@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feature: one
+  workplace: one
+
+two:
+  feature: two
+  workplace: two
