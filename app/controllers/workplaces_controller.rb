@@ -16,6 +16,7 @@ class WorkplacesController < ApplicationController
 
   def show
     @workplace = Workplace.find(params[:id])
+    @visit = Visit.where(user_id: current_user.id).where(workplace_id: @workplace.id).last
   end
 
   def edit
