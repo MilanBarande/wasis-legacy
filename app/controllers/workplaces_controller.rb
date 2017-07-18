@@ -1,6 +1,6 @@
 class WorkplacesController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def new
     @workplace = Workplace.new
@@ -15,7 +15,7 @@ class WorkplacesController < ApplicationController
   end
 
   def show
-
+    @workplace = Workplace.find(params[:id])
   end
 
   def edit
