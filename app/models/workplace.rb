@@ -7,7 +7,7 @@ class Workplace < ApplicationRecord
   has_many :reviews
 
   validates :address, presence: true
-  validates :type, presence: true
+  validates :category, presence: true
   validates :name, presence: true
 
 end

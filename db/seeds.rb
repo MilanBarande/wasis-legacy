@@ -6,4 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts Workplace.destroy_all
 
+@client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
+
+coworkings = @client.spots_by_query("coworking montreal")
+libraries = @client.spots_by_query("library montral")
+
+
+coworkings.each do |coworking|
+  puts Workplace.create(google_id: coworking.id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+end
+
+libraries.each do |library|
+  puts Workplace.create(google_id: library.id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
+end
