@@ -1,1 +1,10 @@
 <h1><%= @workplace.name %></h1>
+<h1><%=  %></h1>
+<div class="btn">
+<% if @visit.nil? || @visit.checkin == false %>
+  <%= link_to "Checkin",[@workplace, :visits], class: "waves-effect waves-light btn" , :method => :post%>
+<% else %>
+  <%= link_to "Checkout",[@workplace, @visit], class: "waves-effect waves-light btn" , :method => :put%>
+<% end %>
+
+</div>
