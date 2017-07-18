@@ -22,6 +22,8 @@ gem 'json'
 gem "coffee-rails"
 gem "gmaps4rails"
 
+gem 'rest-client', '~> 2.0', '>= 2.0.2'
+
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end

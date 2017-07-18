@@ -1,4 +1,20 @@
 <h1><%= @workplace.name %></h1>
+
+<div class="container workplace-show">
+  <div class="container main">
+    <h3><%= @workplace.name %></h3>
+  </div>
+
+  <div class="container details">
+    <p><%= @workplace.description %></p>
+    <p><%= @workplace.category %> $</p>
+<!-- <p><%= @workplace.features.each %></p> -->
+
+    <div class="btn-workplace">
+      <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
+    </div>
+  </div>
+
 <div class="btn btn-primary">
 <% if @visit.nil? || @visit.checkin == false %>
   <%= link_to "Checkin",[@workplace, :visits], class: "waves-effect waves-light btn" , :method => :post%>
