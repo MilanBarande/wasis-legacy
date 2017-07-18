@@ -11,7 +11,12 @@ class WorkplacesController < ApplicationController
   end
 
   def index
-    @workplaces = Workplace.all
+    @workplaces = Workplace.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
+      marker.lat workplace.latitude
+      marker.lng workplace.longitude
+    end
   end
 
   def show
