@@ -1,0 +1,5 @@
+<ul>
+<% @workplaces.each do |workplace| %>
+<li><%= link_to workplace.name, workplace_path(workplace.id) %></li>
+<% end %>
+</ul>
