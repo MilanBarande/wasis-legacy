@@ -1,0 +1,4 @@
+class WorkplacesController < ApplicationController
+
+
+end
