@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717205152) do
+ActiveRecord::Schema.define(version: 20170718170143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,13 +99,14 @@ ActiveRecord::Schema.define(version: 20170717205152) do
   end
 
   create_table "workplaces", force: :cascade do |t|
-    t.integer  "type"
+    t.integer  "category"
     t.string   "name"
     t.string   "address"
     t.float    "longitude"
-    t.float    "latitute"
+    t.float    "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "google_id"
   end
 
   add_foreign_key "favourites", "users"
