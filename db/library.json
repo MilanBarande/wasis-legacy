@@ -1,0 +1,829 @@
+{
+html_attributions: [ ],
+next_page_token: "CvQB5QAAAGHf8RiScRC-Ph4cBEtpllydtAZBAZepl-03N25TZQvfped7rx3dELFXaGvFiAdb1s9H2MaqfKaY0lZMZSzYoUUeFI5FTPfmMuiTcYYZoQZ6BDrAkcSTgroBVD1qtiabZvNufI5ofp_FrlxzNr43hlDag2rhl7RJhzYsn9gEkIs-B0OATdGsakkxa1B3fafIDNB0SLajNamrjFSGtFqUu-93o-BfNmMd_JL4rrZ1hJpRmnCgrUzJb_H6ITnuY2WDolg2gPaiX2i9EGJNj_IzcABE7YbUMUx-UZvptIxWUBweBxT55Tu4-q41IS3v2vCyWRIQCsG_3Ux_UffZDfDnUiNsqBoU4C3j3waOtSuoALyoeCkh99SnaI8",
+results: [
+{
+formatted_address: "475 Boul de Maisonneuve E, Montréal, QC H2L 5C4, Canada",
+geometry: {
+location: {
+lat: 45.51545530000001,
+lng: -73.5623129
+},
+viewport: {
+northeast: {
+lat: 45.5165930302915,
+lng: -73.56048221970849
+},
+southwest: {
+lat: 45.5138950697085,
+lng: -73.56318018029151
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "6db01cd960e1a52529bc6b4c1f3f6524df4592ed",
+name: "BAnQ Grande Bibliothèque",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 400,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/117131846487902583819/photos">BAnQ Grande Bibliothèque</a>"
+],
+photo_reference: "CmRaAAAA_fehe41qKCLctSqsIoYxZGl9Xy3DKC4eOXCzDd0hNQFmXRJO9YMTdEQnrBzjiwJxiq6Y0JeMLjggE5A93PYsrmdupS_IJWf7x3YgautTs61Mwc1aW1vlQfe_jrV-rie4EhDJ6GtzB0EH_uvcrd15pvEuGhQQ3beFK1gSlraj_Tck-XII1x_j-g",
+width: 800
+}
+],
+place_id: "ChIJ-YgvO7MbyUwR7ZMFiZwfTsc",
+rating: 4.7,
+reference: "CmRSAAAAKUOWIMqSGJSKutNLg4U1lKZY7R1dpQskHQ60LW5XZIZnYZ9DStf01zEL9bsYLZCHIg32BKs0SCW2HYxsGQhpb8YAHCB6aIi1KGoionQhjsWOX_9TqePQo9mqw5vIICEPEhADCfWZ3g-OqgpRkDCUcj19GhQ_OrbXm5FH184P914nwkRPZtVXMw",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "6400 Av de Monkland, Montréal, QC H4B 1H3, Canada",
+geometry: {
+location: {
+lat: 45.4661154,
+lng: -73.63097189999999
+},
+viewport: {
+northeast: {
+lat: 45.4675297302915,
+lng: -73.62977341970848
+},
+southwest: {
+lat: 45.4648317697085,
+lng: -73.63247138029149
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "d55f8322eb13cc728ad700f4c3f9e2335cf786d9",
+name: "Bibliothèque Benny",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2448,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/114362018438337412126/photos">Tony Hong Truong</a>"
+],
+photo_reference: "CmRaAAAA70KcKpUsA0q38LZ0NSBwsnEjpGUcp1Vxe87pf1jvk7ZcpOjYLvZYMQyczuT1DnrMTQMXs6Mv3FMlJtCwTPcEQ3I7x5u2f-2g7Fg1FGtVpv8fH3impppRIdmVdxide5bIEhAGGI5-WcYN_0qpuJmmgIuFGhQlA5xQIK2DSfrTrz1VK6XM0gAoKw",
+width: 3264
+}
+],
+place_id: "ChIJ45qhtMoQyUwRxX6ySDlun9o",
+rating: 4.4,
+reference: "CmRSAAAAN_tVMHAbEmG17LWanxLiGUmWzEmKy4jSMsf6a_pIfGoRMNiBQ7lSgZqpJriOiBNBAzKRYZ-P8L6j480xn-JTh4oVX6fw9C2qRJoSiEfUDWPSUe1phn9cHiMquxQqjED2EhBLuWRph8jCC3Kaz9D2QLL2GhQSHScjDx38X6WZ4uaQeoEGQhr7MQ",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "500 Boulevard Rosemont, Montréal, QC H2S 0C4, Canada",
+geometry: {
+location: {
+lat: 45.5319459,
+lng: -73.5972311
+},
+viewport: {
+northeast: {
+lat: 45.53336083029149,
+lng: -73.59602226970848
+},
+southwest: {
+lat: 45.53066286970849,
+lng: -73.5987202302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "e5bf3a99d01d1b4c2553994a5420524f36183259",
+name: "Bibliothèque Marc-Favreau",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2358,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/115077238339009942655/photos">Francely Rocher</a>"
+],
+photo_reference: "CmRaAAAAqyZHN6naxxxiM9_eQOmAaLiyHoOeDUQEHaOPes0sa82Xojd2bYft5JhL-eN8TQ6MWgAyigw-YEVnvWC33eGHhUDX1d8U-9zA89jRtQuaYkuH4HUWQvrv83EHCg9gQSm_EhDkH8vfhTgiDzS01qF_pPo-GhTojbV-L08SavthbTM0qHPe4-f-lA",
+width: 3731
+}
+],
+place_id: "ChIJR-l29mQZyUwRSlfWD216hhU",
+rating: 4.5,
+reference: "CmRRAAAAf00a7zwqa2kT6iwK3mDydQFYdhbsWgREVMjb3ngHHB4AcTfDwmekstK5hsVdYgXKpT8drk6HZr6TaxvoX8jGT6wg__r-pqA-EQJxeceYIfOrwC1jK7ceQKPiP638IuybEhDO58vJEGvdxbwYOKERVz42GhQ_6FscOYv2jc_eaRnFjY-oJxr0QA",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "6767 Chemin de la Côte-des-Neiges, Montréal, QC H3S 2T6, Canada",
+geometry: {
+location: {
+lat: 45.5032453,
+lng: -73.6369072
+},
+viewport: {
+northeast: {
+lat: 45.5045203302915,
+lng: -73.63562751970849
+},
+southwest: {
+lat: 45.5018223697085,
+lng: -73.63832548029151
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "d1ad1e7e03c4a1b0c10f9d744dcdf2e5c0e80d93",
+name: "Bibliothèque interculturelle de Côte-Des-Neiges",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 4032,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/100382278076416454815/photos">Mark Ortizo</a>"
+],
+photo_reference: "CmRaAAAAfyM1hKQl7hkQg-eH9nmcicjx5R6cbe_20eqfi_HG2wXULhFyrZIvUrRhPt0d_SQ-dwqbTBXMRYW5CCBZNgUYlQGsMbOAcitPBbKw3nzYXAS6mIIenD5-z5uFPZLsZsHBEhCQvRuVR04lDUMvzagJhZbWGhSqCxKi2KP-79fRUeHAZgP7kOEyCQ",
+width: 3024
+}
+],
+place_id: "ChIJ_w7skh0ayUwRpArE7tCEwLw",
+rating: 3.9,
+reference: "CmRSAAAAzj1TELGJe3M9SpSc4dBgparr4kJ6sGFzk_FUX_RfyheyDZgGWw6Mm2Q-iP-5QlCv6wkT4byfefwSfNfE3eFexBnceEiPkMB57yoG8l3cgGW-NUZGMKNMDcnRpRZS-6TtEhA4L77qQhuckBGsZ0x5KKnAGhSrx4VkvKaKd9AzPQKWwVkuMqWKsw",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "12002 Boulevard Rolland, Montréal-Nord, QC H1G 3W1, Canada",
+geometry: {
+location: {
+lat: 45.6160822,
+lng: -73.62057229999999
+},
+viewport: {
+northeast: {
+lat: 45.61757628029149,
+lng: -73.6192170197085
+},
+southwest: {
+lat: 45.6148783197085,
+lng: -73.6219149802915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "c2f0832fb3d8a0e4ebe0660b975f182dc4fdb0ef",
+name: "Bibliothèque de la Maison culturelle et communautaire",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+place_id: "ChIJG6s3lZUfyUwRAH_sg5ENLlE",
+rating: 4.3,
+reference: "CmRRAAAA8TPsiVjrjLBFDEbMK8K0srhN5AoDPYeXA4ZI4YUehTc62M57zKP-bbsJ8aipjCA8762xhnvfARvDza8NCVS-WRVINRrXi86Nh9xMZ7hHkH2dwxmrhSy4Ptj_lN6Z9eTJEhBhu6jRx63f5N4Bv-i3XMNzGhSudupUM02Hd4BwpY9gSfkbJF9mRA",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "6707 Avenue de Lorimier, Montréal, QC H2G 2P8, Canada",
+geometry: {
+location: {
+lat: 45.5475234,
+lng: -73.5981872
+},
+viewport: {
+northeast: {
+lat: 45.54876318029149,
+lng: -73.5969416197085
+},
+southwest: {
+lat: 45.5460652197085,
+lng: -73.59963958029151
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "383819cfe47dde5a5a21d1f908d08638238da6d4",
+name: "Bibliothèque de La Petite-Patrie",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2048,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/111671970344295691179/photos">Victor Zell</a>"
+],
+photo_reference: "CmRaAAAALxO9Z8yr0etvT82qE-DeHGwvlJWHPZvi8BxRZRt4riHKfTWUDaqU5ELQJrRp2PgurJy-CYtgX1OZ1VcuaUf1jeVdDU096xvMOHuoKa3hzaB8el4Wp-mpc7mga6FW4aShEhBARj_5WIJaSq7HduzTdcgQGhQOel1z1isvuZJFn4QjgbaYyamJqA",
+width: 1536
+}
+],
+place_id: "ChIJwbSaxkUZyUwR4a2V235EnFw",
+rating: 4.3,
+reference: "CmRRAAAAiYt_by13mbjS_v7EuYc0kqXozj1lt3Y_oE30iyQJVESPxCGN4bDmFcXvqsUuyj33M9zxbEW2MaeQ9rdDONXP7ICs5ZQraLMN8Q311gy63MHPQ_u43MGw96xqnx21_x6XEhCHut8iHuV1t90bGQ-l4QBbGhSEdiq820OKk5lzVP-6b3qJ0ABn3Q",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "5290 Chemin de la Côte-des-Neiges, Montréal, QC H3T 1Y2, Canada",
+geometry: {
+location: {
+lat: 45.4960148,
+lng: -73.6221997
+},
+viewport: {
+northeast: {
+lat: 45.49746328029151,
+lng: -73.62075461970849
+},
+southwest: {
+lat: 45.49476531970851,
+lng: -73.6234525802915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "11f444bbda820a7dae76f640fc597d11964c75e9",
+name: "Bibliothèque de Côte-des-Neiges",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 3264,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/107236239292865724797/photos">Amara Sahoneh</a>"
+],
+photo_reference: "CmRaAAAA3LwjjLzClg-4O5U23HZcWzq5AmR4S-UGvORTHSWmOV1fch0ulWHvL0vV53L8_KwPWPKqi82mnTA0JqSmFGVWuJRLNf2iPCU_HkPEZFtpQBPzMDCxxKF-pJ1pUkf5Y0mJEhCKAPR7KdLGWy5PDvpbuLb-GhRdFcwxClj4OTMzmlp9wxsW6FYNAg",
+width: 2448
+}
+],
+place_id: "ChIJ19kpO_AZyUwR5zK_xJpxQzU",
+rating: 4,
+reference: "CmRRAAAAvy4cHbCTEqAoeW3zH8nYdCxnvODUYvTykX8-jEmZDEUseNVuTGr1Do3iVJH7ZMGjX1TYMDzGoZ8W-Mi-7Qf5lpkKodxfNduLwqtmCJYiKsOJV8wsvlmxcz53MjTwEVGxEhCQQY207E09ul-itEvrYzAWGhQUmD9KNjypUvh9QCMBc0Hsb0MZDA",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "45 Westminster S H4X 1Y6, Canada",
+geometry: {
+location: {
+lat: 45.4517235,
+lng: -73.6419557
+},
+viewport: {
+northeast: {
+lat: 45.4530724802915,
+lng: -73.64060671970849
+},
+southwest: {
+lat: 45.4503745197085,
+lng: -73.6433046802915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "ecb691bd097111878c6a39a6ed0017a1a2b5f3fe",
+name: "Montreal West Public Library",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+place_id: "ChIJ3aP-0isXyUwRs3FIX4tGL8Q",
+rating: 5,
+reference: "CmRSAAAAo2tNe8dNKMEZWsqYMAsNEDBJbw89qiMGLEPEvWtgA5YltUov13-IR9cWzXa_5FWy7dP7mmZfSwYXxk1CiqFRS2cKN1wXTKif9y0Evdb6u_Gu5PpWEcuwhfhjThHX2YqTEhDjCe4IeU6Iolt2t4kuWYneGhRXJpbb7_VUIqF-TxxiuqO-KLjIjg",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "2093 Rue de la Visitation, Montréal, QC H2L 3C9, Canada",
+geometry: {
+location: {
+lat: 45.52278919999999,
+lng: -73.56267009999999
+},
+viewport: {
+northeast: {
+lat: 45.5240845302915,
+lng: -73.56137086970848
+},
+southwest: {
+lat: 45.5213865697085,
+lng: -73.56406883029149
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "db634f6a6f8b5582296e353aacb24504c0a4074f",
+name: "Bibliothèque Père-Ambroise",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 3264,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/107288360133223644366/photos">François Demers</a>"
+],
+photo_reference: "CmRaAAAALSE4XbiSWIdkUSEPROytYn3Rx43g1TNpY-6Qv_60lazJpjGyAiy5dfB429A2shulc1f16fXc9fWp7pee3KyEFm6p8BogTyRGTZKJDBbAL9a1fkdA5nWzUAMn9-I1dnKfEhDy_5kkbkBQxPcN3ZXb_rVbGhRA6zmP6-NVvkgMXfGXlYBnRjb0XQ",
+width: 2448
+}
+],
+place_id: "ChIJ5ZC5DrcbyUwR2C-LMVlbE34",
+rating: 5,
+reference: "CmRRAAAACjtGglGDOsOe3wOkW3NoAzeCx5gyGjS1ZejXGOtvuj89q8Y8xsBBKmQKR8FhAcrncxPZDDAxnUzHdmZXf6WqnJLA3iz20ffKBL71UBS_95_pwy0jKbttG4dFSQbi41usEhBT-UXmh00wHRn7CdQdAkOLGhRLFFsmEdWFvH0ih8RV9w7DUuBatg",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "5434 Av du Parc, Montréal, QC H2V 4G7, Canada",
+geometry: {
+location: {
+lat: 45.5215292,
+lng: -73.6016487
+},
+viewport: {
+northeast: {
+lat: 45.52306413029149,
+lng: -73.6002380697085
+},
+southwest: {
+lat: 45.5203661697085,
+lng: -73.6029360302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "8ccf73151e428aba1dcf989f53832166395dcde2",
+name: "Bibliothèque Mordecai-Richler",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 3120,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/102591920577692288246/photos">Julien Paquier-Galliard</a>"
+],
+photo_reference: "CmRaAAAAAvwPPw3lB6s0xnB3amtdNFKQ6InE3HwYQ3GgIjiqwXOYBqT8bjyxa3m2jElJOtoLuGsXLhxUGnq4tbwdUyNJJafK3jHkQZtdCY0uBidj4QshKYWsiv9vY1sK-YaMUDH4EhBzTjQI71kEy6w4QtEQ4PJEGhTZbHAgS47n9iKHCzV1PnA7cKlnvA",
+width: 4160
+}
+],
+place_id: "ChIJbZxZyXgZyUwRw7qzzQlZeEY",
+rating: 4.6,
+reference: "CmRRAAAAqyt4g3RS-CbKdQoGSNlOhQYn3gUvQxIT6pUiPlFUpI6vv_sSdeIqA92V8Q3LSp11HhoXyCSKb0zo6BvlpUqrvTGUv2seGuO3ICYxsQymVbt4A2jVEBW_vDE1Ve02fXYkEhBwPFkczKIeZDdvjId63i9dGhRJz9y8-fsSE0CYbIEJLtM0RnHGxg",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "465 Avenue du Mont-Royal E, Montréal, QC H2J 1W3, Canada",
+geometry: {
+location: {
+lat: 45.5248723,
+lng: -73.58247399999999
+},
+viewport: {
+northeast: {
+lat: 45.5261609302915,
+lng: -73.58097976970849
+},
+southwest: {
+lat: 45.5234629697085,
+lng: -73.5836777302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "8773a8bd447993211e378b121a8e86d74a0f7de6",
+name: "Bibliothèque du Plateau-Mont-Royal",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 3120,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/102591920577692288246/photos">Julien Paquier-Galliard</a>"
+],
+photo_reference: "CmRaAAAAGclxHYpls4990m1Y8L6-Tc3WealFIql3RggixSIIqTb9fiHKEB8hRmSPw3EU2yMg6X46mqWGVjvmSqXb-7lGHafoMDxYb88vLt9ugaCHcJvLuGG7ySA1OAVvAt9XY1psEhA9ITqSMKfMYvt6gLBIwoizGhSaowc9NIK_NOGwYsLOhq_iU54k_A",
+width: 4160
+}
+],
+place_id: "ChIJ6Y9oVdAbyUwRuaa8Kdp3CcU",
+rating: 3.8,
+reference: "CmRSAAAAEYPPNDMg0VEBNK438BWgmcBDiEk910Oq0yGat7y2RG1klAI_hH1J5eC-JIl7YOgPVsoB-A_vZrEqvfL8G8o6g-PHYghKfiX0cLSQMAso3EyhP3aLQ9vNfTrxhjkHT7trEhA10_1mScwVmUnovLLqitT1GhTncbwiCu30paV9cEyH17smWYIuAQ",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "3755 Rue Botrel, Montréal, QC H4A 3G8, Canada",
+geometry: {
+location: {
+lat: 45.47555,
+lng: -73.614584
+},
+viewport: {
+northeast: {
+lat: 45.4768409302915,
+lng: -73.61328996970848
+},
+southwest: {
+lat: 45.4741429697085,
+lng: -73.6159879302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "c708321339aced716bd541fa335412f8e5564d7a",
+name: "Bibliothèque Notre-Dame-de-Grâce",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+place_id: "ChIJE2Bkba4QyUwRL1jKXFEaAzU",
+rating: 4.2,
+reference: "CmRRAAAAm9wf4VxMbMF52dcZDvpzc5ovNzTnFp3vDQhd0Ra43DxBbq7WCBb8Jm1nLtCFrqzKjN0WCUqMi2T9Q2HdKuOoN7dmqOwssqma6mbTQkg0rGzLXzgO03nlcducH_f-ROJ3EhADqhQMo9z-WWyGtFWXBbANGhTBrznwYOTZum9nabz2D4kYy1IO6A",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "5151 Chemin de la Côte-Sainte-Catherine, Montréal, QC H3W 1M6, Canada",
+geometry: {
+location: {
+lat: 45.4889725,
+lng: -73.6362699
+},
+viewport: {
+northeast: {
+lat: 45.49028438029149,
+lng: -73.6348269697085
+},
+southwest: {
+lat: 45.48758641970849,
+lng: -73.63752493029152
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "2d5d4c1023d1215a2a217f217668490d47d39366",
+name: "Bibliothèque Publique Juive",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 3096,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/111863536575998465181/photos">Joel Guerra</a>"
+],
+photo_reference: "CmRaAAAA2vpKMoPSBZigY4nAvugotGptXmZVmHfr7IR-B9_Vt5D9JY9YtWLvw7pwPndyt4Ww8IMLoO1VlGsnltCMuankoxbawY_vKXCDe-U94JI4mEwaKxCs5PqAX-KIbpjwz0I_EhAuPIq1IxZn5AuKNl1jNq_BGhSSmjF3KnjDxZJ6nkvWzf22nbuR0A",
+width: 4128
+}
+],
+place_id: "ChIJe6YGCuEZyUwRleJvEnvtS5U",
+rating: 4.7,
+reference: "CmRSAAAA1A4klCqK3MSvU6AFZBPlR0B1DvtGSNNIVe9RRgaVHuIsLYAckv3ko6NQCDWnqZQXkbBnD06JCY4tjt3yK30T3FziMqZD1Xau4amnb779_eJk2dYnKQa2ln4reIuaV-X8EhCWIce2Z99Q-4ZJl2vUiUq2GhQyKyntDKh2w4OopxSXKNGvfBFXyg",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "2333 Rue Mullins, Montréal, QC H3K 3E3, Canada",
+geometry: {
+location: {
+lat: 45.4790485,
+lng: -73.56375299999999
+},
+viewport: {
+northeast: {
+lat: 45.4803633802915,
+lng: -73.56235906970849
+},
+southwest: {
+lat: 45.4776654197085,
+lng: -73.5650570302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "e3c8fe3545abd5025e869ad0560c0f982d56171f",
+name: "Bibliothèque de Saint-Charles",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2304,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/108185597258421269136/photos">maher kouraytem</a>"
+],
+photo_reference: "CmRaAAAAevFMNLNSc3qWI-tzscMnSkrqCzaqVKTx51dGZeBo1XcXzkOkBjsKGBcsxijLyxL5JNi52iOA0v5EbyPHS9XdKGs6uL0TVA98KWccpiElsBPVAIkxl6jQWMx5UbwUjZ9NEhAxUGUqMaWW2ROy4-hQGjWKGhT5945HyhhsH8T6qb5ivfUvDyMLsQ",
+width: 2408
+}
+],
+place_id: "ChIJEauL8IAayUwRoUq6BXz_dN4",
+rating: 4.7,
+reference: "CmRSAAAA91yqRzQ8RKHnofx55r1R6t6dQzuiGsFtTK79vvnQJFJcg-HemUc1xMKROCInJ70YCsyQ6LBYZ5GYC83-kHWy9iQ6KmOiTC4kg7Y65mx_5AeuVY7-IDDzF7aDWv5BlJ6yEhBXkRPwwFIITMGrAcXgU2S4GhR-VCw22CfgFw3b6kxdckTmvfMQ0g",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "4170 Rue de Salaberry, Montréal, QC H4J 1H1, Canada",
+geometry: {
+location: {
+lat: 45.5346605,
+lng: -73.7038596
+},
+viewport: {
+northeast: {
+lat: 45.5360557802915,
+lng: -73.7025511197085
+},
+southwest: {
+lat: 45.53335781970851,
+lng: -73.70524908029151
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "61751a0bbfb49cd14fc5850c81c853d41d1c2af9",
+name: "Bibliothèque De Salaberry",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+place_id: "ChIJXzz4dYciyUwR7neAWaLVi28",
+rating: 4.8,
+reference: "CmRRAAAAmKuqO-FaPA_M3Jv6OlTmFE3PxDxKb1DptlrZaK7ADMyWJEbSFzslXA73oxIRZt210qRJJ164aTZVSm820vCPUoUnjwMgaNybcR1Ek-IJLEKwS1ZzwyWGuX3dv-21FHvMEhCq9PY9KWtgSg2qds28VrCHGhTQQ3mtTcejnjcvea8Nx9Hy-nryrA",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "3131 Boulevard Rosemont, Montréal, QC H1Y 1M4, Canada",
+geometry: {
+location: {
+lat: 45.551927,
+lng: -73.58227459999999
+},
+viewport: {
+northeast: {
+lat: 45.55316373029149,
+lng: -73.58069466970848
+},
+southwest: {
+lat: 45.5504657697085,
+lng: -73.5833926302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "33e25ae80cbebb4da07fb813972ced850c852f83",
+name: "Bibliothèque de Rosemont",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 1536,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/111671970344295691179/photos">Victor Zell</a>"
+],
+photo_reference: "CmRaAAAARxKBw4d1d2oCwbdtdvL18kLvTUlbJo6iftL00iTnxbh8KESDymppfgi_OKNMWAu_gekrJGHV-VK_7kNVIx-yVz-pT3kdS0BVtg6_LC7FfYv96Va3yj4ZPNlgvjYFvOaBEhDl_4g4ul_aO4UinxUwURjkGhTGa80Ns84IiLsb_NYidgpp--f4DA",
+width: 2048
+}
+],
+place_id: "ChIJDcG-BFQZyUwR8dLF1Npf-4I",
+rating: 4.3,
+reference: "CmRSAAAA90J_Ug8RNHSYdxzSdeHbv91h3mxuJ5q0dT8fRrla2VuFndVxzVFabyHoV035zjpLN_KGN13HK_z-sJRXPYo-aCJP5gwpa5iiYNxjiNTvHeZixFa4MkLA5E6NdpwZbYBfEhDYpWNn56oP9BD2Oww6MetzGhRz4lXAppxjiNSGQ7ENEPwASNZEXQ",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "421 Rue Saint Roch, Montréal, QC H3N 1K2, Canada",
+geometry: {
+location: {
+lat: 45.53138000000001,
+lng: -73.62885779999999
+},
+viewport: {
+northeast: {
+lat: 45.5326653302915,
+lng: -73.6272943697085
+},
+southwest: {
+lat: 45.52996736970851,
+lng: -73.6299923302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "0e395db364e9cae0fa12d27e0e2233d4bdbd4f61",
+name: "Bibliothèque de Parc-Extension",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2988,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/116586568915697994742/photos">Hhamza Amjad</a>"
+],
+photo_reference: "CmRaAAAAnQggRB1pPOJWRpGdD2RFWRzpSOy-rrNlHqQHU3cZhWUubZjRCZyiS6aS_tH594J7I9QuocR05VotlYRQ_5vwL9K0n67Hb4Dp9yqmlJw1rKw42Eg0Qe01yWqs4AzD4Gn7EhB-dxdzD1RbPqQmv3VbPtBKGhSe-PWIk5qZcMsJ33w7u4-2p6YKGg",
+width: 5312
+}
+],
+place_id: "ChIJAAAAAAQZyUwR452AaAicYCk",
+rating: 3.4,
+reference: "CmRRAAAAPAFyYLdr76i18s0NzZpA5IRaQ2vJrYqE19BPWZtSU0-dsM77NYZiB0kOupJlo8UzggD_BNxanpxWWj7o0D8MDBIh0sDzSUYGTDUuncE3gTsBzXHD4pPF_1uQfNekh8LwEhDnekLglxjUjnL72JMdt7AiGhSb8oGtssQvQ5EVo9g2FBD3sPNWfQ",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "2450 Rue Workman, Montréal, QC H3J 1L8, Canada",
+geometry: {
+location: {
+lat: 45.483664,
+lng: -73.57520889999999
+},
+viewport: {
+northeast: {
+lat: 45.4850523802915,
+lng: -73.57390321970848
+},
+southwest: {
+lat: 45.4823544197085,
+lng: -73.57660118029149
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "1802ac69a35e8c1c023dd2988d741e437f956dc8",
+name: "Bibliothèque Georges-Vanier",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+photos: [
+{
+height: 2448,
+html_attributions: [
+"<a href="https://maps.google.com/maps/contrib/112644356975532092192/photos">Rida Issa</a>"
+],
+photo_reference: "CmRaAAAAZxwr8vkM-GM8yaUL1S-JM19RbolQYpTwUXPklJHsthV94W6JyAOINjO0LnOyiCcMlsfk8DaxUAeLI-wfxQFEekwWh8ok9Q6zKk5BL41yM3_CZnyGlzaEbCspUQHnjSRgEhDBMqmeB0WGf8aihLXXOUyyGhRCKmYu91maBx2LCeuakdEvpcuYKQ",
+width: 3264
+}
+],
+place_id: "ChIJMQbuFXoayUwRnIuYp8BYkg0",
+rating: 4,
+reference: "CmRRAAAAJqvpDNFsMsWw8VH6ONsSDU_cUnxUVrU8Ig3va9JUx1HO3GlUoYma2fA75agt_nvKLbvX5GBe_pgX6u0hTW7FCGXaT5hrtAHu56r8j5s6dcwu01v4gjDGxiv4a_Om4LxlEhAW-q4JZ908siyo6cFXw1XXGhR_mFhQ9OkR6sxNdGsSq9NdQnDVRw",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "5400 Boul Henri-Bourassa E, Montréal-Nord, QC H1G 2S9, Canada",
+geometry: {
+location: {
+lat: 45.604671,
+lng: -73.625197
+},
+viewport: {
+northeast: {
+lat: 45.60608483029149,
+lng: -73.62389296970849
+},
+southwest: {
+lat: 45.60338686970849,
+lng: -73.62659093029151
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "2115c4550a5f0e579328242d69634bd1874c1ed4",
+name: "Bibliothèque Henri-Bourassa",
+opening_hours: {
+open_now: true,
+weekday_text: [ ]
+},
+place_id: "ChIJhQb1xKEfyUwRoDstmZBwERg",
+rating: 4.3,
+reference: "CmRRAAAAKM4O9NCHIOCvYPci6vvIUuJUSvOqhd-cJYfKQgemJ8EfWYZwrCLMeLmrPyV8dklO9_Hau69BUbJt2cMUpNCo1qMPlO5hrjAuJwr9kAkXvcLlzTLl3gAq9HEZtJ4tSlcFEhAnxXoWmLzkM8QXLNTiobtVGhRnfuX2lLi-fqnufQfTiXED5Ewp1A",
+types: [
+"library",
+"point_of_interest",
+"establishment"
+]
+},
+{
+formatted_address: "4707 Rue Notre-Dame Ouest, Montréal, QC H4C 1S9, Canada",
+geometry: {
+location: {
+lat: 45.4727582,
+lng: -73.5889754
+},
+viewport: {
+northeast: {
+lat: 45.4740766802915,
+lng: -73.58755976970849
+},
+southwest: {
+lat: 45.4713787197085,
+lng: -73.5902577302915
+}
+}
+},
+icon: "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+id: "1d17da4d46a6bea3226cbb2888c42622e1f5c630",
+name: "Bibliothèque de Saint-Henri",
+opening_hours: {
+open_now: false,
+weekday_text: [ ]
+},
+place_id: "ChIJFStfMpoQyUwRJ9ZH6DroSFw",
+rating: 5,
+reference: "CmRRAAAA6tJQaaG5hwRpiBhCbMcctM4OGMEg3bT7Ts3cEEnFPGsGu4vuCnqJC1PBWtTs5ZRjP_5ffWAP9xfTD8ZyNdJnTZF5TujsfStKqVgdtFhALZ10LXVvWBP3fyXjISa4qff_EhDc-w8NMcE_ZNBZFeKZQJ2HGhQsBc6AVjycr6XKIB5Pc3XxsCbmtA",
+types: [
+"city_hall",
+"library",
+"local_government_office",
+"point_of_interest",
+"establishment"
+]
+}
+],
+status: "OK"
+}
