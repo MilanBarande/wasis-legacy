@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def show
     set_user
     @review = Review.new
-    @favorites = Favorite.where(user_id: @user.id)
+    @favourites = Favourite.where(user_id: @user.id)
     @workplaces = Workplace.where(user_id: @user.id)
   end
 
