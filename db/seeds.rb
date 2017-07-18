@@ -15,9 +15,13 @@ libraries = @client.spots_by_query("library montral")
 
 
 coworkings.each do |coworking|
-  puts Workplace.create(google_id: coworking.id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+  puts Workplace.create(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
 end
 
 libraries.each do |library|
-  puts Workplace.create(google_id: library.id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
+  puts Workplace.create(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
 end
+
+# response = RestClient.get "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{coworking.photos.first.photo_reference
+# }&key=#{ENV['GOOGLE_PLACE_API']}"
+
