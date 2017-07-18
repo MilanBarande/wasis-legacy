@@ -1,11 +1,11 @@
 class CreateWorkplaces < ActiveRecord::Migration[5.0]
   def change
     create_table :workplaces do |t|
-      t.integer :type
+      t.integer :category
       t.string :name
       t.string :address
       t.float :longitude
-      t.float :latitute
+      t.float :latitude
 
       t.timestamps
     end
