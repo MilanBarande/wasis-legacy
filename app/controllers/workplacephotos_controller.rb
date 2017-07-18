@@ -1,0 +1,2 @@
+class WorkplacephotosController < ApplicationController
+end
