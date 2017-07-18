@@ -16,6 +16,11 @@ class WorkplacesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
       marker.lng workplace.longitude
+       marker.picture({
+        url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}.png"),
+        width:  45,
+        height: 55
+        })
     end
   end
 
