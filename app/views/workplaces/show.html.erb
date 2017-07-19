@@ -1,27 +1,26 @@
-
-<h3><%= @workplace.name %></h3>
-
-<h5><%= @workplace.address %></h5>
-
 <div class="container workplace-show">
   <div class="container main">
     <h3><%= @workplace.name %></h3>
   </div>
 
   <div class="container details">
-    <p><%= @workplace.address %> $</p>
-<!-- <p><%= @workplace.features.each %></p> -->
+    <p><%= @workplace.address %></p>
+    <p>Features:</p>
+    <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
+      <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
+    <% end %>
+    </ul>
 
     <div class="btn-workplace">
       <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
     </div>
   </div>
 
-<div class="btn btn-primary">
-<% if @visit.nil? || @visit.checkin == false %>
-  <%= link_to "Checkin",[@workplace, :visits], class: "waves-effect waves-light btn" , :method => :post%>
-<% else %>
-  <%= link_to "Checkout",[@workplace, @visit], class: "waves-effect waves-light btn" , :method => :put%>
-<% end %>
+  <div class="btn btn-primary">
+    <% if @visit.nil? || @visit.checkin == false %>
+    <%= link_to "Checkin",[@workplace, :visits], class: "waves-effect waves-light btn" , :method => :post%>
+    <% else %>
+    <%= link_to "Checkout",[@workplace, @visit], class: "waves-effect waves-light btn" , :method => :put%>
+    <% end %>
 
 </div>
