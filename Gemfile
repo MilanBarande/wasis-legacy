@@ -21,6 +21,7 @@ gem 'google_places'
 gem 'json'
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'bootstrap-toggle-rails'
 
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 

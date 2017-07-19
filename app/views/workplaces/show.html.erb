@@ -16,11 +16,6 @@
     </div>
   </div>
 
-  <div class="btn btn-primary">
-    <% if @visit.nil? || @visit.checkin == false %>
-    <%= link_to "Checkin",[@workplace, :visits], class: "waves-effect waves-light btn" , :method => :post%>
-    <% else %>
-    <%= link_to "Checkout",[@workplace, @visit], class: "waves-effect waves-light btn" , :method => :put%>
-    <% end %>
-
+  <div id="checkin" class="btn btn-primary">
+    <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
 </div>

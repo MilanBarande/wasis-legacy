@@ -1,0 +1,7 @@
+// Here you will write *javascript* that would be executed by the browser
+<% if @visit.errors.any? %>
+  // Render new review form with errors
+  $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
+<% else %>
+  $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
+<% end %>

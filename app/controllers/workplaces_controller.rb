@@ -26,6 +26,7 @@ class WorkplacesController < ApplicationController
 
   def show
     @workplace = Workplace.find(params[:id])
+    @review = Review.new
   end
 
   def edit
