@@ -11,6 +11,13 @@ Workplace.destroy_all
 Feature.destroy_all
 puts "Done."
 
+features = ["wifi", "large tables", "hot drinks", "cold drinks", "snacks", "meals", "electric outlets", "private rooms", "hourly rate" ]
+
+puts "Seeding the features..."
+features.each do |feature|
+  puts Feature.create!(name: feature)
+end
+puts "Done."
 
 @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
 
@@ -19,21 +26,19 @@ libraries = @client.spots_by_query("library montral")
 
 puts "Seeding coworking places..."
 coworkings.each do |coworking|
-  Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+  workplace = Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+  3.times do
+    Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
+  end
 end
 puts "Done."
 
 puts "Seeding libraries..."
 libraries.each do |library|
-  Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
-end
-puts "Done."
-
-features = ["wifi", "large tables", "hot drinks", "cold drinks", "snacks", "meals", "electric outlets", "private rooms", "hourly rate" ]
-
-puts "Seeding the features..."
-features.each do |feature|
-  puts Feature.create!(name: feature)
+  workplace = Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
+  3.times do
+    Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
+  end
 end
 puts "Done."
 

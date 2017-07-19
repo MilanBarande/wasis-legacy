@@ -1,6 +1,7 @@
 class Workplace < ApplicationRecord
 
   has_many :features, through: :workplacefeatures
+  has_many :workplacefeatures, dependent: :destroy
   has_many :visits, dependent: :destroy
   has_many :workplacephotos, dependent: :destroy
   has_many :favourites, dependent: :destroy
