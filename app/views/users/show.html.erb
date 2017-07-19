@@ -1,31 +1,52 @@
-<div class="container-profile-card">
-  <div class="user-card">
-    <% if @user.facebook_picture_url != nil %>
-    <%= image_tag @user.facebook_picture_url, class: "avatar-profile" %>
-    <% end %>
-    <div><h5 class="profile-name pink-text"><%= @user.first_name %></h5></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s6">
-    <div class="container">
-      <h4 class="profile-element">My favourites:</h4>
-      <% @favourites.each do |favourite|%>
-      <div class="card-favo">
-        <div class="container-favo">
-          <p class="profile-name pink-text"><%= link_to favourite.workplace.name, favourite.workplace %></p>
-          <p><%= link_to "Remove from my favorites", favourite_path(favourite.id), method: :delete %></p>
-          <p class="text-16px">Reviews:</p>
-          <% favourite.workplace.reviews.each do |review| %>
-          <ul class="list-unstyled">
-            <li>Rating: <%= review.rating %> stars</li>
-            <li>Content: <%= review.content %></li>
-          </ul>
-          <% end %>
-        </div>
-      </div>
-      <% end %>
+<div class=".container">
+  <div class="row">
+    <div class="user-nav">
+      <ul>
+        <li><a class="tab" data-target="#my-profile">Profile</li>
+        <li><a class="tab" data-target="#my-history">History</li>
+        <li><a class="tab" data-target="#my-places">My places</li>
+        <li><a class="tab" data-target="#my-favorites">Favorites</a></li>
+      </ul>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sx-12 col-sm-12 col-md-4 col-lg-4 user-info" id="my-profile">
+      <%= render 'user-info' %>
+    </div>
+    <div class="col-sx-12 col-sm-12 col-md-8 col-lg-8 user-activity text-center">
+
+      <div class="tab-content" id="my-history">
+        <p>This is my history</p>
+      </div>
+
+
+      <div class="tab-content hidden" id="my-places">
+        <p>Those are my places</p>
+      </div>
+
+<!-- Ce code favorites n'est pas encore verifie avec de la donnee. @Thibault -->
+      <div class="tab-content hidden" id="my-favorites">
+        <h4 class="profile-element">My favourites:</h4>
+        <% @favourites.each do |favourite|%>
+        <div class="card-favo">
+         <div class="container-favo">
+           <p class="profile-name pink-text"><%= link_to favourite.workplace.name, favourite.workplace %></p>
+           <p><%= link_to "Remove from my favorites", favourite_path(favourite.id), method: :delete %></p>
+           <p class="text-16px">Reviews:</p>
+           <% favourite.workplace.reviews.each do |review| %>
+           <ul class="list-unstyled">
+             <li>Rating: <%= review.rating %> stars</li>
+             <li>Content: <%= review.content %></li>
+           </ul>
+           <% end %>
+         </div>
+       </div>
+       <% end %>
+
+
+     </div>
+
+   </div>
+ </div>
 </div>
+<script src="javascript/tabs.js"></script>
