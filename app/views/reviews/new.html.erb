@@ -1,7 +1,7 @@
 <h3>Add a new review </h3>
 
 <%= simple_form_for [@workplace, @review] do |f| %>
-  <%= f.input :comment, as: :text %>
+  <%= f.input :comment, maxlength: 480, size: 60 %>
   <%= f.error_notification %>
 
   <%= form_tag workplace_ratings_path do %>
@@ -11,7 +11,7 @@
 
      <div class="field">
        <%= p.label rating.description %><br>
-       <%= p.text_field :rating %>
+       <%= f.input :ratings, collection: 1..5 %>
      </div>
     <% end %>
     <% end %>
