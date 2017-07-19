@@ -11,11 +11,11 @@ Workplace.destroy_all
 Feature.destroy_all
 puts "Done."
 
-features = ["wifi", "large tables", "hot drinks", "cold drinks", "snacks", "meals", "electric outlets", "private rooms", "hourly rate" ]
+features = [{name: "Wifi", icon: "feature_icon_2"}, {name: "Large tables", icon:"feature_icon_4"}, {name:"Hot drinks", icon:"feature_icon_1"}, {name:"Cold drinks", icon:"feature_icon_3"}, {name:"Snacks", icon:"feature_icon_7"}, {name:"Meals", icon:"feature_icon_6"}, {name:"Electric outlets", icon:"feature_icon_5"}, {name:"Private rooms", icon:"feature_icon_8"}, {name:"Hourly rate", icon:"feature_icon_9"} ]
 
 puts "Seeding the features..."
 features.each do |feature|
-  puts Feature.create!(name: feature)
+  Feature.create!(name: feature[:name], icon: feature[:icon])
 end
 puts "Done."
 

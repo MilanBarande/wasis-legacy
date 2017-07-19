@@ -4,8 +4,12 @@
   </div>
 
   <div class="container details">
-    <p><%= @workplace.address %> $</p>
+    <p><%= @workplace.address %></p>
     <p>Features:</p>
+    <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
+      <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
+    <% end %>
+    </ul>
 
     <div class="btn-workplace">
       <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
