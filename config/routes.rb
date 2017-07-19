@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   resources :workplaces do
     resources :workplacephotos, only: [:create, :destroy]
     resources :visits, only: [:create, :update]
-    resources :reviews, only: [:new, :create, :update]
-    resources :ratings, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :update] do
+      resources :ratings, only: [:new, :create]
+    end
     resources :favourites, only: :create
   end
 
