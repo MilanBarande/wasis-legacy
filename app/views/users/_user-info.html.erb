@@ -1,0 +1,9 @@
+<div class="user-card">
+  <% if @user.facebook_picture_url != nil %>
+  <%= image_tag @user.facebook_picture_url, class: "avatar-profile" %>
+  <% end %>
+  <div>
+    <h5><%= @user.first_name %></h5>
+    <h3>HELLO THIS IS MY PAGE</h3>
+  </div>
+</div>
