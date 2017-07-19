@@ -3,10 +3,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @workplace = Workplace.find(params[:workplace_id])
-    @user_ratings = []
-    Rating::DESCRIPTIONS.each do |description|
-      @user_ratings << Rating.new(description: description)
-    end
+    @rating = Rating.new
   end
 
   def create
@@ -15,9 +12,9 @@ class ReviewsController < ApplicationController
     @review.user = User.find(current_user.id)
     # Save ratings
     if @review.save!
-      params["ratings"].each do |rating|
-        if rating["rate"] != ""
-          Rating.create(rating_params(rating))
+      params[:review]["rating"].each do |rating|
+        if params[:review]["rating"] != ""
+          Rating.create(rating_params)
         end
       end
       redirect_to workplace_path(@review.workplace)
@@ -33,11 +30,11 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:comment)
+    params.require(:review).permit(:comment, :ratings_attributes => [:rating])
   end
 
-  def rating_params(my_params)
-    my_params.permit(:rating)
+  def rating_params
+    params.require(:review).require(:rating).permit(:wifi, :noise, :comfort, :service)
   end
 
 end

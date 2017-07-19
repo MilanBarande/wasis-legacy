@@ -156,6 +156,10 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    pg_search (2.0.1)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     poltergeist (1.15.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -280,6 +284,7 @@ DEPENDENCIES
   minitest-reporters
   omniauth-facebook
   pg
+  pg_search
   poltergeist
   pry-byebug
   pry-rails
