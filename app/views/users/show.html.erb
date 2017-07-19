@@ -3,51 +3,26 @@
     <% if @user.facebook_picture_url != nil %>
     <%= image_tag @user.facebook_picture_url, class: "avatar-profile" %>
     <% end %>
-    <div><h5 class="profile-name pink-text"><%= @user.name %></h5></div>
-    <div><h5 class="">My address:</h5> <p class="text-16px"><%= @user.address %></p></div>
+    <div><h5 class="profile-name pink-text"><%= @user.first_name %></h5></div>
   </div>
 </div>
 
 <div class="row">
   <div class="col s6">
     <div class="container">
-      <h4 class="profile-element">My favorites:</h4>
-      <% @favorites.each do |favorite|%>
+      <h4 class="profile-element">My favourites:</h4>
+      <% @favourites.each do |favourite|%>
       <div class="card-favo">
         <div class="container-favo">
-          <p class="product-name pink-text"><%= link_to favorite.workplace.name, favorite.workplace %></p>
-          <p><%= link_to "Remove from my favorites", favorite_path(favorite.id), method: :delete %></p>
+          <p class="profile-name pink-text"><%= link_to favourite.workplace.name, favourite.workplace %></p>
+          <p><%= link_to "Remove from my favorites", favourite_path(favourite.id), method: :delete %></p>
           <p class="text-16px">Reviews:</p>
-          <% favorite.workplace.reviews.each do |review| %>
+          <% favourite.workplace.reviews.each do |review| %>
           <ul class="list-unstyled">
             <li>Rating: <%= review.rating %> stars</li>
             <li>Content: <%= review.content %></li>
           </ul>
           <% end %>
-          <div class="review-form">
-            <%= simple_form_for [favorite.workplace, @review] do |f| %>
-            <p>Add your review for this workplace (rating: 0 - 5) :</p>
-            <%= f.error_notification %>
-
-            <%= f.input :content, as: :text %>
-            <%= f.input :rating %>
-            <%= f.button :submit %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="col s6">
-    <div class="container">
-      <h4 class="profile-element">My History:</h4>
-      <% @workplace.each do |workplace| %>
-      <div class="card-favo">
-        <div class="container-favo">
-          <p class="workplace-name pink-text"><%= link_to workplace.name, workplace, class: "linkk" %> </p>
-          <p class="text-16px">Description: <%= workplace.description %></p>
         </div>
       </div>
       <% end %>

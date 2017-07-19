@@ -12,15 +12,15 @@ class WorkplacesController < ApplicationController
 
   def index
     @workplaces = Workplace.where.not(latitude: nil, longitude: nil)
-
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
       marker.lng workplace.longitude
-       marker.picture({
+      marker.picture({
         url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}.png"),
         width:  45,
         height: 55
-        })
+      })
+      marker.title workplace.name
     end
   end
 
@@ -29,15 +29,12 @@ class WorkplacesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
   end
 
   def destroy
-
   end
 
   private
