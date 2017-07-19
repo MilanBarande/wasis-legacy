@@ -19,15 +19,15 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'google_places'
 gem 'json'
-gem "coffee-rails"
-gem "gmaps4rails"
-gem 'bootstrap-toggle-rails"
-gem "pg_search"
+gem 'coffee-rails'
+gem 'gmaps4rails'
+gem 'bootstrap-toggle-rails'
+gem 'pg_search'
 
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 
 source 'https://rails-assets.org' do
-  gem "rails-assets-underscore"
+  gem 'rails-assets-underscore'
 end
 
 
