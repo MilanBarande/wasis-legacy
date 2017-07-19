@@ -1,3 +1,47 @@
 .btn-primary>a {
   color: white;
 }
+
+.button-black {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 50px;
+  border-radius: 50%;
+  opacity: 0.6;
+  color: rgb(20,20,20);
+  background: rgba(200,200,200,0.3);
+}
+
+
+.button-black:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: rgb(20,20,20);
+}
+
+a:focus {
+   text-decoration: none;
+   color: rgb(20,20,20);
+}
+
+
+
+.filters-container {
+
+}
+
+.text-12 {
+  font-size: 12px;
+  padding-left: 9px;
+}
+
+.active {
+  font-weight: bold;
+  color: rgb(5,5,5);
+  background: rgba(170,170,170, 0.9);
+  text-decoration: none;
+}

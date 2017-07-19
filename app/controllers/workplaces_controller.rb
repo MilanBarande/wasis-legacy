@@ -11,6 +11,7 @@ class WorkplacesController < ApplicationController
   end
 
   def index
+    @features = Feature.all
     @workplaces = Workplace.where.not(latitude: nil, longitude: nil)
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
@@ -20,7 +21,7 @@ class WorkplacesController < ApplicationController
         width:  45,
         height: 55
       })
-      marker.title workplace.name
+      marker.title "<a href=" + workplace_url(workplace) + ">" + workplace.name + "</a>"
     end
   end
 
