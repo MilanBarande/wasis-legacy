@@ -1,0 +1,22 @@
+<h3>Add a new review </h3>
+
+<%= simple_form_for [@workplace, @review] do |f| %>
+  <%= f.input :comment, as: :text %>
+  <%= f.error_notification %>
+
+  <%= form_tag workplace_ratings_path do %>
+    <% @user_ratings.each do |rating| %>
+
+    <%= fields_for 'ratings[]', rating do |p| %>
+
+     <div class="field">
+       <%= p.label rating.description %><br>
+       <%= p.text_field :rating %>
+     </div>
+    <% end %>
+    <% end %>
+    <div class="">
+      <%= f.submit "add a review", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>
