@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 puts "Destroying all the element in the db..."
 Workplace.destroy_all
 Feature.destroy_all
@@ -26,7 +18,7 @@ libraries = @client.spots_by_query("library montral")
 
 puts "Seeding coworking places..."
 coworkings.each do |coworking|
-  workplace = Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+  workplace = Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat, photo: "la_gare.jpg")
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
@@ -35,7 +27,7 @@ puts "Done."
 
 puts "Seeding libraries..."
 libraries.each do |library|
-  workplace = Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
+  workplace = Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat, photo: "banq.jpg")
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
