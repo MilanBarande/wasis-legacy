@@ -1,4 +1,4 @@
-puts "Destroying all the element in the db..."
+puts "Destroying all the elements in the db..."
 Workplace.destroy_all
 Feature.destroy_all
 puts "Done."
