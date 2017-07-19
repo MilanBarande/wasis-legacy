@@ -27,6 +27,7 @@ class WorkplacesController < ApplicationController
 
   def show
     @workplace = Workplace.find(params[:id])
+    @review = Review.new
     @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     @spot = @client.spot(@workplace.google_id)
   end
