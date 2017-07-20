@@ -1,0 +1,13 @@
+<div class="card" id="card_<%= workplace.id %>" style="width: 20rem;">
+
+  <img class="card-img-top" src="..." alt="Card image cap">
+
+  <div class="card-block">
+    <h4 class="card-title"><%= workplace.name %></h4>
+    <p class="card-text"><%= workplace.address %></p>
+    <ul class="list-unstyled"><% workplace.features.each do |feature| %>
+      <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
