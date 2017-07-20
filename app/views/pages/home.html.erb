@@ -1,2 +1,48 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <p>Find me in app/views/pages/home.html.erb</p> -->
+
+
+
+<div id="home-page">
+<!-- Landing hiomepage -->
+  <div class="tag-line">
+    <p>Discover new places to work around you</p>
+  </div>
+  <div class="category-banner">
+    <p>Coworking Space<%= image_tag "icone_0.png" %></p>
+    <p>Coffee<%= image_tag "icone_1.png" %></p>
+    <p>Library<%= image_tag "icone_2.png" %></p>
+    <p>Park</p>
+  </div>
+  <div class="home-map" style="background-image:url('<%= image_path 'map_home.png' %>');">
+     <div class="button-banner">
+        <%= link_to "FIND", workplaces_path %>
+    </div>
+  </div>
+  <!--  How it work -->
+ <div class="howitwork">
+   <h4>There will be 3 card/explanation of how it work, ex: step 1, find a place near you 2, select filter to fulfill in the best way possible your work requirement in open workplace 3, log in/checkin to have access to blah blah blah</h4>
+ </div>
+  <!--  Join comminuty -->
+  <div class="join" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
+    <p>Come and join multiple nomad workers like you to find the best environment that will suit your need to work and join worker related to your domain</p>
+    <div class="button-join">
+      <%= link_to "JOIN", workplaces_path %>
+    </div>
+  </div>
+  <div class=blue-transition></div>
+  <!-- Start uploading -->
+  <div class="start">
+    <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+    <div>
+      <p>Help the community by adding workplaces around you!</p>
+    </div>
+    <div class="button-start">
+      <%= link_to "START", workplaces_path %>
+    </div>
+
+  </div>
+
+
+</div>
+
+

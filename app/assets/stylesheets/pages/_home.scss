@@ -2,3 +2,244 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+/// /// home-page /// ///
+// #home-page {
+//   position: absolute;
+// }
+
+
+ /// /// LANDING HOMEPAGE /// ///
+
+.tag-line {
+  background: #F5BD4E;
+  height: 62vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  p {
+    font-size: 40px;
+    font-weight: lighter;
+    color: white;
+    padding-top: 300px;
+  }
+}
+
+.category-banner{
+  position: relative;
+  display:flex;
+  background: white;
+  color: black;
+  height: 8vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  p {
+    margin-top:15px;
+    font-size: 25px;
+  }
+  img {
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+.home-map {
+  display: flex;
+  position: relative;
+  background-size: cover;
+  height: 30vh;
+}
+
+.button-banner{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-self: center;
+  padding: 20px 100px 18px 100px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: arial;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #E95D83;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  // width: 150px;
+  a {
+    text-decoration:none;
+    color: white;
+  }
+}
+
+.button-banner:hover{
+ background: #e22f5f;
+}
+
+.button-banner:active{
+  transform: scale(1.025);
+}
+/// /// HOW IT WORK /// ///
+
+.howitwork {
+  display:flex;
+  position: relative;
+  background: #E95D83;
+  color: white;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/// /// JOIN COMMUNITY /// ///
+
+.join {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  height: 85vh;
+  color: white;
+  text-align: center;
+  p {
+    font-size: 25px;
+  }
+}
+
+
+
+.button-join{
+  position: relative;
+  align-self: center;
+  padding: 20px 100px 18px 100px;
+  font-family: arial;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #82EAC1;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  margin-top: 75px;
+  text-decoration: none;
+  a {
+    text-decoration:none;
+    color: white;
+  }
+}
+
+.button-join:hover{
+ background: #72d3ac;
+}
+
+.button-join:active{
+  transform: scale(1.025);
+}
+
+/// /// BLUE TRANSITION /// ///
+
+.blue-transition {
+  display:flex;
+  position: relative;
+  background: #72d3ac;
+  height: 10vh;
+  width: 100%;
+}
+
+/// /// START UPLOADING /// ///
+
+.start {
+  display:flex;
+  position: relative;
+  flex-direction: column;
+  color: black;
+  height: 74vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 25px
+  }
+}
+
+.video{
+  position: absolute;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: -100;
+}
+
+.button-start{
+  position: relative;
+  top: 150px;
+  align-self: center;
+  padding: 20px 100px 18px 100px;
+  font-family: arial;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #7560bc;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  margin-top: 75px;
+  text-decoration: none;
+  a {
+    text-decoration:none;
+    color: white;
+  }
+}
+
+.button-start:hover{
+ background: #684EB7;
+}
+
+.button-start:active{
+  transform: scale(1.025);
+}
+
+
+// OTHER ??? //
+.btn-home, .btn:hover, .btn-large:hover {
+  background-color: rgba(0, 255, 205, 0.5);
+  border-radius: 5px;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-home:hover, .btn:hover, .btn-large:hover {
+   background-color: rgba(0, 255, 205, 0.8);
+}
+
+.logo > h1 {
+  font-family: 'Damion', cursive;
+  font-size: 8em;
+}
+
+.class {
+  height: 300px;
+}
+
+
+
+
+
+
+
