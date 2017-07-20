@@ -11,37 +11,45 @@
  /// /// LANDING HOMEPAGE /// ///
 
 .tag-line {
-  background: #F5BD4E;
-  height: 62vh;
+  // background: #F5BD4E;
+  height: 70vh;
   width: 100%;
   position: relative;
-  top: 0;
-  left: 0;
   text-align: center;
-  p {
-    font-size: 40px;
+  h3, p {
+    position: relative;
+    top: 20vh;
     font-weight: lighter;
-    color: white;
-    padding-top: 300px;
+    color: black;
+  }
+  p {
+    color: #c6c4c4;
   }
 }
 
+.home-logo {
+  position: relative;
+  top: 18vh;
+  img {
+    width: 60vh;
+  }
+}
 .category-banner{
   position: relative;
+  top: 9vh;
   display:flex;
-  background: white;
   color: black;
-  height: 8vh;
   width: 100%;
-  align-items: center;
   justify-content: space-around;
   p {
     margin-top:15px;
-    font-size: 25px;
+    font-size: 22px;
+    color: black;
   }
   img {
     margin-left: 15px;
     margin-bottom: 5px;
+    width: 5vh;
   }
 }
 
@@ -51,7 +59,8 @@
   align-content: center;
   justify-content: center;
   background-size: cover;
-  height: 30vh;
+  height: 28vh;
+  top: -30px;
 }
 
 .button-banner{
@@ -61,6 +70,7 @@
   align-self: center;
   padding: 20px 100px 18px 100px;
   color: rgba(255, 255, 255, 0.9);
+  border-color:#EE924A;
   font-family: arial;
   font-size: 18px;
   letter-spacing: 1px;
@@ -84,6 +94,15 @@
 
 .button-banner:active{
   transform: scale(1.025);
+}
+
+.home-city {
+  text-align: center;
+  margin-top: -2.5vh;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  font-size: 15px;
+  color: #c6c4c4;
 }
 /// /// HOW IT WORK /// ///
 

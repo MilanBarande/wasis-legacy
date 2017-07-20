@@ -1,6 +1,7 @@
 class WorkplacesController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
+  include ApplicationHelper
 
   def new
     @workplace = Workplace.new
@@ -21,8 +22,9 @@ class WorkplacesController < ApplicationController
         width:  45,
         height: 55
       })
-      marker.title "<a href=" + workplace_url(workplace) + ">" + workplace.name + "</a>"
+      marker.title workplace.id.to_s
     end
+    no_footer
   end
 
   def show

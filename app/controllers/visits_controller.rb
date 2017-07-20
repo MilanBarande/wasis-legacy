@@ -7,6 +7,7 @@ class VisitsController < ApplicationController
     @visit.workplace = @workplace
     @visit.checkin = true
     if @visit.save
+      @checkedin_visit = true
       respond_to do |format|
         format.html { redirect_to workplace_path(params[:workplace_id]) }
         format.js  # <-- will render `app/views/visits/create.js.erb`
@@ -24,6 +25,7 @@ class VisitsController < ApplicationController
     @workplace = Workplace.find(params[:workplace_id])
     @visit.checkin = false
     if @visit.save
+      @checkedin_visit = false
       respond_to do |format|
         format.html { redirect_to workplace_path(params[:workplace_id])}
         format.js  # <-- will render `app/views/visits/update.js.erb`

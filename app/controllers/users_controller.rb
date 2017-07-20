@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @review = Review.new
     @favourites = Favourite.where(user_id: @user.id)
     @workplaces = Workplace.where(user_id: @user.id)
+    @visits = Visit.where(user_id: @user.id)
   end
 
   def index
