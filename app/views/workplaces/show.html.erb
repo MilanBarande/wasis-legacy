@@ -1,7 +1,9 @@
 <div class="container workplace-show">
   <div class="container main">
     <h3><%= @workplace.name %></h3>
-    <% if @spot.opening_hours["open_now"] %>
+    <% if @spot.opening_hours.nil? %>
+    <div class="btn btn-info">Opening hours are not available for this place</div>
+    <% elsif @spot.opening_hours["open_now"] %>
     <div class="btn btn-success">OPEN NOW</div>
     <% else %>
     <div class="btn btn-danger">CLOSED NOW</div>
