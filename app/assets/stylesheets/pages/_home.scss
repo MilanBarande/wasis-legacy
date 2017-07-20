@@ -69,14 +69,14 @@
   justify-content: space-around;
   align-self: center;
   padding: 20px 100px 18px 100px;
-  color: rgba(255, 255, 255, 0.9);
-  border-color:#EE924A;
+  color: #FD8D34;
+  opacity: 0.6;
   font-family: arial;
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  background: #E95D83;
+  background: #fd8d34;
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
@@ -86,10 +86,12 @@
     text-decoration:none;
     color: white;
   }
+
 }
 
 .button-banner:hover{
- background: #e22f5f;
+ background: #fd8d34;
+ opacity: 0.9;
 }
 
 .button-banner:active{
@@ -147,7 +149,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  background: #82EAC1;
+  background: #fd8d34;
+  opacity: 0.6;
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
@@ -160,7 +163,8 @@
 }
 
 .button-join:hover{
- background: #72d3ac;
+ background: #fd8d34;
+ opacity: 0.9;
 }
 
 .button-join:active{
@@ -213,7 +217,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  background: #7560bc;
+  background: #fd8d34;
+  opacity: 0.6;
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
@@ -226,7 +231,8 @@
 }
 
 .button-start:hover{
- background: #684EB7;
+ background: #fd8d34;
+ opacity: 0.9;
 }
 
 .button-start:active{
