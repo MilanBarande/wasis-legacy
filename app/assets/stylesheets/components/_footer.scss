@@ -2,7 +2,7 @@
 body {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  // flex-direction: column;
 
 }
 
@@ -11,19 +11,28 @@ main {
 }
 
 .page-footer {
-    position: fixed;
+    position: relative;
     background-color: #EDA41E;
     color: white;
+    height: 15vh;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
 }
 
-.page-footer .footer-copyright {
+.footer-copyright {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
   background-color: rgba(51, 51, 51, 0.2);
 }
 
+.row {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
 .fa {
   color: white;
   font-size: 30px;
@@ -31,6 +40,33 @@ main {
   margin-right: 10px;
 }
 
+.fa-facebook:hover{
+  color: #425F9C;
+}
+
+.fa-twitter:hover {
+  color:#1DA1F2;
+}
+
 footer li {
   display: inline;
 }
+
+.find-us {
+  position: relative;
+  left: 20vh;
+  top: 1.5vh;
+}
+
+.disclaimer {
+  position: relative;
+  left: -21vh;
+  top: 1.5vh;
+  width: 55vh;
+}
+
+.social-logo {
+  padding: 0;
+  display: flex
+}
+

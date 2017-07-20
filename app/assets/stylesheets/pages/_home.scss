@@ -11,33 +11,40 @@
  /// /// LANDING HOMEPAGE /// ///
 
 .tag-line {
-  background: #F5BD4E;
-  height: 62vh;
+  // background: #F5BD4E;
+  height: 70vh;
   width: 100%;
   position: relative;
-  top: 0;
-  left: 0;
   text-align: center;
-  p {
-    font-size: 40px;
+  h3, p {
+    position: relative;
+    top: 21vh;
     font-weight: lighter;
-    color: white;
-    padding-top: 300px;
+    color: black;
+  }
+  p {
+    color: #c6c4c4;
   }
 }
 
+.home-logo {
+  position: relative;
+  top: 20vh;
+  img {
+    width: 60vh;
+  }
+}
 .category-banner{
   position: relative;
+  top: 5vh;
   display:flex;
-  background: white;
   color: black;
-  height: 8vh;
   width: 100%;
-  align-items: center;
   justify-content: space-around;
   p {
     margin-top:15px;
-    font-size: 25px;
+    font-size: 22px;
+    color: black;
   }
   img {
     margin-left: 15px;
