@@ -11,8 +11,13 @@ main {
 }
 
 .page-footer {
+    position: fixed;
     background-color: #EDA41E;
     color: white;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
 .page-footer .footer-copyright {
