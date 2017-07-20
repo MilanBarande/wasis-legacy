@@ -21,8 +21,9 @@ class WorkplacesController < ApplicationController
         width:  45,
         height: 55
       })
-      marker.title "<a href=" + workplace_url(workplace) + ">" + workplace.name + "</a>"
+      marker.title workplace.id.to_s
     end
+
   end
 
   def show
