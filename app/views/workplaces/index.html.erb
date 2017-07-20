@@ -1,19 +1,13 @@
-<ul>
-  <% @workplaces.each do |workplace| %>
-  <li><%= link_to workplace.name, workplace_path(workplace.id) %></li>
-  <% end %>
-</ul>
 
-<p>Filters:</p>
 
 <div class="filters-container">
   <div class="row">
     <div class="container">
       <% @features.each do |feature| %>
       <div class="col-sm-4">
-      <a href="" class="button-black">
-            <span class="text-12"><%= feature.name %></span>
-            <div><%= image_tag(feature.icon+"_small") %></div>
+        <a href="" class="button-black">
+          <span class="text-12"><%= feature.name %></span>
+          <div><%= image_tag(feature.icon+"_small") %></div>
         </a>
       </div>
       <% end %>
@@ -53,7 +47,9 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2c
       handleLocationError(false, infoWindow, map.getCenter());
     }
     var infowindow = new google.maps.InfoWindow();
+
     var marker, i;
+    var markers = [];
     for (i = 0; i < locations.length; i++) {
       var marker = new google.maps.Marker({
         position: locations[i],
@@ -66,12 +62,22 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2c
           infowindow.open(map, marker);
         }
       })(marker, i));
+      markers.push(marker);
     }
+  var markerCluster = new MarkerClusterer(map, markers,
+    {      });
   }
+
+
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
       'Error: The Geolocation service failed.' :
       'Error: Your browser doesn\'t support geolocation.');
   }
+</script>
+
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+
 </script>
