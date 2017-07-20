@@ -6,7 +6,9 @@
     </div>
     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 info-workplace">
       <div class="open-close">
-        <% if @spot.opening_hours["open_now"] %>
+        <% if @spot.opening_hours.nil? %>
+        <div>Opening hours are not available for this place.</div>
+        <% elsif @spot.opening_hours["open_now"] %>
         <div>OPEN NOW</div>
         <% else %>
         <div>CLOSED NOW</div>
@@ -30,7 +32,7 @@
           <%= @workplace.reviews %>
         </div>
         <% end %>
-      </div>
+     </div>
 
       <div id="checkin" class="btn btn-primary">
         <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
