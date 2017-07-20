@@ -6,7 +6,10 @@
     <% else %>
     <div class="btn btn-danger">CLOSED NOW</div>
     <% end %>
+
+
   </div>
+
 
   <div class="container details">
     <p><%= @workplace.address %></p>
@@ -16,13 +19,15 @@
     <% end %>
     </ul>
 
+    <div id="checkin" class="btn btn-primary">
+      <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+    </div>
+
     <div><%= image_tag(@workplace.photo) %></div>
 
     <div class="btn-workplace">
       <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
     </div>
-  </div>
 
-  <div id="checkin" class="btn btn-primary">
-    <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
-</div>
+
+  </div>
