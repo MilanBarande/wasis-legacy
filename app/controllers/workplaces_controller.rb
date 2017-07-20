@@ -1,6 +1,7 @@
 class WorkplacesController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
+  include ApplicationHelper
 
   def new
     @workplace = Workplace.new
@@ -23,7 +24,7 @@ class WorkplacesController < ApplicationController
       })
       marker.title workplace.id.to_s
     end
-
+    no_footer
   end
 
   def show
