@@ -16,9 +16,11 @@
     <% end %>
     </ul>
 
-    <div id="checkin" class="btn btn-primary">
-      <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
-    </div>
+    <% if @checkedin_visit == false || @visit.workplace == @workplace %>
+      <div id="checkin">
+          <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+      </div>
+    <% end %>
 
     <div><%= image_tag(@workplace.photo) %></div>
 
