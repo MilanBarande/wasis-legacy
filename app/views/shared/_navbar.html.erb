@@ -9,13 +9,11 @@
 
 
     <!-- Check-in toggle -->
-    <% if @checkedin_visit == true %>
-
-    <input type="checkbox" checked data-toggle="toggle" data-on="Checked-In" data-off="Checking-Out" data-onstyle="success" data-offstyle="danger" data-width="200">
-
-    <%= link_to "Checkout",[@workplace, @visit], class: "waves-effect waves-light btn" , :method => :put%>
-
-    <% end %>
+    <div id="checkin_navbar">
+      <% if @checkedin_visit == true %>
+        <%= render 'visits/checkin_navbar', visit: @visit, workplace: @workplace %>
+      <% end %>
+    </div>
 
     <!-- Search form -->
     <form action="" class="navbar-wagon-search">
