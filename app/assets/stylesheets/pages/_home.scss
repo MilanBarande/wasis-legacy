@@ -18,7 +18,7 @@
   text-align: center;
   h3, p {
     position: relative;
-    top: 21vh;
+    top: 20vh;
     font-weight: lighter;
     color: black;
   }
@@ -29,14 +29,14 @@
 
 .home-logo {
   position: relative;
-  top: 20vh;
+  top: 18vh;
   img {
     width: 60vh;
   }
 }
 .category-banner{
   position: relative;
-  top: 5vh;
+  top: 9vh;
   display:flex;
   color: black;
   width: 100%;
@@ -49,6 +49,7 @@
   img {
     margin-left: 15px;
     margin-bottom: 5px;
+    width: 5vh;
   }
 }
 
@@ -58,7 +59,8 @@
   align-content: center;
   justify-content: center;
   background-size: cover;
-  height: 30vh;
+  height: 28vh;
+  top: -30px;
 }
 
 .button-banner{
@@ -68,6 +70,7 @@
   align-self: center;
   padding: 20px 100px 18px 100px;
   color: rgba(255, 255, 255, 0.9);
+  border-color:#EE924A;
   font-family: arial;
   font-size: 18px;
   letter-spacing: 1px;
@@ -91,6 +94,15 @@
 
 .button-banner:active{
   transform: scale(1.025);
+}
+
+.home-city {
+  text-align: center;
+  margin-top: -2.5vh;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  font-size: 15px;
+  color: #c6c4c4;
 }
 /// /// HOW IT WORK /// ///
 
