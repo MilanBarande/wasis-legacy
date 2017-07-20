@@ -23,6 +23,7 @@ class WorkplacesController < ApplicationController
       })
       marker.title workplace.id.to_s
     end
+
   end
 
   def show
