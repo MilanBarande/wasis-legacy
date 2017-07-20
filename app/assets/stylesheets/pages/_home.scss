@@ -48,6 +48,8 @@
 .home-map {
   display: flex;
   position: relative;
+  align-content: center;
+  justify-content: center;
   background-size: cover;
   height: 30vh;
 }
