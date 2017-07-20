@@ -4,7 +4,22 @@
   <% end %>
 </ul>
 
+<p>Filters:</p>
 
+<div class="filters-container">
+  <div class="row">
+    <div class="container">
+      <% @features.each do |feature| %>
+      <div class="col-sm-4">
+      <a href="" class="button-black">
+            <span class="text-12"><%= feature.name %></span>
+            <div><%= image_tag(feature.icon+"_small") %></div>
+        </a>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <div id="map" style="width: 100%; height: 800px;"></div>
 

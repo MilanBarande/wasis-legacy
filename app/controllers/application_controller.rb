@@ -14,12 +14,9 @@ class ApplicationController < ActionController::Base
 
   def set_checkedin_visit
     @visit = Visit.where(user_id: current_user).last
-    @workplace = @visit.workplace
-    @user_ratings = []
-    Rating::DESCRIPTIONS.each do |description|
-      @user_ratings << Rating.new(description: description)
-    end
-    if @visit.checkin
+    if @visit&.checkin
+      @workplace = @visit.workplace
+      @review = Review.new
       @checkedin_visit = true
     else
       @checkedin_visit = false
