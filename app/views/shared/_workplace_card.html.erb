@@ -11,8 +11,8 @@
     <%= link_to "More Informations", workplace, class: "btn btn-primary" %>
   </div>
 
-  <div class="card-right">
-  <%= image_tag(workplace.photo, class: "image-small") %>
+  <div class="card-right image-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= workplace.photo %>);">
+  <%= image_tag(workplace.photo) %>
   <!-- THIS CLASS IS AFFECTED TO IMG BUT MOODIFYING ITS PROPERTIES DOESNT DO ANYTHING -->
   </div>
 
