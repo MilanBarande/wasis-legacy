@@ -1,28 +1,25 @@
 <div class="wrapper">
 
-  <div class="container">
-
+  <div class="container workplace-page">
     <div class="row">
-
+      <div class="col col-sm-12 col-md-12 col-lg-8 col-xl-8 ">
+        <div><%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn btn-workplace" %></div>
+      </div>
+      <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 open-close">
+        <% if @spot.opening_hours.nil? %>
+          <div>Opening hours are not available for this place.</div>
+        <% elsif @spot.opening_hours["open_now"] %>
+          <div>OPEN NOW</div>
+        <% else %>
+          <div>CLOSED NOW</div>
+        <% end %>
+      </div>
     </div>
+
     <div class="row workplace-info">
-      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 info-workplace">
-        <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
+      <div class="col col-sm-12 col-md-12 col-lg-8 col-xl-8 info-workplace">
         <div class ="workplace-photo">
           <%= image_tag(@workplace.photo) %>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
-        <div class="open-close">
-          <% if @spot.opening_hours.nil? %>
-          <div>Opening hours are not available for this place.</div>
-          <% elsif @spot.opening_hours["open_now"] %>
-          <div>OPEN NOW</div>
-          <% else %>
-          <div>CLOSED NOW</div>
-          <% end %>
-
         </div>
         <h3><%= @workplace.name %></h3>
         <h5><%= @workplace.address %></h5>
@@ -32,21 +29,27 @@
           <% end %>
           </ul>
         </div>
-        <div class="reviews">
-          <% if @workplace.reviews.nil? %>
-          <p>This place doesn't have any review yet. <br/>
-            Be the first one to add one :)
-          </p>
-          <% else %>
-          <div>
-            <%= @workplace.reviews %>
-          </div>
-          <% end %>
-       </div>
-        <div class="btn-workplace">
-          <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
-        </div>
+<!--          <div class="reviews">
+           <% if @workplace.reviews.nil? %>
+           <p>This place doesn't have any review yet. <br/>
+             Be the first one to add one :)
+           </p>
+           <%= link_to "Add a review", new_workplace_review_path %>
+           <% else %>
+             <%= @workplace.reviews %>
+           <% end %>
+        </div> -->
+      </div>
 
+      <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
+<!--          <div class="ratings">
+           <% if @workplace.reviews.nil? %>
+           <p>This place doesn't have any rating yet. <br/>
+
+           <% else %>
+             <%= @workplace.reviews %>
+           <% end %>
+        </div> -->
         <% if @checkedin_visit == false || @visit.workplace == @workplace %>
           <div id="checkin">
               <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
