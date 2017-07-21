@@ -3,7 +3,7 @@ Workplace.destroy_all
 Feature.destroy_all
 puts "Done."
 
-features = [{name: "Wifi", icon: "feature_icon_2"}, {name: "Large tables", icon:"feature_icon_4"}, {name:"Hot drinks", icon:"feature_icon_1"}, {name:"Cold drinks", icon:"feature_icon_3"}, {name:"Snacks", icon:"feature_icon_7"}, {name:"Meals", icon:"feature_icon_6"}, {name:"Electric outlets", icon:"feature_icon_5"}, {name:"Private rooms", icon:"feature_icon_8"}, {name:"Hourly rate", icon:"feature_icon_9"} ]
+features = [{name: "Wifi", icon: "feature_icon_2.png"}, {name: "Large tables", icon:"feature_icon_4.png"}, {name:"Hot drinks", icon:"feature_icon_1.png"}, {name:"Cold drinks", icon:"feature_icon_3.png"}, {name:"Snacks", icon:"feature_icon_7.png"}, {name:"Meals", icon:"feature_icon_6.png"}, {name:"Electric outlets", icon:"feature_icon_5.png"}, {name:"Private rooms", icon:"feature_icon_8.png"}, {name:"Hourly rate", icon:"feature_icon_9.png"} ]
 
 puts "Seeding the features..."
 features.each do |feature|
