@@ -1,11 +1,18 @@
 <div class="wrapper">
-  <div class="container-fluide workplace-show">
+
+  <div class="container">
+
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 info-workplace">
+
+    </div>
+    <div class="row workplace-info">
+      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 info-workplace">
         <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
-        <div><%= image_tag(@workplace.photo) %></div>
+        <div class ="workplace-photo">
+          <%= image_tag(@workplace.photo) %>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 info-workplace">
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
         <div class="open-close">
           <% if @spot.opening_hours.nil? %>
           <div>Opening hours are not available for this place.</div>
@@ -51,9 +58,11 @@
         <div id="map" style="width: 100%; height: 600px;"></div>
       </div>
     </div>
-
   </div>
+
+
 </div>
+
 
 <% content_for(:after_js) do %>
 <%= javascript_tag do %>
