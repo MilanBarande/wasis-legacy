@@ -14,12 +14,11 @@ class ApplicationController < ActionController::Base
 
   def set_checkedin_visit
     @visit = Visit.where(user_id: current_user).last
-    if @visit.checkin == true
+    if !@visit.nil? && @visit.checkin == true
       @workplace = @visit.workplace
       @review = Review.new
       @checkedin_visit = true
     else
-
       @checkedin_visit = false
     end
   end
