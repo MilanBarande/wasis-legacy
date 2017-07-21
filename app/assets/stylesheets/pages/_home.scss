@@ -16,7 +16,7 @@
   width: 100%;
   position: relative;
   text-align: center;
-  h3, p {
+  h2, h3, p {
     position: relative;
     top: 20vh;
     font-weight: lighter;
@@ -69,15 +69,14 @@
   justify-content: space-around;
   align-self: center;
   padding: 20px 100px 18px 100px;
-  color: rgba(255, 255, 255, 0.9);
-  border-color:#EE924A;
+  color: #FD8D34;
   font-family: arial;
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  background: #E95D83;
-  border-radius: 10px;
+  background: rgba(235, 135, 56, 0.6);
+  border-radius: 50px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   text-decoration: none;
@@ -85,11 +84,14 @@
   a {
     text-decoration:none;
     color: white;
+    opacity: 0.9;
   }
+
 }
 
 .button-banner:hover{
- background: #e22f5f;
+ background: #fd8d34;
+ opacity: 0.9;
 }
 
 .button-banner:active{
@@ -99,6 +101,7 @@
 .home-city {
   text-align: center;
   margin-top: -2.5vh;
+  margin-bottom: 6vh;
   padding-bottom: 1vh;
   padding-top: 1vh;
   font-size: 15px;
@@ -109,15 +112,50 @@
 .howitwork {
   display:flex;
   position: relative;
-  background: #E95D83;
+  flex-direction: column;
+  background-size: cover;
+  background-position: 0em -28em;
   color: white;
-  height: 40vh;
+  height: 56vh;
   width: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
+  h2 {
+    font-weight: bold;
+  }
 }
 
+.button-howitwork{
+  position: relative;
+  align-self: center;
+  padding: 20px 85px 18px 85px;
+  font-family: arial;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(235, 135, 56, 0.6);
+  border-radius: 50px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  margin-top: 75px;
+  text-decoration: none;
+  a {
+    text-decoration:none;
+    color: white;
+    opacity: 0.9;
+  }
+}
+
+.button-howitwork:hover{
+ background: #fd8d34;
+ opacity: 0.9;
+}
+
+.button-howitwork:active{
+  transform: scale(1.025);
+}
 /// /// JOIN COMMUNITY /// ///
 
 .join {
@@ -134,37 +172,6 @@
   p {
     font-size: 25px;
   }
-}
-
-
-
-.button-join{
-  position: relative;
-  align-self: center;
-  padding: 20px 100px 18px 100px;
-  font-family: arial;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  background: #82EAC1;
-  border-radius: 10px;
-  transition: all 0.1s ease-in-out;
-  cursor: pointer;
-  margin-top: 75px;
-  text-decoration: none;
-  a {
-    text-decoration:none;
-    color: white;
-  }
-}
-
-.button-join:hover{
- background: #72d3ac;
-}
-
-.button-join:active{
-  transform: scale(1.025);
 }
 
 /// /// BLUE TRANSITION /// ///
@@ -213,8 +220,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  background: #7560bc;
-  border-radius: 10px;
+  background: rgba(235, 135, 56, 0.6);
+  border-radius: 50px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   margin-top: 75px;
@@ -222,11 +229,13 @@
   a {
     text-decoration:none;
     color: white;
+    opacity: 0.9;
   }
 }
 
 .button-start:hover{
- background: #684EB7;
+ background: #fd8d34;
+ opacity: 0.9;
 }
 
 .button-start:active{
