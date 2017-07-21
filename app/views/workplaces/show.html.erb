@@ -1,26 +1,16 @@
-<div class="container-fluide workplace-show">
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 info-workplace">
-      <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
-      <div><%= image_tag(@workplace.photo) %></div>
+<div class="wrapper">
+
+  <div class="container">
+
+    <div class="row">
+
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 info-workplace">
-      <div class="open-close">
-        <% if @spot.opening_hours.nil? %>
-        <div>Opening hours are not available for this place.</div>
-        <% elsif @spot.opening_hours["open_now"] %>
-        <div>OPEN NOW</div>
-        <% else %>
-        <div>CLOSED NOW</div>
-        <% end %>
-      </div>
-      <h3><%= @workplace.name %></h3>
-      <h5><%= @workplace.address %></h5>
-      <div class="features">
-        <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
-          <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
-        <% end %>
-        </ul>
+    <div class="row workplace-info">
+      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 info-workplace">
+        <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
+        <div class ="workplace-photo">
+          <%= image_tag(@workplace.photo) %>
+        </div>
       </div>
       <div class="reviews">
         <% if @workplace.reviews.nil? %>
@@ -30,25 +20,59 @@
         <% else %>
         <div>
           <%= @workplace.reviews %>
+
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
+        <div class="open-close">
+          <% if @spot.opening_hours.nil? %>
+          <div>Opening hours are not available for this place.</div>
+          <% elsif @spot.opening_hours["open_now"] %>
+          <div>OPEN NOW</div>
+          <% else %>
+          <div>CLOSED NOW</div>
+          <% end %>
+
         </div>
+        <h3><%= @workplace.name %></h3>
+        <h5><%= @workplace.address %></h5>
+        <div class="features">
+          <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
+            <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
+          <% end %>
+          </ul>
+        </div>
+        <div class="reviews">
+          <% if @workplace.reviews.nil? %>
+          <p>This place doesn't have any review yet. <br/>
+            Be the first one to add one :)
+          </p>
+          <% else %>
+          <div>
+            <%= @workplace.reviews %>
+          </div>
+          <% end %>
+       </div>
+        <div class="btn-workplace">
+          <%= link_to "Back to workplaces", workplaces_path, class: "waves-effect waves-light btn" %>
+        </div>
+
+        <% if @checkedin_visit == false || @visit.workplace == @workplace %>
+          <div id="checkin">
+              <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+          </div>
         <% end %>
-     </div>
+      </div>
+    </div>
 
-      <% if @checkedin_visit == false || @visit.workplace == @workplace %>
-        <div id="checkin">
-            <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
-        </div>
-      <% end %>
+    <div class="row">
+      <div class="col">
+        <div id="map" style="width: 100%; height: 600px;"></div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col">
-      <div id="map" style="width: 100%; height: 600px;"></div>
-    </div>
-  </div>
 
 </div>
+
 
 <% content_for(:after_js) do %>
 <%= javascript_tag do %>

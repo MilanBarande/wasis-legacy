@@ -1,16 +1,9 @@
-<h3>Add a new review </h3>
-
-<%= simple_form_for [@workplace, @review] do |f| %>
-  <%= f.input :comment, maxlength: 480, size: 60 %>
-  <%= f.error_notification %>
-    <%= f.simple_fields_for :rating do |r| %>
-      <%= r.input :wifi, collection: 1..5 %>
-      <%= r.input :noise, collection: 1..5 %>
-      <%= r.input :comfort, collection: 1..5 %>
-      <%= r.input :service, collection: 1..5 %>
-    <% end %>
-
-    <div class="">
-      <%= f.submit "add a review", class: "btn btn-primary" %>
+<div class="wrapper wrapper-signin">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm6- col-sm-offset-3">
+        <%= render 'form' %>
+      </div>
     </div>
-<% end %>
+  </div>
+</div>

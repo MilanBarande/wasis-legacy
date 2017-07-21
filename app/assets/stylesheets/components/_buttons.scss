@@ -2,7 +2,39 @@
   color: white;
 }
 
+.button-black {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 50px;
+  border-radius: 50%;
+  opacity: 0.6;
+  color: rgb(20,20,20);
+  background: rgba(200,200,200,0.3);
+}
 
+.button-text {
+
+}
+
+.button-img {
+
+}
+
+.button-black:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: rgb(20,20,20);
+}
+
+a:focus {
+   text-decoration: none;
+   color: rgb(20,20,20);
+}
 
 .btn-more-info {
   width: 550px;
