@@ -1,4 +1,5 @@
 <div class="card" id="card_<%= workplace.id %>" style="width: 20rem;">
+<!-- PROBLEM WITH MODIFICATIONS TO THE CARD CLASS -->
 
   <div class="card-left">
     <h4 class="card-title"><%= workplace.name %></h4>
@@ -12,6 +13,7 @@
 
   <div class="card-right">
   <%= image_tag(workplace.photo, class: "image-small") %>
+  <!-- THIS CLASS IS AFFECTED TO IMG BUT MOODIFYING ITS PROPERTIES DOESNT DO ANYTHING -->
   </div>
 
 </div>
