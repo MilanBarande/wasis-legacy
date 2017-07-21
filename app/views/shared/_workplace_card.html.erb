@@ -1,19 +1,19 @@
-<div class="card" id="card_<%= workplace.id %>" style="width: 20rem;">
-<!-- PROBLEM WITH MODIFICATIONS TO THE CARD CLASS -->
+<div class="card" id="card_<%= workplace.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(<%= asset_path workplace.photo %>); background-size: cover; background-repeat: no-repeat;">
 
-  <div class="card-left">
-    <h4 class="card-title"><%= workplace.name %></h4>
-    <p class="card-text"><%= workplace.address %></p>
-    <ul class="list-unstyled"><% workplace.features.each do |feature| %>
-      <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
-      <% end %>
-    </ul>
-    <%= link_to "More Informations", workplace, class: "btn btn-primary" %>
-  </div>
+  <div class="card-content">
+    <div class="card-graphics">
+      <h3 class="card-title"><%= workplace.name %></h3>
+      <p class="card-text"><%= workplace.address %></p>
+    </div>
+    <div class="card-features-container">
 
-  <div class="card-right image-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= workplace.photo %>);">
-  <%= image_tag(workplace.photo) %>
-  <!-- THIS CLASS IS AFFECTED TO IMG BUT MOODIFYING ITS PROPERTIES DOESNT DO ANYTHING -->
+      <% workplace.features.each do |feature| %>
+      <div class="feature-desc">
+        <%= image_tag(feature.icon) %> <p><%= feature.name %></p>
+      </div>
+        <% end %>
+    </div>
+    <%= link_to "More Informations", workplace, class: "btn btn-primary btn-more-info" %>
   </div>
 
 </div>
