@@ -1,14 +1,17 @@
 <div class="card" id="card_<%= workplace.id %>" style="width: 20rem;">
 
-  <img class="card-img-top" src="..." alt="Card image cap">
-
-  <div class="card-block">
+  <div class="card-left">
     <h4 class="card-title"><%= workplace.name %></h4>
     <p class="card-text"><%= workplace.address %></p>
     <ul class="list-unstyled"><% workplace.features.each do |feature| %>
       <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
-    <% end %>
+      <% end %>
     </ul>
     <%= link_to "More Informations", workplace, class: "btn btn-primary" %>
   </div>
+
+  <div class="card-right">
+  <%= image_tag(workplace.photo, class: "image-small") %>
+  </div>
+
 </div>

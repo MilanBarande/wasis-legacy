@@ -6,6 +6,7 @@
   width: 90px;
   height: 90px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 5px;
@@ -16,6 +17,13 @@
   background: rgba(200,200,200,0.3);
 }
 
+.button-text {
+
+}
+
+.button-img {
+
+}
 
 .button-black:hover {
   opacity: 1;
