@@ -149,18 +149,19 @@
   :first-child {
     flex: 1 0 auto;
     padding-right: 5px;
-    margin-top: 5px;
+    margin-top: 6px;
   }
   :first-child a{
   text-decoration: none;
+  font-weight: bold;
   color: #F9C143;
   }
   :first-child a:hover{
   color: #FD8D34;
   }
   :last-child a{
-    padding-right: 15px;
-    font-weight: bold;
+    padding-right: 18px;
+
   }
 }
 
