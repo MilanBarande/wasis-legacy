@@ -1,27 +1,32 @@
 
-
-<div class="filters-container">
-  <div class="row">
-    <div class="container">
+<div class="index-content">
+  <div class="side-container">
+    <div class="filters-container">
       <% @features.each do |feature| %>
-      <div class="col-sm-4">
-        <a href="" class="button-black">
-          <span class="text-12"><%= feature.name %></span>
-          <div><%= image_tag(feature.icon+"_small") %></div>
-        </a>
-      </div>
+      <a href="" class="button-black">
+        <span class="text-12"><%= feature.name %></span>
+        <div><%= image_tag(feature.icon+"_small") %></div>
+      </a>
+      <% end %>
+    </div>
+    <div class="card-container">
+      <% @workplaces.each do |workplace| %>
+      <%= render 'shared/workplace_card', workplace: workplace %>
       <% end %>
     </div>
   </div>
+  <div id="map" style="width: 100%; height: 100vh;"></div>
 </div>
 
-<div id="map" style="width: 100%; height: 800px;"></div>
-
-
-
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A&callback=initMap">
+<% content_for(:after_js) do %>
+<script>
+  $( document ).ready(function() {
+    $(".card-container .card").hide();
+  });
 </script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A&callback=initMap"></script>
 <script type="text/javascript">
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -46,7 +51,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2c
     } else {
       handleLocationError(false, infoWindow, map.getCenter());
     }
-    var infowindow = new google.maps.InfoWindow();
+
 
     var marker, i;
     var markers = [];
@@ -58,14 +63,17 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2c
       });
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
+          $(".card-container .card").hide();
+          var card_selector = "#card_" + locations[i]["marker_title"];
+          console.log(card_selector);
+          $(card_selector).show();
           infowindow.setContent(locations[i]["marker_title"]);
           infowindow.open(map, marker);
         }
       })(marker, i));
       markers.push(marker);
     }
-  var markerCluster = new MarkerClusterer(map, markers,
-    {      });
+    var markerCluster = new MarkerClusterer(map, markers, {      });
   }
 
 
@@ -76,8 +84,5 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2c
       'Error: Your browser doesn\'t support geolocation.');
   }
 </script>
+<% end %>
 
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-</script>
-
-</script>

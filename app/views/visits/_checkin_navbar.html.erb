@@ -1,0 +1,10 @@
+
+<div class="check-in">
+  <div>
+    <p>You checked-in at: <br/> <%= link_to @visit.workplace.name, workplace_path(@visit.workplace) %></p>
+  </div>
+  <div>
+    <%= link_to "Checkout",[@workplace, @visit], class: "btn navbar-wagon-button" , :method => :put, remote: true %>
+  </div>
+</div>
+
