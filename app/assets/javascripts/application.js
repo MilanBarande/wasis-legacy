@@ -3,5 +3,5 @@
 //= require bootstrap-sprockets
 //= require underscore
 //= require gmaps/google
-//= require_tree .
 //= require bootstrap-toggle
+//= require_tree .
