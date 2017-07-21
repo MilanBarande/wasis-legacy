@@ -1,17 +1,17 @@
 <!-- <p>Find me in app/views/pages/home.html.erb</p> -->
 <div id="home-page">
-  <!-- Landing hiomepage -->
+  <!-- Landing homepage -->
   <div class="tag-line">
     <div class="home-logo">
     <%= image_tag "logo.png" %></div>
-    <h3>Your favorites workplaces in town</h3>
+    <h2>Your favorites workplaces in town</h2>
     <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
     <div class="category-banner">
-      <p>Coworking Space<%= image_tag "type_coworking.png" %></p>
-      <p>Coffee<%= image_tag "type_coffee.png" %></p>
-      <p>Library<%= image_tag "type_library.png" %></p>
-      <p>Park<%= image_tag "type_park.png" %></p>
-      <p>Others<%= image_tag "type_others.png" %></p>
+      <h3>Coworking Space<%= image_tag "type_coworking.png" %></h3>
+      <h3>Coffee<%= image_tag "type_coffee.png" %></h3>
+      <h3>Library<%= image_tag "type_library.png" %></h3>
+      <h3>Park<%= image_tag "type_park.png" %></h3>
+      <h3>Others<%= image_tag "type_others.png" %></h3>
     </div>
   </div>
   <div class="home-map" style="background-image:url('<%= image_path 'map_home.png' %>');">
@@ -21,15 +21,16 @@
 </div>
 <div class="home-city"><p>Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom</p></div>
 <!--  How it work -->
-<div class="howitwork">
- <h4>There will be 3 card/explanation of how it work, ex: step 1, find a place near you 2, select filter to fulfill in the best way possible your work requirement in open workplace 3, log in/checkin to have access to blah blah blah</h4>
+<div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
+ <h2>We need space to be productive, we need places to go to be free.</h2>
+ <div class="button-howitwork">
+    <%= link_to "JOIN", workplaces_path %>
+  </div>
 </div>
 <!--  Join comminuty -->
 <div class="join" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
   <p>Come and join multiple nomad workers like you to find the best environment that will suit your need to work and join worker related to your domain</p>
-  <div class="button-join">
-    <%= link_to "JOIN", workplaces_path %>
-  </div>
+
 </div>
 <div class=blue-transition></div>
 <!-- Start uploading -->
