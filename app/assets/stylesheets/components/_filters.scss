@@ -24,19 +24,18 @@
 }
 
 .button-black {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
+  margin: 5px auto;
   opacity: 0.6;
   color: rgb(20,20,20);
   background: rgba(200,200,200,0.3);
   img {
-    width: 50px;
-    margin-top: 2rem;
+    width: 40px;
   }
 }
 

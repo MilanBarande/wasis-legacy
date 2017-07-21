@@ -3,12 +3,15 @@
   <div class="side-container">
 
 
-    <div class="filters-container">
+    <div class="container filters-container">
       <% @features.each do |feature| %>
+      <div class="col-xs-4">
       <a href="" class="button-black">
-        <div class="button-text"><p class="text-12"><%= feature.name %></p></div>
+        <div class="button-text"><p class="text-12"><%= feature.name %></p>
+        </div>
         <div class="button-img"><%= image_tag(feature.icon) %></div>
       </a>
+      </div>
       <% end %>
     </div>
 
