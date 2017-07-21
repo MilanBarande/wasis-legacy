@@ -34,6 +34,14 @@ libraries.each do |library|
 end
 puts "Done."
 
+puts "Seeding a coffee for testing..."
+  workplace = Workplace.create!(name: "Caravane Café", category: 2, address: '3506 Avenue Lacombe, Montréal, QC H3T 1X5', longitude: -73.6247049, latitude: 45.4972885, photo: "caravane.jpg")
+  3.times do
+    Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
+  end
+puts "Done."
+
+
 # response = RestClient.get "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{coworking.photos.first.photo_reference
 # }&key=#{ENV['GOOGLE_PLACE_API']}"
 

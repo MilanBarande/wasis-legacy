@@ -12,6 +12,15 @@
           <%= image_tag(@workplace.photo) %>
         </div>
       </div>
+      <div class="reviews">
+        <% if @workplace.reviews.nil? %>
+        <p>This place doesn't have any review yet. <br/>
+          Be the first one to add one :)
+        </p>
+        <% else %>
+        <div>
+          <%= @workplace.reviews %>
+
       <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
         <div class="open-close">
           <% if @spot.opening_hours.nil? %>
@@ -21,6 +30,7 @@
           <% else %>
           <div>CLOSED NOW</div>
           <% end %>
+
         </div>
         <h3><%= @workplace.name %></h3>
         <h5><%= @workplace.address %></h5>
