@@ -26,9 +26,9 @@ gem 'pg_search'
 
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 
-#source 'https://rails-assets.org' do
-#  gem 'rails-assets-underscore'
-#end
+source 'https://rails-assets.org' do
+  gem 'rails-assets-underscore'
+end
 
 group :production do
   gem 'rails_12factor'
