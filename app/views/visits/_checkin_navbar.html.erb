@@ -1,7 +1,10 @@
 
-
 <div container>
-<div><%= link_to @visit.workplace.name, workplace_path(@visit.workplace) %>
-<%= link_to "Checkout",[@workplace, @visit], class: "btn btn-danger" , :method => :put, remote: true %></div>
+  <div>
+    <p>You checked in at <%= link_to @visit.workplace.name, workplace_path(@visit.workplace) %></p>
+  </div>
+  <div>
+    <%= link_to "Checkout",[@workplace, @visit], class: "btn btn-danger" , :method => :put, remote: true %>
+  </div>
 </div>
 
