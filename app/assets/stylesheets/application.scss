@@ -16,30 +16,3 @@
 @import "bootstrap-toggle";
 
 
-.index-content {
-    display: flex;
-    width: 100%;
-}
-
-.filters-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
-    width: 550px;
-    justify-content: space-around;
-    position: relative;
-    padding: 2em;
-    background: #fff;
-    position: relative;
-    left: 55px;
-    margin-top: 85px;
-}
-
-.side-container {
-  height: 100vh;
-  width: 200px;
-  background-color: transparent;
-  position: absolute;
-  z-index: 99;
-  }
-
