@@ -4,8 +4,8 @@
     <div class="filters-container">
       <% @features.each do |feature| %>
       <a href="" class="button-black">
-        <span class="text-12"><%= feature.name %></span>
-        <div><%= image_tag(feature.icon+"_small") %></div>
+        <div class="button-text"><span class="text-12"><%= feature.name %></span></div>
+        <div class="button-img"><%= image_tag(feature.icon+"_small") %></div>
       </a>
       <% end %>
     </div>

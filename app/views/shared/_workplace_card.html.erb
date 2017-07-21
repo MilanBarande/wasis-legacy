@@ -1,14 +1,19 @@
 <div class="card" id="card_<%= workplace.id %>" style="width: 20rem;">
+<!-- PROBLEM WITH MODIFICATIONS TO THE CARD CLASS -->
 
-  <img class="card-img-top" src="..." alt="Card image cap">
-
-  <div class="card-block">
+  <div class="card-left">
     <h4 class="card-title"><%= workplace.name %></h4>
     <p class="card-text"><%= workplace.address %></p>
     <ul class="list-unstyled"><% workplace.features.each do |feature| %>
       <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
-    <% end %>
+      <% end %>
     </ul>
     <%= link_to "More Informations", workplace, class: "btn btn-primary" %>
   </div>
+
+  <div class="card-right image-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= workplace.photo %>);">
+  <%= image_tag(workplace.photo) %>
+  <!-- THIS CLASS IS AFFECTED TO IMG BUT MOODIFYING ITS PROPERTIES DOESNT DO ANYTHING -->
+  </div>
+
 </div>
