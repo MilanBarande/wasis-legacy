@@ -1,6 +1,8 @@
 <!-- <p>Find me in app/views/pages/home.html.erb</p> -->
 <div id="home-page">
+
   <!-- Landing homepage -->
+
   <div class="tag-line">
     <div class="home-logo">
     <%= image_tag "logo.png" %></div>
@@ -20,29 +22,41 @@
   </div>
 </div>
 <div class="home-city"><p>Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom</p></div>
-<!--  How it work -->
+
+<!--  explanation -->
+
 <div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
  <h2>We need space to be productive, we need places to go to be free.</h2>
- <div class="button-howitwork">
+</div>
+<div class=button-transition>
+<div class="button-howitwork">
     <%= link_to "JOIN", workplaces_path %>
   </div>
 </div>
-<!--  Join comminuty -->
-<div class="join" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
-  <p>Come and join multiple nomad workers like you to find the best environment that will suit your need to work and join worker related to your domain</p>
 
+<!-- box to insist user to add places -->
+
+<div class="add-places">
+  <div class="box-placeholder"></div>
+  <div class="box-placeholder"></div>
+  <div class="box-placeholder"></div>
 </div>
-<div class=blue-transition></div>
+
+<div class="add-places-2">
+  <p class="add-places-p">ADD YOUR FAVOURITE PLACE AND BLAH BLAH BLAH</p>
+  <div class="button-howitwork">
+    <%= link_to "START", workplaces_path %>
+  </div>
+</div>
+<!--  Join comminuty -->
+
 <!-- Start uploading -->
+
 <div class="start">
   <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
   <div>
-    <p>Help the community by adding workplaces around you!</p>
+    <h2>Help the community by adding workplaces around you!</h2>
   </div>
-  <div class="button-start">
-    <%= link_to "START", workplaces_path %>
-  </div>
-
 </div>
 
 

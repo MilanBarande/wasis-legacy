@@ -106,7 +106,7 @@
   font-size: 15px;
   color: #c6c4c4;
 }
-/// /// HOW IT WORK /// ///
+/// /// EXPLANATION /// ///
 
 .howitwork {
   display:flex;
@@ -126,7 +126,6 @@
 }
 
 .button-howitwork{
-  position: relative;
   align-self: center;
   padding: 20px 85px 18px 85px;
   font-family: arial;
@@ -138,7 +137,7 @@
   border-radius: 50px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
-  margin-top: 75px;
+  // margin-top: 75px;
   text-decoration: none;
   a {
     text-decoration:none;
@@ -155,48 +154,64 @@
 .button-howitwork:active{
   transform: scale(1.025);
 }
-/// /// JOIN COMMUNITY /// ///
 
-.join {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-size: cover;
-  height: 85vh;
-  color: white;
-  text-align: center;
-  p {
-    font-size: 25px;
-  }
-}
-
-/// /// BLUE TRANSITION /// ///
-
-.blue-transition {
+.button-transition {
   display:flex;
-  position: relative;
-  background: #72d3ac;
-  height: 10vh;
+  justify-content: center;
+  background: white;
+  height: 25vh;
   width: 100%;
 }
+
+/// /// ADD PLACES /// ///
+
+.add-places {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  height: 60vh;
+}
+
+.box-placeholder {
+  height: 40vh;
+  width: 20em;
+  background-color: black
+}
+
+.add-places-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 50vh;
+}
+
+.add-places-p {
+  font-weight: 700;
+  font-size: 50px;
+  color: #c6c4c4;
+}
+
 
 /// /// START UPLOADING /// ///
 
 .start {
   display:flex;
-  position: relative;
-  flex-direction: column;
+  // position: relative;
+  // flex-direction: column;
   color: black;
   height: 74vh;
   width: 100%;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
-  p {
+  h2 {
+    position: relative;
+    font-weight: 700;
+  font-size: 50px;
+    top: 30vh;
     color: white;
-    font-size: 40px;
     margin-bottom: 25px
   }
 }
@@ -208,39 +223,6 @@
     background-size: cover;
     z-index: -100;
 }
-
-.button-start{
-  position: relative;
-  top: 150px;
-  align-self: center;
-  padding: 20px 100px 18px 100px;
-  font-family: arial;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  background: rgba(235, 135, 56, 0.6);
-  border-radius: 50px;
-  transition: all 0.1s ease-in-out;
-  cursor: pointer;
-  margin-top: 75px;
-  text-decoration: none;
-  a {
-    text-decoration:none;
-    color: white;
-    opacity: 0.9;
-  }
-}
-
-.button-start:hover{
- background: #fd8d34;
- opacity: 0.9;
-}
-
-.button-start:active{
-  transform: scale(1.025);
-}
-
 
 // OTHER ??? //
 // .btn-home, .btn:hover, .btn-large:hover {
