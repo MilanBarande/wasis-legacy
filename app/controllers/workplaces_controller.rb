@@ -20,7 +20,7 @@ class WorkplacesController < ApplicationController
       marker.picture({
         url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}.png"),
         width:  45,
-        height: 55
+        height: 57
       })
       marker.title workplace.id.to_s
     end
