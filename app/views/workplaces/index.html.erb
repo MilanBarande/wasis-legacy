@@ -67,13 +67,12 @@
       var marker = new google.maps.Marker({
         position: locations[i],
         icon: locations[i]["picture"],
-        map: map
+        map: map,
       });
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           $(".card-container .card").hide();
           var card_selector = "#card_" + locations[i]["marker_title"];
-          console.log(card_selector);
           $(card_selector).show();
           infowindow.setContent(locations[i]["marker_title"]);
           infowindow.open(map, marker);

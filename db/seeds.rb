@@ -15,6 +15,7 @@ puts "Done."
 
 coworkings = @client.spots_by_query("coworking montreal")
 libraries = @client.spots_by_query("library montral")
+coffees = @client.spots_by_query("coffee montreal workplace") + @client.spots_by_query("coffee montreal students")
 
 puts "Seeding coworking places..."
 coworkings.each do |coworking|
@@ -34,13 +35,14 @@ libraries.each do |library|
 end
 puts "Done."
 
-puts "Seeding a coffee for testing..."
-  workplace = Workplace.create!(name: "Caravane Café", category: 2, address: '3506 Avenue Lacombe, Montréal, QC H3T 1X5', longitude: -73.6247049, latitude: 45.4972885, photo: "caravane.jpg")
+puts "Seeding coffees..."
+coffees.each do |coffee|
+  workplace = Workplace.create!(google_id: coffee.place_id, name: coffee.name, category: 2, address: coffee.formatted_address, longitude: coffee.lng, latitude: coffee.lat, photo: "caravane.jpg")
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
-puts "Done."
-
+end
+puts "Done"
 
 # response = RestClient.get "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{coworking.photos.first.photo_reference
 # }&key=#{ENV['GOOGLE_PLACE_API']}"
