@@ -23,6 +23,11 @@ gem 'coffee-rails'
 gem 'gmaps4rails'
 gem 'bootstrap-toggle-rails'
 gem 'pg_search'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+gem "geocoder"
+
+
 
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 
