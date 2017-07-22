@@ -7,11 +7,6 @@
 
   <%= f.input :address, placeholder: 'Address' %>
 
-<!-- HOW TO GET GEOLOC FROM ADDRESS ENTERED AND STORE IT IN THE MODEL INSTANCE ?
-https://developers.google.com/maps/documentation/javascript/geocoding
--->
-
-
   <%= f.input :features, as: :check_boxes,
   collection: ["Wifi", "Hot drinks", "Cold drinks", "Large tables", "Snacks", "Meals", "Electric outlets", "Private rooms", "Hourly rate"] %>
 
@@ -21,6 +16,8 @@ https://developers.google.com/maps/documentation/javascript/geocoding
   <%= f.input :photo %>
 
   <%= f.input :photo_cache, as: :hidden %>
+
+  <!-- COMMENT FAIRE UN CALLBACK A GOOGLE PLACES POUR OBTENIR LE GOOGLE ID DE L'ADDRESSE ENTREE ? -->
 
   <%= f.button :submit %>
   <% end %>
