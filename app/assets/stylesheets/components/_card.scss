@@ -15,11 +15,14 @@
 }
 
 .card-container {
+  position: relative;
   width: 550px;
   height: 480px;
   position: relative;
   top: 45px;
   left: 55px;
+  background: white;
+  opacity: 0.5;
 }
 
 .card-graphics {
