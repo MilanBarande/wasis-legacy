@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    no_footer
   end
 
   # def create
@@ -24,6 +23,7 @@ class UsersController < ApplicationController
     @favourites = Favourite.where(user_id: @user.id)
     @workplaces = Workplace.where(user_id: @user.id)
     @visits = Visit.where(user_id: @user.id)
+
   end
 
   def index
