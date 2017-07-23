@@ -1,35 +1,38 @@
-<!-- <p>Find me in app/views/pages/home.html.erb</p> -->
+<!-- Home page screen -->
 <div id="home-page">
-
-  <!-- Landing homepage -->
-
-  <div class="tag-line">
+  <div class="home-banner">
     <div class="home-logo">
-    <%= image_tag "logo.png" %></div>
-    <h2>Your favorites workplaces in town</h2>
-    <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
-    <div class="category-banner">
-      <h3>Coworking Space<%= image_tag "type_coworking.png" %></h3>
-      <h3>Coffee<%= image_tag "type_coffee.png" %></h3>
-      <h3>Library<%= image_tag "type_library.png" %></h3>
-      <h3>Park<%= image_tag "type_park.png" %></h3>
-      <h3>Others<%= image_tag "type_others.png" %></h3>
+      <%= image_tag "wasis_home.png" %>
+      <h2>Your favorites workplaces in town</h2>
+      <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
+    </div>
+    <div class="home-category">
+      <ul>
+        <li><h3>Coworking Space</h3><%= image_tag "type_coworking.png" %></li>
+        <li><h3>Coffee</h3><%= image_tag "type_coffee.png" %></li>
+        <li><h3>Library</h3><%= image_tag "type_library.png" %></li>
+        <li><h3>Park</h3><%= image_tag "type_park.png" %></li>
+        <li><h3>Others</h3><%= image_tag "type_others.png" %></li>
+      </ul>
     </div>
   </div>
-  <div class="home-map" style="background-image:url('<%= image_path 'map_home.png' %>');">
-   <div class="button-banner">
-    <%= link_to "FIND", workplaces_path %>
+  <div class="home-map" style="background-image: linear-gradient(135deg, rgba(249,193,67,0.2) 0%,rgba(250,79,131,0.2) 33%,rgba(74,255,245,0.2) 100%), url('<%= image_path 'map_home.png' %>');">
+    <div class="button-banner">
+      <%= link_to workplaces_path do %>
+      <h4>FIND</h4>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="home-city"><p>Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom</p></div>
+  <div class="home-city">
+    <p> Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom </p>
+    </div>
 
-<!--  explanation -->
-
-<div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
- <h2>We need space to be productive, we need places to go to be free.</h2>
-</div>
-<div class=button-transition>
-<div class="button-howitwork">
+  <!--  Second section screen -->
+  <div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
+   <h2>We need space to be productive, we need places to go to be free.</h2>
+ </div>
+ <div class=button-transition>
+  <div class="button-howitwork">
     <%= link_to "JOIN", workplaces_path %>
   </div>
 </div>
