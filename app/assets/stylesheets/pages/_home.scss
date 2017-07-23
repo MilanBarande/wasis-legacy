@@ -107,18 +107,39 @@
   position: relative;
   display:flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   background-size: cover;
   background-position: bottom;
   margin-top: 8vh;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   height: 82vh;
   width: 100%;
-  align-items: center;
-  justify-content: center;
+
   text-align: center;
   h2 {
     font-weight: bold;
   }
+}
+.home-stats ul {
+  margin-top: 120px;
+  display: inline-flex;
+  font-size: 32px;
+  font-weight: bold;
+  list-style-type: none;
+    li {
+      padding-right: 30px;
+      padding-bottom: 30px;
+    }
+}
+
+.home-text-section {
+  height: 30vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 

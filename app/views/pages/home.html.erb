@@ -32,13 +32,23 @@
 
 <section class="home-page">
   <div class="howitwork" style="background-image: linear-gradient(135deg, rgba(255,255,255,0.5) 20%,rgba(246,239,248,0.5) 23%,rgba(152,83,179,0.31) 53%,rgba(150,88,181,0.3) 54%,rgba(86,229,235,0.2) 81%,rgba(74,255,245,0.2) 86%,rgba(255,255,255,0.4) 100%,rgba(255,255,255,0.4) 101%), url('<%= image_path 'join_community_photo.png' %>');">
-   <h2>Another quote on how productive it is <br/>
-    to work with  other people
-   </h2>
+    <div class = "home-stats">
+      <h2>Another quote on how productive it is <br/>
+       to work with  other people
+      </h2>
+      <ul>
+        <li>15 Cities</li>
+        <li>358 Worplaces</li>
+        <li>2870 Checkin</li>
+      </ul>
+    </div>
   </div>
-  <div class=button-transition>
-    <div class="button-howitwork">
-      <%= link_to "JOIN", workplaces_path %>
+
+  <div class="home-text-section">
+    <div class="button-banner">
+     <%= link_to new_user_registration_path do %>
+       <h4>JOIN</h4>
+       <% end %>
     </div>
   </div>
 </section>
