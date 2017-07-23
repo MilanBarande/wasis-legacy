@@ -1,5 +1,5 @@
 <!-- Home page screen -->
-<div id="home-page">
+<section class="home-page">
   <div class="home-banner">
     <div class="home-logo">
       <%= image_tag "wasis_home.png" %>
@@ -25,44 +25,48 @@
   </div>
   <div class="home-city">
     <p> Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom </p>
-    </div>
-
-  <!--  Second section screen -->
-  <div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
-   <h2>We need space to be productive, we need places to go to be free.</h2>
- </div>
- <div class=button-transition>
-  <div class="button-howitwork">
-    <%= link_to "JOIN", workplaces_path %>
   </div>
-</div>
+</section>
+
+<!--  Second section screen -->
+
+<section class="home-page">
+  <div class="howitwork" style="background-image: linear-gradient(135deg, rgba(255,255,255,0.5) 20%,rgba(246,239,248,0.5) 23%,rgba(152,83,179,0.31) 53%,rgba(150,88,181,0.3) 54%,rgba(86,229,235,0.2) 81%,rgba(74,255,245,0.2) 86%,rgba(255,255,255,0.4) 100%,rgba(255,255,255,0.4) 101%), url('<%= image_path 'join_community_photo.png' %>');">
+   <h2>Another quote on how productive it is <br/>
+    to work with  other people
+   </h2>
+  </div>
+  <div class=button-transition>
+    <div class="button-howitwork">
+      <%= link_to "JOIN", workplaces_path %>
+    </div>
+  </div>
+</section>
 
 <!-- box to insist user to add places -->
 
-<div class="add-places">
-  <div class="box-placeholder"></div>
-  <div class="box-placeholder"></div>
-  <div class="box-placeholder"></div>
-</div>
-
-<div class="add-places-2">
-  <p class="add-places-p">ADD YOUR FAVOURITE PLACE AND BLAH BLAH BLAH</p>
-  <div class="button-howitwork">
-    <%= link_to "START", workplaces_path %>
+<section class="home-page">
+  <div class="add-places">
+    <div class="box-placeholder"></div>
+    <div class="box-placeholder"></div>
+    <div class="box-placeholder"></div>
   </div>
-</div>
-<!--  Join comminuty -->
 
-<!-- Start uploading -->
-
-<div class="start">
-  <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-  <div>
-    <h2>Help the community by adding workplaces around you!</h2>
+  <div class="add-places-2">
+    <p class="add-places-p">ADD YOUR FAVOURITE PLACE AND BLAH BLAH BLAH</p>
+    <div class="button-howitwork">
+      <%= link_to "START", workplaces_path %>
+    </div>
   </div>
-</div>
+  <!--  Join comminuty -->
 
+  <!-- Start uploading -->
 
-</div>
-
+  <div class="start">
+    <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+    <div>
+      <h2>Help the community by adding workplaces around you!</h2>
+    </div>
+  </div>
+</section>
 
