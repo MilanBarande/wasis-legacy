@@ -1,65 +1,80 @@
-<!-- <p>Find me in app/views/pages/home.html.erb</p> -->
-<div id="home-page">
-
-  <!-- Landing homepage -->
-
-  <div class="tag-line">
+<!-- Home page screen -->
+<section class="home-page">
+  <div class="home-banner">
     <div class="home-logo">
-    <%= image_tag "logo.png" %></div>
-    <h2>Your favorites workplaces in town</h2>
-    <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
-    <div class="category-banner">
-      <h3>Coworking Space<%= image_tag "type_coworking.png" %></h3>
-      <h3>Coffee<%= image_tag "type_coffee.png" %></h3>
-      <h3>Library<%= image_tag "type_library.png" %></h3>
-      <h3>Park<%= image_tag "type_park.png" %></h3>
-      <h3>Others<%= image_tag "type_others.png" %></h3>
+      <%= image_tag "wasis_home.png" %>
+      <h2>Your favorites workplaces in town</h2>
+      <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
+    </div>
+    <div class="home-category">
+      <ul>
+        <li><h3>Coworking Space</h3><%= image_tag "type_coworking.png" %></li>
+        <li><h3>Coffee</h3><%= image_tag "type_coffee.png" %></li>
+        <li><h3>Library</h3><%= image_tag "type_library.png" %></li>
+        <li><h3>Park</h3><%= image_tag "type_park.png" %></li>
+        <li><h3>Others</h3><%= image_tag "type_others.png" %></li>
+      </ul>
     </div>
   </div>
-  <div class="home-map" style="background-image:url('<%= image_path 'map_home.png' %>');">
-   <div class="button-banner">
-    <%= link_to "FIND", workplaces_path %>
+  <div class="home-map" style="background-image: linear-gradient(135deg, rgba(249,193,67,0.2) 0%,rgba(250,79,131,0.2) 33%,rgba(74,255,245,0.2) 100%), url('<%= image_path 'map_home.png' %>');">
+    <div class="button-banner">
+      <%= link_to workplaces_path do %>
+      <h4>FIND</h4>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="home-city"><p>Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom</p></div>
-
-<!--  explanation -->
-
-<div class="howitwork" style="background-image:url('<%= image_path 'join_community_photo.png' %>');">
- <h2>We need space to be productive, we need places to go to be free.</h2>
-</div>
-<div class=button-transition>
-<div class="button-howitwork">
-    <%= link_to "JOIN", workplaces_path %>
+  <div class="home-city">
+    <p> Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom </p>
   </div>
-</div>
+</section>
+
+<!--  Second section screen -->
+
+<section >
+  <div class="howitwork" style="background-image: linear-gradient(135deg, rgba(255,255,255,0.5) 20%,rgba(246,239,248,0.5) 23%,rgba(152,83,179,0.31) 53%,rgba(150,88,181,0.3) 54%,rgba(86,229,235,0.2) 81%,rgba(74,255,245,0.2) 86%,rgba(255,255,255,0.4) 100%,rgba(255,255,255,0.4) 101%), url('<%= image_path 'join_community_photo.png' %>');">
+    <div class = "home-stats">
+      <h2>Another quote on how productive it is <br/>
+       to work with  other people
+       </h2>
+       <ul>
+        <li>15 Cities</li>
+        <li>358 Worplaces</li>
+        <li>2870 Checkin</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="home-text-section">
+    <div class="home-how">
+      <div class="box-placeholder"></div>
+      <div class="box-placeholder"></div>
+      <div class="box-placeholder"></div>
+    </div>
+    <div class="button-banner">
+     <%= link_to new_user_registration_path do %>
+     <h4>JOIN</h4>
+     <% end %>
+   </div>
+  </div>
+</section>
 
 <!-- box to insist user to add places -->
 
-<div class="add-places">
-  <div class="box-placeholder"></div>
-  <div class="box-placeholder"></div>
-  <div class="box-placeholder"></div>
-</div>
+<section class="home-page">
 
-<div class="add-places-2">
-  <p class="add-places-p">ADD YOUR FAVOURITE PLACE AND BLAH BLAH BLAH</p>
-  <div class="button-howitwork">
-    <%= link_to "START", workplaces_path %>
+  <!-- Start uploading -->
+
+  <div class="howitwork">
+    <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+    <div>
+      <h2>Help the community by adding workplaces around you!</h2>
+    </div>
+
+     <div class="button-banner">
+      <%= link_to new_workplace_path do %>
+      <h4>START</h4>
+      <% end %>
+    </div>
   </div>
-</div>
-<!--  Join comminuty -->
-
-<!-- Start uploading -->
-
-<div class="start">
-  <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-  <div>
-    <h2>Help the community by adding workplaces around you!</h2>
-  </div>
-</div>
-
-
-</div>
-
+</section>
 
