@@ -7,11 +7,20 @@
       </div>
       <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 open-close">
         <% if @spot.opening_hours.nil? %>
-          <div>Opening hours are not available for this place.</div>
+        <div class="led-box">
+          <div class="led-yellow"></div>
+          <p>Opening hours are not available for this place.</p>
+        </div>
         <% elsif @spot.opening_hours["open_now"] %>
-          <div>OPEN NOW</div>
+        <div class="led-box">
+          <div class="led-green"></div>
+          <p>OPEN NOW</p>
+        </div>
         <% else %>
-          <div>CLOSED NOW</div>
+        <div class="led-box">
+          <div class="led-red"></div>
+          <p>CLOSED NOW</p>
+        </div>
         <% end %>
       </div>
     </div>
@@ -26,7 +35,7 @@
         <div class="features">
           <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
             <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
-          <% end %>
+            <% end %>
           </ul>
         </div>
 <!--          <div class="reviews">
@@ -38,10 +47,10 @@
            <% else %>
              <%= @workplace.reviews %>
            <% end %>
-        </div> -->
-      </div>
+         </div> -->
+       </div>
 
-      <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
+       <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 info-workplace">
 <!--          <div class="ratings">
            <% if @workplace.reviews.nil? %>
            <p>This place doesn't have any rating yet. <br/>
@@ -49,11 +58,11 @@
            <% else %>
              <%= @workplace.reviews %>
            <% end %>
-        </div> -->
-        <% if @checkedin_visit == false || @visit.workplace == @workplace %>
-          <div id="checkin">
-              <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
-          </div>
+         </div> -->
+         <% if @checkedin_visit == false || @visit.workplace == @workplace %>
+         <div id="checkin">
+          <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+        </div>
         <% end %>
       </div>
     </div>
