@@ -1,6 +1,7 @@
 class VisitsController < ApplicationController
 
   def create
+
     @visit = Visit.new
     @workplace = Workplace.find(params[:workplace_id])
     @visit.user = current_user
@@ -21,6 +22,7 @@ class VisitsController < ApplicationController
   end
 
   def update
+
     @visit = Visit.find(params[:id])
     @workplace = Workplace.find(params[:workplace_id])
     @visit.checkin = false

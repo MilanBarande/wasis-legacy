@@ -13,6 +13,11 @@
   <%= render 'shared/flashes' %>
   <%= render 'shared/navbar' %>
   <%= yield %>
+  <% unless @workplace.nil? %>
+     <%= render 'shared/modal_review', locals: { workplace: @workplace,review: @review } %>
+  <% end %>
+
+
   <%= render 'shared/footer' unless @hide_footer %>
   <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
   <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>

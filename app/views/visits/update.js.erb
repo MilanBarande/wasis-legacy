@@ -1,8 +1,11 @@
 // Here you will write *javascript* that would be executed by the browser
+
 <% if @visit.errors.any? %>
   // Render new review form with errors
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
 <% else %>
+  //$(".modal-backdrop").remove();
+  $('#reviews').modal("show");
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
   $('#checkin_navbar').html("");
 <% end %>

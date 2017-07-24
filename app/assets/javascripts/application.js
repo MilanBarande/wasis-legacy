@@ -5,3 +5,6 @@
 //= require gmaps/google
 //= require bootstrap-toggle
 //= require_tree .
+$('#form_id').on('submit', function() {
+  $('#reviews').modal('hide');
+});
