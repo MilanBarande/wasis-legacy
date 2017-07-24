@@ -26,6 +26,16 @@ class WorkplacesController < ApplicationController
   def index
     @features = Feature.all
     @workplaces = Workplace.where.not(latitude: nil, longitude: nil)
+    if params["features"]
+      @feature_ids = []
+      params["features"].each do |key, value|
+        @feature_ids << value
+      end
+      @feature_ids.each do |feature_id|
+        @workplaces = @workplaces.select { |w| w.features.include?(Feature.find(feature_id))}
+      end
+    end
+    # @workplaces = @workplaces.includes(:workplacefeatures).where({workplacefeatures: {feature: Feature.find(params[])}})
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
       marker.lng workplace.longitude
@@ -33,7 +43,7 @@ class WorkplacesController < ApplicationController
         url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}.png"),
         width:  45,
         height: 57
-      })
+        })
       marker.title workplace.id.to_s
     end
     no_footer

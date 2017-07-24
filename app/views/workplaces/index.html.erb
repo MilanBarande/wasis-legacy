@@ -6,13 +6,30 @@
     <div class="container filters-container">
       <% @features.each do |feature| %>
       <div class="col-xs-4">
-      <a href="" class="button-black">
-        <div class="button-text"><p class="text-12"><%= feature.name %></p>
-        </div>
-        <div class="button-img"><%= image_tag(feature.icon) %></div>
-      </a>
+        <a href="" class="button-black" id="btn-<%= feature.name.downcase.tr(" ", "_") %>">
+          <div class="button-text"><p class="text-12"><%= feature.name %></p>
+          </div>
+          <div class="button-img"><%= image_tag(feature.icon) %></div>
+        </a>
       </div>
       <% end %>
+
+      <!-- FILTERING FORM -->
+
+      <%= form_tag "/workplaces", method: "get" do %>
+      <%= check_box_tag('features[wifi]', Feature.find_by(name: "Wifi").id) %>
+      <%= check_box_tag('features[hot_drinks]', Feature.find_by(name: "Hot drinks").id) %>
+      <%= check_box_tag('features[cold_drinks]', Feature.find_by(name: "Cold drinks").id) %>
+      <%= check_box_tag('features[large_tables]', Feature.find_by(name: "Large tables").id) %>
+      <%= check_box_tag('features[hourly_rate]', Feature.find_by(name: "Hourly rate").id) %>
+      <%= check_box_tag('features[meals]', Feature.find_by(name: "Meals").id) %>
+      <%= check_box_tag('features[private_rooms]', Feature.find_by(name: "Private rooms").id) %>
+      <%= check_box_tag('features[snacks]', Feature.find_by(name: "Snacks").id) %>
+      <%= check_box_tag('features[electric_outlets]', Feature.find_by(name: "Electric outlets").id) %>
+      <%= submit_tag("Search") %>
+      <% end %>
+
+
     </div>
 
 
@@ -30,8 +47,17 @@
 <script>
   $( document ).ready(function() {
     $(".card-container .card").hide();
+    <% @features.each do |feature| %>
+    $("#btn-<%= feature.name.downcase.tr(" ", "_") %>").click(function (){
+      $("#features_<%= feature.name.downcase.tr(" ", "_") %>").prop("checked", !$("#features_<%= feature.name.downcase.tr(" ", "_") %>").prop("checked"));
+    });
+    <% end %>
+
   });
 </script>
+
+
+
 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A&callback=initMap"></script>
