@@ -1,4 +1,4 @@
-<div class="card" id="card_<%= workplace.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(<%= asset_path workplace.photo %>); background-size: cover; background-repeat: no-repeat;">
+<div class="card" id="card_<%= workplace.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(<%= cl_image_path workplace.photo unless workplace.photo.url.nil? %>); background-size: cover; background-repeat: no-repeat;">
 
   <div class="card-content">
     <div class="card-graphics">

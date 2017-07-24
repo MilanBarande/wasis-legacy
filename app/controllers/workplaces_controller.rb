@@ -5,11 +5,23 @@ class WorkplacesController < ApplicationController
 
   def new
     @workplace = Workplace.new
+    @features = Feature.all
     no_footer
   end
 
   def create
-    @workplace = Workplace.new(workplace_params)
+    binding.pry
+    @workplace = Workplace.create(workplace_params)
+    params[:workplace][:features].each do |id|
+      if Feature.exists?(id.to_i)
+        Workplacefeature.create!(workplace: @workplace, feature: Feature.find(id.to_i) )
+      end
+    end
+    if @workplace.save
+      redirect_to workplaces_path
+    else
+      render :new
+    end
   end
 
   def index
@@ -58,6 +70,6 @@ class WorkplacesController < ApplicationController
   end
 
   def workplace_params
-    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache)
+    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache, :features)
   end
 end
