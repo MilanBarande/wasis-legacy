@@ -1,20 +1,30 @@
 <h3>Add a new review </h3>
-
+<p><%= @workplace.name %></p>
 <%= simple_form_for [@workplace, @review] do |f| %>
   <%= f.input :comment, maxlength: 480, size: 60 %>
   <%= f.error_notification %>
     <%= f.simple_fields_for :rating do |r| %>
-      <%= r.input :wifi, collection: 1..5 %>
-      <%= r.input :noise, collection: 1..5 %>
-      <%= r.input :comfort, collection: 1..5 %>
-      <%= r.input :service, collection: 1..5 %>
+      <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
+      <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
     <% end %>
 
     <div class="">
-      <%= f.submit "add a review", class: "btn btn-primary" %>
+      <%= f.submit "Add a review", class: "btn btn-primary" %>
     </div>
 <% end %>
 
-
-
-
+<%= content_for(:after_js) do %>
+  <script>
+    $(document).on('ready', function(){
+    $('.feature-rating').rating({
+        size:'xs',
+        step: 1,
+        clearCaption: '',
+        starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
+        starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
+    });
+});
+</script>
+<% end %>

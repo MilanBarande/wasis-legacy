@@ -24,9 +24,10 @@ gem 'gmaps4rails'
 gem 'bootstrap-toggle-rails'
 gem 'pg_search'
 gem 'cloudinary'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave'
 gem "geocoder"
-
+gem 'mini_magick'
+gem 'fog-aws'
 
 
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
