@@ -17,7 +17,10 @@
       <div class="col-sx-12 col-sm-12 col-md-8 col-lg-8 user-activity text-center">
 
         <div class="tab-content" id="my-history">
-          <p>This is my history</p>
+          <p>Places visited:</p>
+          <%= @workplaces.each do |workplace| %>
+            <p><%= workplace.name %>, visited <%= workplace.visits.count %> times</p>
+          <% end %>
         </div>
 
 
@@ -34,12 +37,12 @@
              <p class="profile-name pink-text"><%= link_to favourite.workplace.name, favourite.workplace %></p>
              <p><%= link_to "Remove from my favorites", favourite_path(favourite.id), method: :delete %></p>
              <p class="text-16px">Reviews:</p>
-             <% favourite.workplace.reviews.each do |review| %>
+             <!-- <% favourite.workplace.reviews.each do |review| %>
              <ul class="list-unstyled">
                <li>Rating: <%= review.rating %> stars</li>
                <li>Content: <%= review.content %></li>
              </ul>
-             <% end %>
+             <% end %>-->
            </div>
          </div>
          <% end %>
