@@ -26,7 +26,7 @@
       <%= check_box_tag('features[private_rooms]', Feature.find_by(name: "Private rooms").id) %>
       <%= check_box_tag('features[snacks]', Feature.find_by(name: "Snacks").id) %>
       <%= check_box_tag('features[electric_outlets]', Feature.find_by(name: "Electric outlets").id) %>
-      <%= submit_tag("Search") %>
+      <%= submit_tag "Search", class: "btn btn-info filters-submit" %>
       <% end %>
 
 
