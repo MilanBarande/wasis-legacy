@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :workplacephotos
   has_many :favourites
   has_many :reviews
+  has_many :workplaces, through: :visits
 
 
   # Include default devise modules. Others available are:

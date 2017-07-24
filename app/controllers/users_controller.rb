@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :show]
+
   def new
     @user = User.new
   end
@@ -13,16 +15,15 @@ class UsersController < ApplicationController
   # end
 
   def edit
-    set_user
+
     # TODO
   end
 
   def show
-    set_user
     @review = Review.new
-    @favourites = Favourite.where(user_id: @user.id)
-    @workplaces = Workplace.where(user_id: @user.id)
-    @visits = Visit.where(user_id: @user.id)
+    @favourites = @user.favourites
+    @workplaces = @user.workplaces.distinct
+    @visits = @user.visits
   end
 
   def index
