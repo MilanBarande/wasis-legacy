@@ -17,10 +17,8 @@
     </div>
   </div>
   <div class="home-map" style="background-image: linear-gradient(135deg, rgba(249,193,67,0.2) 0%,rgba(250,79,131,0.2) 33%,rgba(74,255,245,0.2) 100%), url('<%= image_path 'map_home.png' %>');">
-    <div class="button-banner">
-      <%= link_to workplaces_path do %>
-      <h4>FIND</h4>
-      <% end %>
+    <div>
+      <%= link_to "FIND", workplaces_path, class: "button-banner" %>
     </div>
   </div>
   <div class="home-city">
