@@ -11,7 +11,9 @@
     <% end %>
 
     <div class="">
-      <%= f.submit "add a review", class: "btn btn-primary" %>
+      <%= f.submit "Add a review", class: "btn btn-primary" %>
+        <%= link_to "Checkout without a review",[@workplace, @visit], class: "btn btn-danger" , :method => :put, remote: true %>
+
     </div>
 <% end %>
 
