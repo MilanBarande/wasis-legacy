@@ -10,7 +10,6 @@ class WorkplacesController < ApplicationController
   end
 
   def create
-    binding.pry
     @workplace = Workplace.create(workplace_params)
     params[:workplace][:features].each do |id|
       if Feature.exists?(id.to_i)
