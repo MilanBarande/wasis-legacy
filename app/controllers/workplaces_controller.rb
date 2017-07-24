@@ -5,6 +5,7 @@ class WorkplacesController < ApplicationController
 
   def new
     @workplace = Workplace.new
+    no_footer
   end
 
   def create
@@ -57,6 +58,6 @@ class WorkplacesController < ApplicationController
   end
 
   def workplace_params
-    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude)
+    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache)
   end
 end
