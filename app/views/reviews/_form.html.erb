@@ -1,5 +1,5 @@
 <h3>Add a new review </h3>
-
+<p><%= @workplace.name %></p>
 <%= simple_form_for [@workplace, @review] do |f| %>
   <%= f.input :comment, maxlength: 480, size: 60 %>
   <%= f.error_notification %>
@@ -12,8 +12,6 @@
 
     <div class="">
       <%= f.submit "Add a review", class: "btn btn-primary" %>
-        <%= link_to "Checkout without a review",[@workplace, @visit], class: "btn btn-danger" , :method => :put, remote: true %>
-
     </div>
 <% end %>
 
