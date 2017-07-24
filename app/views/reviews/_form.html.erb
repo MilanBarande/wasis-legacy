@@ -4,10 +4,10 @@
   <%= f.input :comment, maxlength: 480, size: 60 %>
   <%= f.error_notification %>
     <%= f.simple_fields_for :rating do |r| %>
-      <%= r.input :wifi, collection: 1..5 %>
-      <%= r.input :noise, collection: 1..5 %>
-      <%= r.input :comfort, collection: 1..5 %>
-      <%= r.input :service, collection: 1..5 %>
+      <%= r.input :wifi, input_html: {class: "feature-rating"} %>
+      <%= r.input :noise, input_html: {class: "feature-rating"} %>
+      <%= r.input :comfort, input_html: {class: "feature-rating"} %>
+      <%= r.input :service,  input_html: {class: "feature-rating"} %>
     <% end %>
 
     <div class="">
@@ -15,6 +15,16 @@
     </div>
 <% end %>
 
-
-
-
+<%= content_for(:after_js) do %>
+  <script>
+    $(document).on('ready', function(){
+      console.log("sup");
+    $('.feature-rating').rating({
+        size:'xs',
+        step: 1,
+        starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
+        starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
+    });
+});
+</script>
+<% end %>
