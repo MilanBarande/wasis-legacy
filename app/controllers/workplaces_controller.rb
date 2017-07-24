@@ -10,9 +10,16 @@ class WorkplacesController < ApplicationController
   end
 
   def create
-    @workplace = Workplace.new(workplace_params)
-    workplace_params[:features].each do |id|
-      Workplacefeature.create!(workplace: @workplace, feature: Feature.find(id.to_i) )
+    @workplace = Workplace.create(workplace_params)
+    params[:workplace][:features].each do |id|
+      if Feature.exists?(id.to_i)
+        Workplacefeature.create!(workplace: @workplace, feature: Feature.find(id.to_i) )
+      end
+    end
+    if @workplace.save
+      redirect_to workplaces_path
+    else
+      render :new
     end
   end
 
