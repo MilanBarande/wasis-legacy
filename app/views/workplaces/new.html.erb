@@ -1,6 +1,6 @@
 <div class="container workplace-form">
   <h3>Add a new workplace to Wasis</h3>
-  <%= simple_form_for @workplace do |f| %>
+  <%= simple_form_for @workplace  do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :name, placeholder: 'Enter a name' %>
@@ -8,7 +8,8 @@
   <%= f.input :address, placeholder: 'Address' %>
 
   <%= f.input :features, as: :check_boxes,
-  collection: ["Wifi", "Hot drinks", "Cold drinks", "Large tables", "Snacks", "Meals", "Electric outlets", "Private rooms", "Hourly rate"] %>
+  collection: @features %>
+
 
   <%= f.input :category, as: :radio_buttons,
   collection: ["0", "1", "2"] %>
