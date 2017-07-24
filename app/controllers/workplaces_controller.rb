@@ -42,6 +42,11 @@ class WorkplacesController < ApplicationController
   def show
     @workplace = Workplace.find(params[:id])
     @review = Review.new
+
+    # to change
+    @global_rating = Rating.all
+    ###
+
     @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     @spot = @client.spot(@workplace.google_id)
 
@@ -50,7 +55,7 @@ class WorkplacesController < ApplicationController
       marker.lat place.latitude
       marker.lng place.longitude
     end
-
+    @reviews = Review.where(workplace_id: @workplace.id)
   end
 
   def edit
