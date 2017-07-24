@@ -1,16 +1,5 @@
  <% if @visit.nil? || @visit.checkin == false %>
 <%= link_to "Checkin",[@workplace, :visits], class: "btn btn-success", :method => :post, remote: true %>
   <% else %>
-<button data-toggle="modal" data-target="#reviews">Checkout</button>
+<%= link_to "Checkout",[@workplace, @visit], class: "btn btn-danger" , :method => :put, remote: true %>
 <% end %>
-
-<div class="modal fade" id="reviews">
-<div class="wrapper wrapper-signin">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm6- col-sm-offset-3">
-        <%= render 'reviews/form' %>
-    </div>
-  </div>
-</div>
-</div>
