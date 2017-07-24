@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719170135) do
+ActiveRecord::Schema.define(version: 20170724214723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "average_caches", force: :cascade do |t|
+    t.integer  "rater_id"
+    t.string   "rateable_type"
+    t.integer  "rateable_id"
+    t.float    "avg",           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "favourites", force: :cascade do |t|
     t.integer  "user_id"
@@ -31,6 +40,37 @@ ActiveRecord::Schema.define(version: 20170719170135) do
     t.string   "icon"
   end
 
+  create_table "overall_averages", force: :cascade do |t|
+    t.string   "rateable_type"
+    t.integer  "rateable_id"
+    t.float    "overall_avg",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer  "rater_id"
+    t.string   "rateable_type"
+    t.integer  "rateable_id"
+    t.float    "stars",         null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type", using: :btree
+    t.index ["rater_id"], name: "index_rates_on_rater_id", using: :btree
+  end
+
+  create_table "rating_caches", force: :cascade do |t|
+    t.string   "cacheable_type"
+    t.integer  "cacheable_id"
+    t.float    "avg",            null: false
+    t.integer  "qty",            null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
+  end
+
   create_table "ratings", force: :cascade do |t|
     t.integer  "review_id"
     t.datetime "created_at", null: false
@@ -46,9 +86,8 @@ ActiveRecord::Schema.define(version: 20170719170135) do
     t.text     "comment"
     t.integer  "user_id"
     t.integer  "workplace_id"
-    t.float    "global_rating"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
     t.index ["workplace_id"], name: "index_reviews_on_workplace_id", using: :btree
   end
@@ -114,10 +153,11 @@ ActiveRecord::Schema.define(version: 20170719170135) do
     t.string   "address"
     t.float    "longitude"
     t.float    "latitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "google_id"
     t.string   "photo"
+    t.float    "global_rating"
   end
 
   add_foreign_key "favourites", "users"
