@@ -12,8 +12,7 @@
 }
 
 .status {
-  background: rgb(239, 239, 239);
-  opacity: 0.8;
+  background: rgba(239, 239, 239, 0.2);
   padding-top: 15px;
   width: 300px;
   display: inline-block;
@@ -21,7 +20,7 @@
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
+  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
 }
 
 .status {
@@ -37,8 +36,7 @@
 }
 
 .user-nav {
-  background: rgb(239, 239, 239);
-  opacity: 0.8;
+  background: rgba(239, 239, 239, 0.2);
   width: 100%;
   margin: auto;
   border-radius: 5px;
@@ -49,7 +47,7 @@
   font-size: 18px;
   font-weight: 400;
   align: left;
-  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
+  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
   ul {
     display: flex;
     justify-content: space-around;
@@ -79,7 +77,7 @@
 }
 
 .user-nav {
-  background: rgb(239, 239, 239);
+  background: rgba(239, 239, 239, 0.2);
   display: flex;
   padding: 10px 10px 0 10px;
 }
@@ -102,13 +100,12 @@
 }
 
 .tab-content {
-  background: rgb(239, 239, 239);
-  opacity: 0.8;
+  background: rgba(239, 239, 239, 0.2);
   width: 100%;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
+  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
 }
