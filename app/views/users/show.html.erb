@@ -13,7 +13,7 @@
           <ul>
             <li><a class="tab" data-target="#my-history">History</a></li>
             <li><a class="tab" data-target="#my-places">My places</a></li>
-            <li><a class="tab" data-target="#my-favorites">Favorites</a></li>
+
           </ul>
         </div>
       </div>
@@ -24,38 +24,14 @@
           <%= render 'user-info' %>
         </div>
         <div class="col-sx-12 col-sm-8 user-activity text-center">
-
           <div class="tab-content" id="my-history">
-            <p>Places visited:</p>
-            <%= @workplaces.each do |workplace| %>
-            <p><%= workplace.name %>, visited <%= workplace.visits.count %> times</p>
-            <% end %>
+            <h4>Places visited:</h4>
+            <%= render 'user-history-card' %>
           </div>
-
-
           <div class="tab-content hidden" id="my-places">
             <p>Those are my places</p>
           </div>
         </div>
-        <!-- Ce code favorites n'est pas encore verifie avec de la donnee. @Thibault -->
-        <div class="tab-content hidden" id="my-favorites">
-          <h4 class="profile-element">My favourites:</h4>
-          <% @favourites.each do |favourite|%>
-          <div class="card-favo">
-           <div class="container-favo">
-             <p class="profile-name pink-text"><%= link_to favourite.workplace.name, favourite.workplace %></p>
-             <p><%= link_to "Remove from my favorites", favourite_path(favourite.id), method: :delete %></p>
-             <p class="text-16px">Reviews:</p>
-               <!-- <% favourite.workplace.reviews.each do |review| %>
-               <ul class="list-unstyled">
-                 <li>Rating: <%= review.rating %> stars</li>
-                 <li>Content: <%= review.content %></li>
-               </ul>
-               <% end %>-->
-             </div>
-           </div>
-           <% end %>
-         </div>
        </div>
       </div>
    </div>
