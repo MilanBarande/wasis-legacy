@@ -1,22 +1,23 @@
-.wrapper {
+.wrapper-user {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 50px;
 }
 
 .user-card-avatar {
-  background: white;
+  background: rgb(239, 239, 239);
+  opacity: 0.8;
   width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
 }
 
 .avatar-profile {
-  border-radius: 19px 19px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
   img{
   height: 230px;
   width: 100%;

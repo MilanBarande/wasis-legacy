@@ -7,15 +7,21 @@
   }
 }
 
+.profile-margins {
+  margin-top: 50px;
+}
+
 .status {
-  background: white;
+  background: rgb(239, 239, 239);
+  opacity: 0.8;
+  padding-top: 15px;
   width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
 }
 
 .status {
@@ -31,7 +37,8 @@
 }
 
 .user-nav {
-  background: white;
+  background: rgb(239, 239, 239);
+  opacity: 0.8;
   width: 100%;
   margin: auto;
   border-radius: 5px;
@@ -42,7 +49,7 @@
   font-size: 18px;
   font-weight: 400;
   align: left;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
   ul {
     display: flex;
     justify-content: space-around;
@@ -72,7 +79,7 @@
 }
 
 .user-nav {
-  background: rgb(255, 255, 255);
+  background: rgb(239, 239, 239);
   display: flex;
   padding: 10px 10px 0 10px;
 }
@@ -95,12 +102,13 @@
 }
 
 .tab-content {
-  background: white;
+  background: rgb(239, 239, 239);
+  opacity: 0.8;
   width: 100%;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
 }
