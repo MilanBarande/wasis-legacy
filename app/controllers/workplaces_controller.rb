@@ -58,9 +58,10 @@ class WorkplacesController < ApplicationController
     # to change
     @global_rating = Rating.all
     ###
-
-    @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
-    @spot = @client.spot(@workplace.google_id)
+    unless @workplace.google_id.nil?
+      @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
+      @spot = @client.spot(@workplace.google_id)
+    end
     @visits = @workplace.visits.where(checkin: true)
 
     @workplace_coordinates = { lat: @workplace.latitude, lng: @workplace.longitude }
