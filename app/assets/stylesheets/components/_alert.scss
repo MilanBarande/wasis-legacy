@@ -3,13 +3,20 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  left: 0;
   text-align: center;
   color: white;
 }
-.alert-info {
+.alert-info .alert-dismissible{
   background: $green;
 }
-.alert-warning {
-  background: $red;
+// .alert-warning {
+//   background: $red;
+// }
+
+.alert-warning,  {
+   background: #F45060 ;
 }
