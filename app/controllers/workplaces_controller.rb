@@ -78,8 +78,22 @@ class WorkplacesController < ApplicationController
 
   def update
     set_workplace
-    @workplace.save(params[:workplace])
+    @workplacefeatures = Workplacefeature.where(workplace_id: @workplace.id)
+    @workplace.address = params[:workplace][:address]
+    @workplace.category = params[:workplace][:category]
+    @workplace.photo = params[:workplace][:photo]
+    @workplace.name = params[:workplace][:name]
+
+    @workplacefeatures.destroy_all
+
+    params[:workplace][:features].each do |id|
+      if Feature.exists?(id.to_i)
+        Workplacefeature.create!(workplace: @workplace, feature: Feature.find(id.to_i) )
+      end
+    end
+    @workplace.save
     redirect_to workplace_path(@workplace)
+
   end
 
   def destroy
@@ -92,6 +106,6 @@ class WorkplacesController < ApplicationController
   end
 
   def workplace_params
-    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache, :features)
+    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache)
   end
 end
