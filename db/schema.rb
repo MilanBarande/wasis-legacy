@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719170135) do
+ActiveRecord::Schema.define(version: 20170724214723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,9 +46,8 @@ ActiveRecord::Schema.define(version: 20170719170135) do
     t.text     "comment"
     t.integer  "user_id"
     t.integer  "workplace_id"
-    t.float    "global_rating"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
     t.index ["workplace_id"], name: "index_reviews_on_workplace_id", using: :btree
   end
@@ -114,10 +113,11 @@ ActiveRecord::Schema.define(version: 20170719170135) do
     t.string   "address"
     t.float    "longitude"
     t.float    "latitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "google_id"
     t.string   "photo"
+    t.float    "global_rating"
   end
 
   add_foreign_key "favourites", "users"

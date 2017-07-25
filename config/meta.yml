@@ -1,0 +1,5 @@
+meta_product_name: "Wasis"
+meta_title: "Wasis - Your next office is down the street"
+meta_description: "Wasis is remote worker's best option to find great workplaces fitting all their needs around the world."
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

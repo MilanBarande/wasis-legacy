@@ -10,17 +10,25 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.workplace = Workplace.find(params[:workplace_id])
     @review.user = User.find(current_user.id)
+
     # Save ratings
     if @review.save!
-      params[:review]["rating"].each do |rating|
-        if params[:review]["rating"] != ""
-          Rating.create(rating_params)
-        end
+      if params[:review]["rating"] != ""
+        rating = Rating.create(rating_params)
+        rating.update(review: @review)
       end
+      global_rating = 0
+      @review.workplace.ratings.each do |rating|
+        global_rating += (rating.wifi + rating.comfort + rating.service + rating.noise)
+      end
+      global_rating = global_rating.fdiv(@review.workplace.ratings.count * 4)
+      @review.workplace.global_rating = global_rating.round(1)
+      @review.workplace.save!
       redirect_to workplace_path(@review.workplace)
     else
       render :new
     end
+
   end
 
   def destroy

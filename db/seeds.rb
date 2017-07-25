@@ -14,7 +14,7 @@ puts "Done."
 @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
 
 coworkings = @client.spots_by_query("coworking montreal")
-libraries = @client.spots_by_query("library montral")
+libraries = @client.spots_by_query("library montreal")
 coffees = @client.spots_by_query("coffee montreal workplace") + @client.spots_by_query("coffee montreal students")
 
 puts "Seeding coworking places..."
