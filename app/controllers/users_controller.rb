@@ -20,14 +20,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @review = Review.new
+    @reviews = Review.where(user_id: @user.id)
     @favourites = @user.favourites
     @workplaces = @user.workplaces.distinct
     @visits = @user.visits
 
+
+
   end
 
   def index
+
   end
 
   def update
