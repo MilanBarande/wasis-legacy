@@ -44,6 +44,7 @@ class WorkplacesController < ApplicationController
     @review = Review.new
     @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     @spot = @client.spot(@workplace.google_id)
+    @visits = @workplace.visits.where(checkin: true)
 
     @workplace_coordinates = { lat: @workplace.latitude, lng: @workplace.longitude }
     @hash = Gmaps4rails.build_markers(@workplace) do |place, marker|
