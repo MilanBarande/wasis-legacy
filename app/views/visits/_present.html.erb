@@ -1,4 +1,4 @@
-<% @visits.where(:checkin => true).each do |visit| %>
+<% Visit.where(:checkin => true).each do |visit| %>
   <% user = visit.user %>
   <% avatar_url = user.facebook_picture_url || "http://placehold.it/30x30" %>
   <%= image_tag avatar_url, class: "avatar" %>
