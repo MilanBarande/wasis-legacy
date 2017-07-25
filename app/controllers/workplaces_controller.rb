@@ -35,7 +35,7 @@ class WorkplacesController < ApplicationController
         @workplaces = @workplaces.select { |w| w.features.include?(Feature.find(feature_id))}
       end
     end
-    # @workplaces = @workplaces.includes(:workplacefeatures).where({workplacefeatures: {feature: Feature.find(params[])}})
+
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
       marker.lng workplace.longitude
