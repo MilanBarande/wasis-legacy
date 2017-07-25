@@ -69,9 +69,13 @@ class WorkplacesController < ApplicationController
   end
 
   def edit
+    set_workplace
   end
 
   def update
+    set_workplace
+    @workplace.save(params[:workplace])
+    redirect_to workplace_path(@workplace)
   end
 
   def destroy
