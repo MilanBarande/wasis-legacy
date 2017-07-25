@@ -10,36 +10,43 @@
       </div>
       <!--    People already cheked in  -->
       <div class="checked-in">
-              <% @visits.each do |visit| %>
-                <% user = User.find(visit.user_id) %>
-                <% avatar_url = user.facebook_picture_url || "http://placehold.it/40x40" %>
-                 <div class="user-checkedin">
-                    <%= image_tag avatar_url, class: "avatar" %>
-                    <p><%= user.first_name %></p>
-                </div>
-                <p><%# visit.status unless visit.status.nil? %></p>
-              <% end %>
-
+        <% @visits.each do |visit| %>
+          <% user = User.find(visit.user_id) %>
+          <% avatar_url = user.facebook_picture_url || "http://placehold.it/40x40" %>
+           <div class="user-checkedin">
+              <%= image_tag avatar_url, class: "avatar" %>
+              <p><%= user.first_name %></p>
+          </div>
+          <p><%# visit.status unless visit.status.nil? %></p>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 workplace-info">
         <!--    Photo workplace   -->
         <div class ="workplace-photo">
-          <%= cl_image_tag @workplace.photo.url unless @workplace.photo.url.nil? %>
+          <% if @workplace.photo.url.nil? %>
+            <%= image_tag 'http://via.placeholder.com/550x350' %>
+            <% else %>
+          <%= cl_image_tag @workplace.photo.url %>
+          <% end %>
         </div>
       <!--    Details infos  -->
-        <h3><%= @workplace.name %></h3>
+        <h4><%= @workplace.name %></h4>
         <h5><%= @workplace.address %></h5>
         <div class="features">
+          <h3>Features</h3>
           <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
-            <li><%= image_tag(feature.icon) %> <%= feature.name %></li>
+            <li>
+              <div><%= image_tag(feature.icon) %></div>
+              <div><%= feature.name %></div>
+            </li>
             <% end %>
           </ul>
         </div>
         <!--    Ratings  -->
         <div class="ratings">
-
+          <h3>Ratings</h3>
 
         </div>
         <!--    Reviews -->
