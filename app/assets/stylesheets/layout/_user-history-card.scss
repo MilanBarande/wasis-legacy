@@ -1,0 +1,69 @@
+.history-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+.history-card-body {
+  flex: 1 1 auto;
+}
+.history-card-body h4 {
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: 0;
+}
+.history-card-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+.history-card-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+.history-card-rating {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.workplace-history-rating {
+  margin: 2px 0 0;
+}
+
+.card-favorites {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.card-favorites a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+
+.card-favorites a:hover {
+  color: #D3473C;
+}
+
+.history-card-rating:hover {
+  color: #5898f1;
+
+}
+.history-card-rating .rating-card {
+  border-bottom-color: #5898f1;
+}
+
+.history-card-rating:hover .rating-card {
+  color: rgb(253, 196, 73);
+}
+

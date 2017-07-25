@@ -5,15 +5,14 @@
 }
 
 .user-card-avatar {
-  background: rgb(239, 239, 239);
-  opacity: 0.8;
+  background: rgba(239, 239, 239, 0.2);
   width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(225, 225, 225);
+  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
 }
 
 .avatar-profile {
