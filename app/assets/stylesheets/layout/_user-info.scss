@@ -1,0 +1,52 @@
+
+.user-info {
+  background-color: rgb(209, 209, 209);
+}
+
+// USER CARD //
+
+.user-card-avatar {
+  padding: 15px;
+}
+
+.avatar-profile {
+  width: 150px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.user-card {
+  text-align: center;
+  p {
+    font-weight: bold;
+  }
+}
+
+.username {
+  padding: 15px;;
+}
+
+.usermail {
+  padding: 15px;
+}
+
+.userbio {
+  padding: 15px;
+}
+
+.social-logo {
+  font-size: 35px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  .fa {
+    padding: 10px 15px;
+  }
+}
+
+.fa-facebook:hover .fa-twitter:hover .fa-linkedin:hover{
+  color: rgb(253, 141, 52);
+  transition: 0.2s ease-in-out;
+}
+
+

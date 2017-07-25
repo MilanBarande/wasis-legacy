@@ -10,6 +10,7 @@ class Workplace < ApplicationRecord
   has_many :workplacephotos, dependent: :destroy
   has_many :favourites, dependent: :destroy
   has_many :reviews, dependent: :destroy
+  has_many :ratings, through: :reviews
 
   validates :address, presence: true
   validates :category, presence: true
