@@ -1,16 +1,32 @@
-
-
-.main {
-  margin-top: 60px;
-}
-
-.details {
-  margin-top: 130px;
-}
-
 .workplace-photo img {
   width: 100%;
 }
+
+.workplace-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checked-in {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.workplace-nav:after{
+  content: none !important;
+}
+
+.workplace-nav:before{
+  content: none !important;
+}
+
+.user-checkedin {
+  padding-left: 15px
+}
+
 
 .led-box {
   height: 30px;
@@ -69,3 +85,6 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+
+
+

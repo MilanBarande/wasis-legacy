@@ -35,7 +35,7 @@ class WorkplacesController < ApplicationController
         @workplaces = @workplaces.select { |w| w.features.include?(Feature.find(feature_id))}
       end
     end
-    # @workplaces = @workplaces.includes(:workplacefeatures).where({workplacefeatures: {feature: Feature.find(params[])}})
+
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|
       marker.lat workplace.latitude
       marker.lng workplace.longitude
@@ -49,34 +49,54 @@ class WorkplacesController < ApplicationController
     no_footer
   end
 
+
   def show
+    no_footer
     @workplace = Workplace.find(params[:id])
     @review = Review.new
 
     # to change
     @global_rating = Rating.all
     ###
-
-    @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
-    @spot = @client.spot(@workplace.google_id)
+    unless @workplace.google_id.nil?
+      @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
+      @spot = @client.spot(@workplace.google_id)
+    end
     @visits = @workplace.visits.where(checkin: true)
 
     @workplace_coordinates = { lat: @workplace.latitude, lng: @workplace.longitude }
-    @hash = Gmaps4rails.build_markers(@workplace) do |place, marker|
-      marker.lat place.latitude
-      marker.lng place.longitude
+    @hash = Gmaps4rails.build_markers(@workplace) do |workplace, marker|
+      marker.lat workplace.latitude
+      marker.lng workplace.longitude
     end
     @reviews = Review.where(workplace_id: @workplace.id)
   end
 
   def edit
     set_workplace
+    @features = Feature.all
+    no_footer
+
   end
 
   def update
     set_workplace
-    @workplace.save(params[:workplace])
+    @workplacefeatures = Workplacefeature.where(workplace_id: @workplace.id)
+    @workplace.address = params[:workplace][:address]
+    @workplace.category = params[:workplace][:category]
+    @workplace.photo = params[:workplace][:photo]
+    @workplace.name = params[:workplace][:name]
+
+    @workplacefeatures.destroy_all
+
+    params[:workplace][:features].each do |id|
+      if Feature.exists?(id.to_i)
+        Workplacefeature.create!(workplace: @workplace, feature: Feature.find(id.to_i) )
+      end
+    end
+    @workplace.save
     redirect_to workplace_path(@workplace)
+
   end
 
   def destroy
@@ -89,6 +109,6 @@ class WorkplacesController < ApplicationController
   end
 
   def workplace_params
-    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache, :features)
+    params.require(:workplace).permit(:name, :google_id, :category, :address, :longitude, :latitude, :photo, :photo_cache)
   end
 end
