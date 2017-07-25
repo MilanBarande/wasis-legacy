@@ -70,6 +70,7 @@ class WorkplacesController < ApplicationController
 
   def edit
     set_workplace
+    no_footer
   end
 
   def update
