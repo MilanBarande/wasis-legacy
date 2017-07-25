@@ -6,6 +6,7 @@ class WorkplacesController < ApplicationController
   def new
     @workplace = Workplace.new
     @features = Feature.all
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     no_footer
   end
 
@@ -57,10 +58,14 @@ class WorkplacesController < ApplicationController
     # to change
     @global_rating = Rating.all
     ###
-    unless @workplace.google_id.nil?
-      @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
-      @spot = @client.spot(@workplace.google_id)
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
+    if @workplace.google_id.nil?
+      google_places = @client.spots_by_query(@workplace.name)
+      @workplace.google_id = google_places.first.place_id
     end
+
+    @spot = @client.spot(@workplace.google_id)
+
     @visits = @workplace.visits.where(checkin: true)
 
     @workplace_coordinates = { lat: @workplace.latitude, lng: @workplace.longitude }
