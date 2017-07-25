@@ -113,26 +113,12 @@
           I'm going
         </div>
       </div>
-      <div>
-        <% if @checkedin_visit == false || @visit.workplace == @workplace %>
-          <div id="checkin">
-            <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
-          </div>
-        <% end %>
-      </div>
     </div>
-    <div id="present">
-      <%= render 'visits/present', visits: @visits %>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div id="map" style="width: 100%; height: 600px;"></div>
-      </div>
-    </div>
+
   </div>
 </div>
 
-<div id="map" class = "row" style="width: 100%; height: 600px;"></div>
+<div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A"></script>
 
