@@ -2,6 +2,7 @@
 <div class="index-content">
   <div class="side-container">
 
+    <!-- FILTRES -->
 
     <div class="container filters-container">
       <% @features.each do |feature| %>
@@ -78,7 +79,7 @@
         infoWindow.setPosition(pos);
         infoWindow.setContent('Location found.');
         map.setCenter(pos);
-        map.setZoom(14);
+        map.setZoom(18);
       }, function() {
         handleLocationError(true, infoWindow, map.getCenter());
       });
