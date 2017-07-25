@@ -1,34 +1,28 @@
-#my-profile .status {
-  text-align: center;
-  display: table-column;
+#my-profile {
+  display: flex;
+  justify-content: space-around;
+  .status {
+    text-align: center;
+    display: table-column;
+  }
 }
 
-.user-nav {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 600px;
-  height: 100px;
-  font-size: 18px;
-  font-weight: 400;
-  align: left;
-}
-
-.user-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.user-nav li {
+.status {
+  background: white;
+  width: 300px;
   display: inline-block;
-  padding: 0 20px;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
 }
 
-.user-nav li>a{
-  position: relative;
-  display: block;
-  cursor: pointer;
+.status {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 3px;
 }
 
 .status {
@@ -36,38 +30,62 @@
   align-items: center;
 }
 
-#my-profile {
-  display: flex;
+.user-nav {
+  background: white;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  display: inline-block;
   justify-content: space-around;
+  // width: 600px;
+  height: 100px;
+  font-size: 18px;
+  font-weight: 400;
+  align: left;
+  box-shadow: -1px 15px 30px -12px black;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  li>a{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  }
+  a {
+  color: black;
+  }
+  a:hover {
+  color: rgb(253, 153, 73);
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+  }
 }
-/// A travailler ///
+
 .user-nav {
   background: rgb(255, 255, 255);
   display: flex;
   padding: 10px 10px 0 10px;
 }
 
-.user-nav a {
-  color: black;
-}
-
-.user-nav a:hover {
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
 .tab {
-  background: rgb(255, 255, 255);
   flex: 0 0 25%;
   text-align: center;
-  padding: 20px 10px;
+  padding: 10px 30px;
 }
 
 .tab.active {
-  background: rgb(209, 209, 209);
-  color: black;
-  border-radius: 150px;
+  color: white;
+  border-radius: 100px;
 }
 
 .profile-navbar {
@@ -75,39 +93,14 @@
   justify-content: space-around;
   align-items: center;
 }
-// .tab {
-//   &:before, &:after {
-//     content: '';
-//     position: absolute;
-//     width: 0%;
-//     height: 4px;
-//     bottom: -2px;
-//     margin-top: -0.5px;
-//     background: #grey;
-//   }
 
-//   &:before {
-//     left: -2.5px;
-//   }
-
-//   &:after {
-//     right: 2.5px;
-//     background: #grey;
-//     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-//   }
-
-//   &:hover {
-//     &:before {
-//       background: #grey;
-//       width: 100%;
-//       transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-//     }
-
-//     &:after {
-//       background: transparent;
-//       width: 100%;
-//       transition: 0s;
-//     }
-//   }
-// }
-
+.tab-content {
+  background: white;
+  width: 100%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+}
