@@ -18,7 +18,7 @@ class WorkplacesController < ApplicationController
       end
     end
     if @workplace.save
-      redirect_to workplaces_path
+      redirect_to workplace_path(@workplace)
     else
       render :new
     end

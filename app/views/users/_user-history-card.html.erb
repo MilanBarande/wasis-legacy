@@ -1,0 +1,22 @@
+<% @workplaces.each do |workplace| %>
+  <div class="history-card">
+    <div class="history-card-rating">
+      <div class="fa fa-star rating-card"></div>
+      <div class="workplace-history-rating">91</div>
+      </div>
+        <% if workplace.photo.url.nil? %>
+            <%= image_tag 'http://via.placeholder.com/300x230', class:'history-card-image' %>
+            <% else %>
+          <%= cl_image_tag workplace.photo.url, class:'history-card-image' %>
+          <% end %>
+        <div class="history-card-body">
+          <h4><%= workplace.name %></h4>
+          <p><%= workplace.address %>, <br/> Visited: <%= workplace.visits.count %></p>
+        </div>
+
+      <ul class="card-favorites">
+        <li><a><i class="fa fa-heart"></i></a></li>
+      </ul>
+  </div>
+<% end %>
+
