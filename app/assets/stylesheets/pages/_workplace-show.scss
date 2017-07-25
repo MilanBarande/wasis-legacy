@@ -3,10 +3,23 @@
 }
 
 .workplace-nav {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid lightgrey;
+  :first-child
+  {
+    display: inline-flex;
+    align-items: center;
+    h4 {
+      margin-left: 10px;
+    }
+  }
 }
+
 
 .checked-in {
   display: inline-flex;
@@ -24,7 +37,49 @@
 }
 
 .user-checkedin {
-  padding-left: 15px
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-workplace {
+  position: relative;
+  .fix-search & {
+    position: fixed;
+    top: 72px;
+  }
+
+}
+
+.features {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    :first-child{
+      border-left: 0px solid lightgrey;
+    }
+    li{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items:center;
+      width: 100px;
+      height: 80px;
+      border-left: 1px solid lightgrey;
+      padding: 0px 8px 0px 8px;
+      :last-child {
+        text-align: center;
+        font-size: 14px;
+        font-weight: lighter;
+      }
+      img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
 }
 
 
