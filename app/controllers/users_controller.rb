@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     @favourites = @user.favourites
     @workplaces = @user.workplaces.distinct
     @visits = @user.visits
+
   end
 
   def index
