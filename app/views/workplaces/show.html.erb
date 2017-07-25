@@ -78,14 +78,8 @@
         <% end %>
       </div>
     </div>
-    <div>
-      <% @visits.where(:checkin => true).each do |visit| %>
-        <% user = User.find(visit.user_id) %>
-        <% avatar_url = user.facebook_picture_url || "http://placehold.it/30x30" %>
-        <%= image_tag avatar_url, class: "avatar" %>
-        <p><%= user.first_name %></p>
-        <p><%# visit.status unless visit.status.nil? %></p>
-      <% end %>
+    <div id="present">
+      <%= render 'visits/present', visits: @visits %>
     </div>
     <div class="row">
       <div class="col">
