@@ -1,7 +1,9 @@
 <% Visit.where(:checkin => true).each do |visit| %>
   <% user = visit.user %>
   <% avatar_url = user.facebook_picture_url || "http://placehold.it/30x30" %>
+  <div class="user-checkedin">
   <%= image_tag avatar_url, class: "avatar" %>
   <p><%= user.first_name %></p>
   <p><%# visit.status unless visit.status.nil? %></p>
+  </div>
 <% end %>
