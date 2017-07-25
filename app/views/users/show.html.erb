@@ -26,7 +26,7 @@
 
         <div class="tab-content" id="my-history">
           <p>Places visited:</p>
-          <%= @workplaces.each do |workplace| %>
+          <% @workplaces.each do |workplace| %>
           <p><%= workplace.name %>, visited <%= workplace.visits.count %> times</p>
           <% end %>
         </div>
@@ -36,8 +36,6 @@
           <p>Those are my places</p>
         </div>
       </div>
-
-
       <!-- Ce code favorites n'est pas encore verifie avec de la donnee. @Thibault -->
       <div class="tab-content hidden" id="my-favorites">
         <h4 class="profile-element">My favourites:</h4>
@@ -56,12 +54,7 @@
            </div>
          </div>
          <% end %>
-
-
-
-
        </div>
-
      </div>
    </div>
  </div>

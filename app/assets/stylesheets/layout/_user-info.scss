@@ -1,52 +1,66 @@
-
-.user-info {
-  background-color: rgb(209, 209, 209);
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 50px;
 }
 
-// USER CARD //
-
 .user-card-avatar {
-  padding: 15px;
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
 }
 
 .avatar-profile {
-  width: 150px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.user-card {
-  text-align: center;
-  p {
-    font-weight: bold;
+  border-radius: 19px 19px 0px 0px;
+  img{
+  height: 230px;
+  width: 100%;
   }
 }
 
-.username {
-  padding: 15px;;
+.user-card-picture {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
-.usermail {
-  padding: 15px;
+.user-card-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 3px;
 }
 
-.userbio {
-  padding: 15px;
+.user-card-email {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 3px;
+}
+
+.user-card-description {
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 .social-logo {
-  font-size: 35px;
-  list-style: none;
   display: flex;
   justify-content: center;
+  font-size: 30px;
+  list-style: none;
+  text-align: center;
   .fa {
     padding: 10px 15px;
   }
+  .fa:hover {
+    color:rgb(253, 153, 73);
+    cursor: pointer;
+  }
 }
-
-.fa-facebook:hover .fa-twitter:hover .fa-linkedin:hover{
-  color: rgb(253, 141, 52);
-  transition: 0.2s ease-in-out;
-}
-
-
