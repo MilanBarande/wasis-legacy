@@ -73,6 +73,7 @@ class WorkplacesController < ApplicationController
     set_workplace
     @features = Feature.all
     no_footer
+
   end
 
   def update
