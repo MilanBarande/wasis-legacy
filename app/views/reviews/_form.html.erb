@@ -1,19 +1,21 @@
-<h3>Add a new review </h3>
-<p><%= @workplace.name %></p>
-<%= simple_form_for [@workplace, @review] do |f| %>
-  <%= f.input :comment, maxlength: 480, size: 60 %>
-  <%= f.error_notification %>
-    <%= f.simple_fields_for :rating do |r| %>
-      <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
-      <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-      <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-      <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-    <% end %>
 
-    <div class="">
-      <%= f.submit "Add a review", class: "btn btn-primary" %>
-    </div>
-<% end %>
+  <h3>Add a new review</h3>
+  <p><%= @workplace.name %></p>
+  <%= simple_form_for [@workplace, @review] do |f| %>
+    <%= f.input :comment, maxlength: 480, size: 60 %>
+    <%= f.error_notification %>
+      <%= f.simple_fields_for :rating do |r| %>
+        <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
+        <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+        <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+        <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <% end %>
+
+      <div class="">
+        <%= f.submit "Add a review", class: "btn btn-primary" %>
+      </div>
+  <% end %>
+
 
 <%= content_for(:after_js) do %>
   <script>

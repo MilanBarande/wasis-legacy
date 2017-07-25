@@ -1,7 +1,8 @@
 /* Main class */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
+  opacity: 0.9;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
@@ -21,7 +22,8 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  height: 50px;
+  min-width: 120px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -91,10 +93,16 @@
   color: #666666;
   border: 1px solid #E6E6E6;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 0 20px;
   font-size: 14px;
   outline: none;
+
 }
+
+  .fa-search  {
+  color: lightgrey;
+  }
+
 .navbar-wagon-search-input:focus  {
   border: 1px solid #CCCCCC;
 }
@@ -128,4 +136,33 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+
+.check-in {
+  height: 60px;
+  font-size: 14px;
+  font-weight: 200;
+  display: inline-flex;
+  justify-content: space-around;
+  padding-right: 50px;
+  padding-top: 2px;
+  text-align: center;
+  :first-child {
+    flex: 1 0 auto;
+    padding-right: 5px;
+    margin-top: 6px;
+  }
+  :first-child a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #F9C143;
+  }
+  :first-child a:hover{
+  color: #FD8D34;
+  }
+  :last-child a{
+    padding-right: 18px;
+
+  }
 }
