@@ -3,7 +3,7 @@
   <div class="home-banner">
     <div class="home-logo">
       <%= image_tag "wasis_home.png" %>
-      <h2>Your favorites workplaces in town</h2>
+      <h2>Your next office is down the street</h2>
       <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
     </div>
     <div class="home-category">
@@ -17,10 +17,8 @@
     </div>
   </div>
   <div class="home-map" style="background-image: linear-gradient(135deg, rgba(249,193,67,0.2) 0%,rgba(250,79,131,0.2) 33%,rgba(74,255,245,0.2) 100%), url('<%= image_path 'map_home.png' %>');">
-    <div class="button-banner">
-      <%= link_to workplaces_path do %>
-      <h4>FIND</h4>
-      <% end %>
+    <div>
+      <%= link_to "FIND", workplaces_path, class: "button-banner" %>
     </div>
   </div>
   <div class="home-city">
