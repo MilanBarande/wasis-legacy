@@ -49,6 +49,7 @@ class WorkplacesController < ApplicationController
     no_footer
   end
 
+
   def show
     @workplace = Workplace.find(params[:id])
     @review = Review.new
@@ -62,9 +63,9 @@ class WorkplacesController < ApplicationController
     @visits = @workplace.visits.where(checkin: true)
 
     @workplace_coordinates = { lat: @workplace.latitude, lng: @workplace.longitude }
-    @hash = Gmaps4rails.build_markers(@workplace) do |place, marker|
-      marker.lat place.latitude
-      marker.lng place.longitude
+    @hash = Gmaps4rails.build_markers(@workplace) do |workplace, marker|
+      marker.lat workplace.latitude
+      marker.lng workplace.longitude
     end
     @reviews = Review.where(workplace_id: @workplace.id)
   end
