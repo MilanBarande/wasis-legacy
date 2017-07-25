@@ -13,6 +13,7 @@
          <%= render 'visits/present', visit: @visit, workplace: @workplace %>
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 workplace-info">
         <!--    Photo workplace   -->
@@ -24,8 +25,9 @@
           <% end %>
         </div>
       <!--    Details infos  -->
-        <h4><%= @workplace.name %></h4>
+        <h3><%= @workplace.name %></h3>
         <h5><%= @workplace.address %></h5>
+
         <div class="features">
           <h3>Features</h3>
           <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
@@ -39,7 +41,6 @@
         <!--    Ratings  -->
         <div class="ratings">
           <h3>Ratings</h3>
-
         </div>
         <!--    Reviews -->
         <div class="reviews">
@@ -63,7 +64,7 @@
       </div>
 
 
-      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 action-workplace">
+      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 action-workplace" id="workplaceshow" >
         <div class="action-user">
           <div class="action-header">
             <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
@@ -76,12 +77,21 @@
                 <div class="led-green"></div>
                 <p>OPEN NOW</p>
               </div>
-              <% else %>
+            <% else %>
               <div class="led-box">
                 <div class="led-red"></div>
                 <p>CLOSED NOW</p>
-               </div>
+              </div>
             <% end %>
+          </div>
+          <div>
+            <p class="rating-loading"><%= @global_rating %> </p>
+          </div>
+          <div>
+            Add to Favorites
+          </div>
+          <div>
+            Share with friends
           </div>
           <div>
             <% if @checkedin_visit == false || @visit.workplace == @workplace %>
@@ -90,29 +100,15 @@
               </div>
             <% end %>
           </div>
-        </div>
-
-        <div class="row">
-          global Ratings
-        </div>
-        <div>
-          Add to Favorites
-        </div>
-        <div>
-          Share with friends
-        </div>
-        <div>
-          I'm going
-        </div>
       </div>
-    </div>
-
+     </div>
   </div>
-</div>
-
+ </div>
+  </div>
 <div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A"></script>
+
 
 <% content_for(:after_js) do %>
 <%= javascript_tag do %>
@@ -128,6 +124,34 @@ handler.getMap().setZoom(2);
 handler.getMap().setZoom(16);
 }
 });
+
+$('.rating-loading').rating({
+    size:'xs',
+    step: 1,
+    clearCaption: '',
+    starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
+    starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
 });
+
+var workplaceshow = document.getElementById('workplaceshow');
+var init = workplaceshow.offsetTop;
+var docked;
+
+window.onscroll = function () {
+if (!docked && (workplaceshow.offsetTop - scrollTop() < 0)) {
+  workplaceshow.style.top = 0;
+  workplaceshow.style.position = 'fixed';
+  workplaceshow.className = 'docked';
+  docked = true;
+} else if (docked && scrollTop() <= init) {
+  workplaceshow.style.position = 'absolute';
+  workplaceshow.style.top = init + 'px';
+  workplaceshow.className = workplaceshow.className.replace('docked', '');
+  docked = false;
+
+}
+}
+});
+
 <% end %>
 <% end %>

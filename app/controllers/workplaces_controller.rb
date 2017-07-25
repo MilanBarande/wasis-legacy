@@ -54,10 +54,7 @@ class WorkplacesController < ApplicationController
   def show
     @workplace = Workplace.find(params[:id])
     @review = Review.new
-
-    # to change
-    @global_rating = Rating.all
-    ###
+    @global_rating = Workplace.find(params[:id]).global_rating
     @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     if @workplace.google_id.nil?
       google_places = @client.spots_by_query(@workplace.name)
