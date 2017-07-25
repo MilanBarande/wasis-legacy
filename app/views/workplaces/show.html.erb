@@ -9,7 +9,7 @@
         <% end %>
       </div>
       <!--    People already cheked in  -->
-      <div class="checked-in">
+      <div id="present" class="checked-in">
          <%= render 'visits/present', visit: @visit, workplace: @workplace %>
          <p><%# visit.status unless visit.status.nil? %></p>
       </div>
