@@ -1,26 +1,23 @@
-<div class="wrapper">
-      <div class="user-card-avatar">
-      <div class="user-card-picture">
-      <% if @user.facebook_picture_url != nil %>
-        <%= image_tag @user.facebook_picture_url, class: "avatar-profile"  %>
-        <% else %>
-        <img src="http://placehold.it/300x230", class= "avatar-profile">
-        <% end %>
-        </div>
 
-      <!-- <div class="user-card"> -->
-        <div class="user-card-name"><%= "#{@user.first_name}, #{@user.last_name}" %>
-        </div>
-        <div class="user-card-email"><%= @user.email %>
-        </div>
-        <div class="user-card-description">This is a small text describing the user life and blah blah to what domain he work and what he's looking in workplaces.
-      </div>
-      <ul class="social-logo">
-        <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
-        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-      </ul>
-    </div>
-    </div>
+<div class="user-card-avatar">
+  <div class="user-card-picture">
+    <% if @user.facebook_picture_url != nil %>
+      <%= image_tag @user.facebook_picture_url, class: "avatar-profile"  %>
+    <% else %>
+      <img src="http://placehold.it/300x230", class= "avatar-profile">
+    <% end %>
   </div>
 
+    <!-- <div class="user-card"> -->
+  <div class="user-card-name"><%= "#{@user.first_name}, #{@user.last_name}" %>
+  </div>
+  <div class="user-card-email"><%= @user.email %>
+  </div>
+  <div class="user-card-description">This is a small text describing the user life and blah blah to what domain he work and what he's looking in workplaces.
+  </div>
+  <ul class="social-logo">
+    <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+  </ul>
+</div>
