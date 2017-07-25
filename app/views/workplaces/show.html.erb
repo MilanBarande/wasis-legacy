@@ -26,7 +26,7 @@
       <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 workplace-info">
         <!--    Photo workplace   -->
         <div class ="workplace-photo">
-          <%= image_tag 'http://via.placeholder.com/550x350' %>
+          <%= cl_image_tag @workplace.photo.url unless @workplace.photo.url.nil? %>
         </div>
       <!--    Details infos  -->
         <h3><%= @workplace.name %></h3>

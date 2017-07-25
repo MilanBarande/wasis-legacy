@@ -51,6 +51,7 @@ class WorkplacesController < ApplicationController
 
 
   def show
+    no_footer
     @workplace = Workplace.find(params[:id])
     @review = Review.new
 
