@@ -15,4 +15,5 @@
       starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
       starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
   });
+  $('#present').html("<%= j render 'visits/present', visit: @visit %>");
 <% end %>
