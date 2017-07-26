@@ -44,10 +44,8 @@
           <h3>Ratings</h3>
           <% if @global_rating.nil? %>
             <p>Help the community by rating the place </p>
-            <%#= link_to "Add a review", new_workplace_review_path %>
+            <%= link_to "Add a review", new_workplace_review_path %>
           <% else %>
-
-
           <% end %>
 
         </div>
@@ -57,18 +55,18 @@
             <p>This place doesn't have any review yet. <br/>
               Be the first one to add one :)
             </p>
-            <%#= link_to "Add a review", new_workplace_review_path %>
+            <%= link_to "Add a review", new_workplace_review_path %>
           <% else %>
             <h3>Reviews:</h3>
             <% @workplace.reviews.each do |review| %>
               <% @user = User.find(review.user_id) %>
               <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
-              </div>
+              </%></div>
       <div> <%= render_stars(review.ratings.first.average) %></div>
               <div class="review-comment">
                 <p><u>Comment:</u> <%= review.comment %></p>
               </div>
-            <% end %>
+<% end %>
             <% end %>
         </div>
       </div>
@@ -119,7 +117,8 @@
      </div>
   </div>
  </div>
-  </div>
+
+
 <div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A"></script>
