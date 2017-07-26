@@ -2,7 +2,7 @@
   <div class="history-card">
     <div class="history-card-rating">
       <div class="fa fa-star rating-card"></div>
-      <div class="workplace-history-rating">91</div>
+      <div class="workplace-history-rating"><%= workplace.global_rating %></div>
       </div>
         <% if workplace.photo.url.nil? %>
             <%= image_tag 'http://via.placeholder.com/300x230', class:'history-card-image' %>
@@ -19,4 +19,3 @@
       </ul>
   </div>
 <% end %>
-
