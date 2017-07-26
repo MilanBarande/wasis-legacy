@@ -69,18 +69,19 @@
         <div class="action-user">
           <div class="action-header">
             <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
-              <div class="led-box">
-                <div class="led-yellow"></div>
+              <div class="workplace-hours">
+                <%= image_tag('unknow.svg', alt: 'Unknown hours') %>
                 <p>Opening hours are not available for this place.</p>
               </div>
               <% elsif @spot.opening_hours["open_now"] %>
-              <div class="led-box">
-                <div class="led-green"></div>
-                <%= image_tag ('open.svg' alt: 'Open now') %>
+                <div class="workplace-hours">
+                <%= image_tag('open.svg', alt: 'Open now') %>
+                <p>OPENED NOW</p>
+                </div>
               </div>
             <% else %>
-              <div class="led-box">
-                <div class="led-red"></div>
+              <div class="workplace-hours">
+                  <%= image_tag('closed.svg', alt: 'Open now') %>
                 <p>CLOSED NOW</p>
               </div>
             <% end %>
