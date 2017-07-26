@@ -60,11 +60,15 @@
             <%= link_to "Add a review", new_workplace_review_path %>
           <% else %>
             <h3>Reviews:</h3>
-            <% @reviews.each do |review| %>
-              <p>User: <%= render_stars(review.ratings.first.average) %></p>
-              <p>Comment: <%= review.comment %></p>
+            <% @workplace.reviews.each do |review| %>
+              <% @user = User.find(review.user_id) %>
+              <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
+              </%></div>
+      <div> <%= render_stars(review.ratings.first.average) %></div>
+              <div class="review-comment">
+                <p><u>Comment:</u> <%= review.comment %></p>
+              </div>
 
-              <% end %>
             <% end %>
         </div>
       </div>
@@ -81,7 +85,7 @@
               <% elsif @spot.opening_hours["open_now"] %>
                 <div class="workplace-hours">
                 <%= image_tag('open.svg', alt: 'Open now') %>
-                <p>OPENED NOW</p>
+                <p>OPEN NOW</p>
                 </div>
               </div>
             <% else %>
@@ -92,7 +96,11 @@
             <% end %>
           </div>
           <div>
-            <p class="ratings-stars"><%= (@global_rating) %> </p>
+
+            <% unless @global_rating.nil? %>
+            <p class="ratings-stars"><%= render_stars(@global_rating) %></p>
+            <% end %>
+
           </div>
           <div>
             Add to Favorites

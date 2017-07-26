@@ -27,6 +27,7 @@ class WorkplacesController < ApplicationController
   def index
     @features = Feature.all
     @workplaces = Workplace.where.not(latitude: nil, longitude: nil)
+    @first_workplace = @workplaces.find_by(name: 'La Gare')
     if params["features"]
       @feature_ids = []
       params["features"].each do |key, value|
@@ -35,6 +36,7 @@ class WorkplacesController < ApplicationController
       @feature_ids.each do |feature_id|
         @workplaces = @workplaces.select { |w| w.features.include?(Feature.find(feature_id))}
       end
+      @first_workplace = @workplaces.first
     end
 
     @hash = Gmaps4rails.build_markers(@workplaces) do |workplace, marker|

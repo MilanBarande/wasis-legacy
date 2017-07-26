@@ -12,8 +12,8 @@
         <div class="user-nav">
           <ul>
             <li><a class="tab" data-target="#my-history">History</a></li>
-            <li><a class="tab" data-target="#my-places">My places</a></li>
-
+            <li><a class="tab" data-target="#my-favourites">My favourites</a></li>
+            <li><a class="tab" data-target="#settings">Settings</a></li>
           </ul>
         </div>
       </div>
@@ -27,6 +27,9 @@
           <div class="tab-content" id="my-history">
             <h4>Places visited:</h4>
             <%= render 'user-history-card' %>
+          </div>
+          <div class="tab-content hidden" id="settings">
+          <%= render 'user-edit' %>
           </div>
           <div class="tab-content hidden" id="my-places">
             <% if @favourites.count == 0 %>

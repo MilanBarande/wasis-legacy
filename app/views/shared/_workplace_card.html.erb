@@ -1,9 +1,11 @@
+<%= link_to((workplace), class: 'card-link') do %>
 <div class="card" id="card_<%= workplace.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(<%= cl_image_path workplace.photo.url unless workplace.photo.url.nil? %>); background-size: cover; background-repeat: no-repeat;">
 
   <div class="card-content">
     <div class="card-graphics">
       <h3 class="card-title"><%= workplace.name %></h3>
       <p class="card-text"><%= workplace.address %></p>
+      <p class="card-distance"> meters away from your position.</p>
     </div>
     <div class="card-features-container">
 
@@ -13,6 +15,6 @@
       </div>
         <% end %>
     </div>
-    <%= link_to "More Informations", workplace, class: "btn btn-primary btn-more-info" %>
   </div>
 </div>
+<% end %>
