@@ -44,8 +44,9 @@
           <h3>Ratings</h3>
           <% if @global_rating.nil? %>
             <p>Help the community by rating the place </p>
-            <%= link_to "Add a review", new_workplace_review_path %>
+            <%= link_to "Rate this place", new_workplace_review_path(@workplace) %>
           <% else %>
+          <%= @global_rating %>
           <% end %>
 
         </div>
@@ -55,18 +56,17 @@
             <p>This place doesn't have any review yet. <br/>
               Be the first one to add one :)
             </p>
-            <%= link_to "Add a review", new_workplace_review_path %>
           <% else %>
             <h3>Reviews:</h3>
             <% @workplace.reviews.each do |review| %>
               <% @user = User.find(review.user_id) %>
               <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
               </%></div>
-      <div> <%= render_stars(review.ratings.first.average) %></div>
+             <div> <%= render_stars(review.ratings.first.average) %></div>
               <div class="review-comment">
                 <p><u>Comment:</u> <%= review.comment %></p>
               </div>
-<% end %>
+             <% end %>
             <% end %>
         </div>
       </div>
@@ -107,7 +107,7 @@
             Share with friends
           </div>
           <div>
-            <% if @checkedin_visit == false || @visitrender_stars.workplace == @workplace %>
+            <% if @checkedin_visit == false || !@visitrender.nil? && @visitrender_stars.workplace == @workplace  %>
               <div id="checkin">
                 <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
               </div>
