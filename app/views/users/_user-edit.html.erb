@@ -1,10 +1,10 @@
 <% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<h3>Update your profile</h3>
 
 <div class="row">
   <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-<%= simple_form_for(current_user, as: :user, url: registration_path(current_user), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+    <%= simple_form_for(current_user, as: :user, url: registration_path(current_user), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :first_name, required: true, autofocus: true %>
@@ -17,12 +17,14 @@
     <%= f.input :password, autocomplete: "off", hint: "Leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
 
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update"  %>
-  </div>
-<% end %>
+
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Update"  %>
+    </div>
+    <% end %>
 
     <div class="gravatar_edit">
 

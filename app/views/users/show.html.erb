@@ -28,20 +28,18 @@
             <h4>Places visited:</h4>
             <%= render 'user-history-card' %>
           </div>
-          <div class="tab-content hidden" id="settings">
-          <%= render 'user-edit' %>
-          </div>
           <div class="tab-content hidden" id="my-places">
             <% if @favourites.count == 0 %>
-              <p>You haven't added any place to your favourites yet.</p>
+            <p>You haven't added any place to your favourites yet.</p>
             <% else %>
-              <p>My favourites places</p>
+            <p>My favourites places</p>
             <ul class="list-unstyled">
               <% @favourites.each do |favourite| %>
               <div>
-                <%= Workplace.find(id: favourite.workplace_id) %> </div>
-              <% end %>
-              <% end %>
+                <%= Workplace.find(id: favourite.workplace_id) %>
+              </div>
+                <% end %>
+                <% end %>
               </div>
             </div>
           </div>
