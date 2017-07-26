@@ -25,6 +25,8 @@ a {
 }
 
 
+
+
 .checked-in {
   display: inline-flex;
   align-items: center;
@@ -52,18 +54,20 @@ a.user-checkedin {
   align-items: center;
 }
 
-.action-workplace {
+.workplaceshow {
   position: relative;
-  .fix-search & {
-    position: fixed;
-    top: 72px;
-  }
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: rgba(240, 240, 240, 0.5);
 
 }
 
 .features {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   ul{
     display: inline-flex;
     flex-wrap: wrap;
@@ -76,7 +80,7 @@ a.user-checkedin {
       justify-content: flex-start;
       align-items:center;
       width: 100px;
-      height: 80px;
+      height: 60px;
       border-left: 1px solid lightgrey;
       padding: 0px 8px 0px 8px;
       :last-child {
@@ -92,57 +96,20 @@ a.user-checkedin {
   }
 }
 
-
-.led-box {
-  height: 30px;
-  width: 25%;
-  margin: 10px 0;
-  margin-bottom: 15px;
-  float: left;
+.ratings {
+  margin-bottom: 40px;
 }
 
-.led-box p {
-  font-size: 14px;
-  text-align: center;
-  margin: 1em;
+.workplace-hours {
+  img {
+    width: 80px;
+  }
 }
 
-.led-green {
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #ABFF00;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+.reviews {
+  margin-bottom: 60px;
 }
 
-.led-yellow {
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #FFC532;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
-}
-
-.led-red {
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #DB3A34;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
-}
-
-
-.action-workplace {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background: rgba(240, 240, 240, 0.5);
-}
 
 .action-header {
   width: 300px;
