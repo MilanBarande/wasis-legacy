@@ -44,9 +44,9 @@
           <h3>Ratings</h3>
           <% if @global_rating.nil? %>
             <p>Help the community by rating the place </p>
-            <%= link_to "Add a review", new_workplace_review_path %>
+            <%= link_to "Rate this place", new_workplace_review_path(@workplace) %>
           <% else %>
-
+          <%= @global_rating %>
 
           <% end %>
 
@@ -57,7 +57,7 @@
             <p>This place doesn't have any review yet. <br/>
               Be the first one to add one :)
             </p>
-            <%= link_to "Add a review", new_workplace_review_path %>
+            <%= link_to "Add a review", new_workplace_review_path(@workplace) %>
           <% else %>
             <h3>Reviews:</h3>
             <% @workplace.reviews.each do |review| %>
