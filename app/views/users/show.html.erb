@@ -28,9 +28,11 @@
             <h4>Places visited:</h4>
             <%= render 'user-history-card' %>
           </div>
+          <% if @user = current_user %>
           <div class="tab-content hidden" id="settings">
           <%= render 'user-edit' %>
           </div>
+          <% end %>
           <div class="tab-content hidden" id="my-places">
             <% if @favourites.count == 0 %>
               <p>You haven't added any place to your favourites yet.</p>
