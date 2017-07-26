@@ -87,7 +87,9 @@
             <% end %>
           </div>
           <div>
-            <p class="ratings-stars"><%= render_stars(@global_rating) %> </p>
+            <% unless @global_rating.nil? %>
+            <p class="ratings-stars"><%= render_stars(@global_rating) %></p>
+            <% end %>
           </div>
           <div>
             Add to Favorites
