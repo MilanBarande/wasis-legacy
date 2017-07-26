@@ -1,6 +1,7 @@
 
   <h3>Add a new review</h3>
-  <p><%= @workplace.name %></p>
+  <h2><%= @workplace.name %></h2>
+  <h4><%= @workplace.address %></h4>
   <%= simple_form_for [@workplace, @review] do |f| %>
     <%= f.input :comment, maxlength: 480, size: 60 %>
     <%= f.error_notification %>
@@ -10,10 +11,7 @@
         <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
         <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
       <% end %>
-
-      <div class="">
-        <%= f.submit "Add a review", class: "btn btn-primary" %>
-      </div>
+      <%= f.submit "Add", class: "btn btn-primary btn-wasis" %>
   <% end %>
 
 
