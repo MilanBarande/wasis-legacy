@@ -21,9 +21,10 @@ class UsersController < ApplicationController
 
   def show
     @reviews = Review.where(user_id: @user.id)
-    @favourites = @user.favourites
     @workplaces = @user.workplaces.distinct
     @visits = @user.visits
+    @favourites = Favourite.where(user_id: @user.id)
+
 
 
 
