@@ -13,7 +13,9 @@
           <ul>
             <li><a class="tab" data-target="#my-history">History</a></li>
             <li><a class="tab" data-target="#my-favourites">My favourites</a></li>
+            <% if @user = current_user %>
             <li><a class="tab" data-target="#settings">Edit</a></li>
+            <% end %>
           </ul>
         </div>
       </div>
