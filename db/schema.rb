@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724214723) do
+ActiveRecord::Schema.define(version: 20170726181246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,6 +118,7 @@ ActiveRecord::Schema.define(version: 20170724214723) do
     t.string   "google_id"
     t.string   "photo"
     t.float    "global_rating"
+    t.string   "phone_number"
   end
 
   add_foreign_key "favourites", "users"
