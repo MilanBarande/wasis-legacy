@@ -64,11 +64,11 @@
               <% @user = User.find(review.user_id) %>
               <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
               </%></div>
-      <div> <%= render_stars(review.ratings.first.average) %></div>
+             <div> <%= render_stars(review.ratings.first.average) %></div>
               <div class="review-comment">
                 <p><u>Comment:</u> <%= review.comment %></p>
               </div>
-
+             <% end %>
             <% end %>
         </div>
       </div>
