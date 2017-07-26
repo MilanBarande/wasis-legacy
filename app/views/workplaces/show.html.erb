@@ -69,6 +69,7 @@
                 <p><u>Comment:</u> <%= review.comment %></p>
               </div>
              <% end %>
+
             <% end %>
         </div>
       </div>
@@ -109,7 +110,7 @@
             Share with friends
           </div>
           <div>
-            <% if @checkedin_visit == false || @visitrender_stars.workplace == @workplace %>
+            <% if @checkedin_visit == false || !@visitrender.nil? && @visitrender_stars.workplace == @workplace  %>
               <div id="checkin">
                 <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
               </div>
