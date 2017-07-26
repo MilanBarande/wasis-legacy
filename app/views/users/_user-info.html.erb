@@ -2,7 +2,7 @@
 <div class="user-card-avatar">
   <div class="user-card-picture">
     <% if @user.facebook_picture_url != nil %>
-      <%= image_tag @user.facebook_picture_url, class: "avatar-profile"  %>
+      <%= image_tag @user.facebook_picture_url, class: 'avatar-profile'  %>
     <% else %>
       <img src="http://placehold.it/300x230", class= "avatar-profile">
     <% end %>
