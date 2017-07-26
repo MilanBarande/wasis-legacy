@@ -55,6 +55,12 @@ class WorkplacesController < ApplicationController
     @workplace = Workplace.find(params[:id])
     @review = Review.new
     @global_rating = Workplace.find(params[:id]).global_rating
+
+    #review of each user for each workplace
+    # @user_review = Workplace.find(params[:id]).ratings
+
+    #calculate average
+
     @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACE_API'])
     if @workplace.google_id.nil?
       google_places = @client.spots_by_query(@workplace.name)
@@ -72,6 +78,9 @@ class WorkplacesController < ApplicationController
     end
     @reviews = Review.where(workplace_id: @workplace.id)
   end
+
+
+
 
   def edit
     set_workplace

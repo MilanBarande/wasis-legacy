@@ -42,25 +42,30 @@
         <!--    Ratings  -->
         <div class="ratings">
           <h3>Ratings</h3>
+          <% if @global_rating.nil? %>
+            <p>Help the community by rating the place </p>
+            <%= link_to "Add a review", new_workplace_review_path %>
+          <% else %>
+
+
+          <% end %>
+
         </div>
         <!--    Reviews -->
         <div class="reviews">
-          <% if @workplace.reviews.nil? %>
+          <% if @global_rating.nil? %>
             <p>This place doesn't have any review yet. <br/>
               Be the first one to add one :)
             </p>
             <%= link_to "Add a review", new_workplace_review_path %>
-            <% else %>
+          <% else %>
             <h3>Reviews:</h3>
-            <% @workplace.reviews.each do |review| %>
-              <% @user = User.find(review.user_id) %>
-              <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
-              </%></div>
-              <div class="review-comment">
-                <p>Comment: <%= review.comment %></p>
-              </div>
+            <% @reviews.each do |review| %>
+              <p>User: <%= render_stars(review.ratings.first.average) %></p>
+              <p>Comment: <%= review.comment %></p>
+
+              <% end %>
             <% end %>
-          <% end %>
         </div>
       </div>
 
@@ -87,7 +92,7 @@
             <% end %>
           </div>
           <div>
-            <p class="ratings-stars"><%= render_stars(@global_rating) %> </p>
+            <p class="ratings-stars"><%= (@global_rating) %> </p>
           </div>
           <div>
             Add to Favorites
@@ -96,7 +101,7 @@
             Share with friends
           </div>
           <div>
-            <% if @checkedin_visit == false || @visit.workplace == @workplace %>
+            <% if @checkedin_visit == false || @visitrender_stars.workplace == @workplace %>
               <div id="checkin">
                 <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
               </div>
