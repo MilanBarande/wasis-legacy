@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .workplace-photo img {
   width: 100%;
 }
@@ -34,6 +38,11 @@
 
 .workplace-nav:before{
   content: none !important;
+}
+
+a.user-checkedin {
+  text-decoration: none;
+  color: black;
 }
 
 .user-checkedin {
@@ -141,6 +150,4 @@
   align-items: flex-start;
   justify-content: space-between;
 }
-
-
 

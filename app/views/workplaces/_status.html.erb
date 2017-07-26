@@ -1,0 +1,14 @@
+
+  <h3>Add a new status</h3>
+  <p><%= @workplace.name %></p>
+  <%= simple_form_for [@workplace, @review] do |f| %>
+    <%= f.input :comment, maxlength: 480, size: 60 %>
+    <%= f.error_notification %>
+      <% end %>
+
+      <div class="">
+        <%= f.submit "Add a status", class: "btn btn-primary" %>
+      </div>
+  <% end %>
+
+<% end %>
