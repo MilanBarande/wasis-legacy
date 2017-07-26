@@ -13,11 +13,25 @@
   </div>
   <div class="user-card-email"><%= @user.email %>
   </div>
-  <div class="user-card-description">This is a small text describing the user life and blah blah to what domain he work and what he's looking in workplaces.
+  <div class="user-card-description"><%= @user.bio %>
   </div>
   <ul class="social-logo">
-    <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
-    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    <li>
+      <%= link_to((@user.linkedin), class: 'fa fa-linkedin-square') do %>
+        <i aria-hidden="true"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to @user.facebook do %>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to @user.twitter do %>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      <% end %>
+    </li>
   </ul>
 </div>
+
+
