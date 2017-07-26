@@ -43,7 +43,7 @@
   align-items: center;
 }
 
-.action-user {
+.workplaceshow {
   position: relative;
   height: 40vh;
   display: flex;
@@ -51,10 +51,6 @@
   align-items: flex-start;
   justify-content: space-between;
   background: rgba(240, 240, 240, 0.5);
-  .fix-action-user & {
-    position: fixed;
-    top: 72px;
-  }
 
 }
 

@@ -76,7 +76,7 @@
               <% elsif @spot.opening_hours["open_now"] %>
               <div class="led-box">
                 <div class="led-green"></div>
-                <p>OPEN NOW</p>
+                <%= image_tag ('open.svg' alt: 'Open now') %>
               </div>
             <% else %>
               <div class="led-box">
@@ -86,7 +86,7 @@
             <% end %>
           </div>
           <div>
-            <p class="rating-loading"><%= @global_rating %> </p>
+            <p class="ratings-stars"><%= render_stars(@global_rating) %> </p>
           </div>
           <div>
             Add to Favorites
@@ -126,32 +126,6 @@ handler.getMap().setZoom(16);
 }
 });
 
-$('.rating-loading').rating({
-    size:'xs',
-    step: 1,
-    clearCaption: '',
-    starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
-    starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
-});
-
-var workplaceshow = document.getElementById('workplaceshow');
-var init = workplaceshow.offsetTop;
-var docked;
-
-window.onscroll = function () {
-if (!docked && (workplaceshow.offsetTop - scrollTop() < 0)) {
-  workplaceshow.style.top = 0;
-  workplaceshow.style.position = 'fixed';
-  workplaceshow.className = 'docked';
-  docked = true;
-} else if (docked && scrollTop() <= init) {
-  workplaceshow.style.position = 'absolute';
-  workplaceshow.style.top = init + 'px';
-  workplaceshow.className = workplaceshow.className.replace('docked', '');
-  docked = false;
-
-}
-}
 });
 
 <% end %>
