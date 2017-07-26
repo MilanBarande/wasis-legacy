@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.workplace = Workplace.find(current_user.visits.last.workplace_id)
     @review.user = User.find(current_user.id)
 
-    # Save ratings
+
     if @review.save!
       if params[:review]["rating"] != ""
         rating = Rating.create(rating_params)
