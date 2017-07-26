@@ -34,7 +34,9 @@
   <% unless @workplace.nil? || @review.nil? %>
   <%= render 'shared/modal_review', locals: { workplace: @workplace,review: @review } %>
   <% end %>
-
+ <% unless @workplace.nil? || @status.nil? %>
+  <%= render 'shared/modal_status', locals: { workplace: @workplace,status: @status } %>
+  <% end %>
 
   <%= render 'shared/footer' unless @hide_footer %>
   <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
