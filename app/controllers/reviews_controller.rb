@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.workplace = Workplace.find(current_user.visits.last.workplace_id)
+    @review.workplace = Workplace.find(params[:workplace_id])
     @review.user = User.find(current_user.id)
 
 
