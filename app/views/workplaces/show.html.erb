@@ -44,99 +44,100 @@
 
         <div class="ratings wp-section">
           <h3>Ratings</h3>
-            <table>
-              <tr>
-                <td> Wifi: </td>
-                <td><%= render_stars(average_feature_rating :wifi) %> </td>
-              </tr>
-              <tr>
-                <td> noise: </td>
-                <td> <%= render_stars(average_feature_rating :noise) %></td>
-              </tr>
-              <tr>
-                <td> Comfort: </td>
-                <td><%= render_stars(average_feature_rating :comfort) %> </td>
-              </tr>
-              <tr>
-                <td> Service: </td>
-                <td> <%= render_stars(average_feature_rating :service) %> </td>
-              </tr>
-            </table>
+          <table>
+            <tr>
+              <td> Wifi: </td>
+              <td><%= render_stars(average_feature_rating :wifi) %> </td>
+            </tr>
+            <tr>
+              <td> noise: </td>
+              <td> <%= render_stars(average_feature_rating :noise) %></td>
+            </tr>
+            <tr>
+              <td> Comfort: </td>
+              <td><%= render_stars(average_feature_rating :comfort) %> </td>
+            </tr>
+            <tr>
+              <td> Service: </td>
+              <td> <%= render_stars(average_feature_rating :service) %> </td>
+            </tr>
+          </table>
         </div>
         <hr>
         <!--    Reviews -->
         <div class="reviews wp-section">
           <h3>Reviews</h3>
           <% if @global_rating.nil? %>
-            <p>This place doesn't have any review yet. <br/>
-              Be the first one to add one :)
-            </p>
-            <%= link_to "Add a review", new_workplace_review_path(@workplace) %>
-            <% else %>
-            <h3>Reviews:</h3>
-            <% @workplace.reviews.each do |review| %>
-              <% @user = User.find(review.user_id) %>
-              <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
-              </%></div>
-              <div> <%= render_stars(review.ratings.first.average) %></div>
-              <div class="review-comment">
-                <p><u>Comment: </u> <%= review.comment %></p>
-              </div>
-            <% end %>
+          <p>This place doesn't have any review yet. <br/>
+            Be the first one to add one :)
+          </p>
+          <%= link_to "Add a review", new_workplace_review_path(@workplace) %>
+          <% else %>
+          <h3>Reviews:</h3>
+          <% @workplace.reviews.each do |review| %>
+          <% @user = User.find(review.user_id) %>
+          <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
+          </%></div>
+          <div> <%= render_stars(review.ratings.first.average) %></div>
+          <div class="review-comment">
+            <p><u>Comment: </u> <%= review.comment %></p>
+          </div>
+          <% end %>
           <% end %>
         </div>
       </div>
 
 
-      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 action-workplace" id="action-bar" >
-        <div class="action-header">
+      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 " id="action-bar" >
+        <div class="action-workplace">
+          <div class="action-header">
             <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
             <div class="workplace-hours">
-              <%= image_tag('unknow.svg', alt: 'Unknown hours') %>
               <p>Opening hours are not available for this place.</p>
             </div>
             <% elsif @spot.opening_hours["open_now"] %>
             <div class="workplace-hours">
-              <%= image_tag('open.svg', alt: 'Open now') %>
-              <p>OPEN NOW</p>
+              <p>Open Now</p>
             </div>
 
-          <% else %>
-          <div class="workplace-hours">
-            <%= image_tag('closed.svg', alt: 'Open now') %>
-            <p>CLOSED NOW</p>
-          </div>
-          <% end %>
-        </div>
-        <div class="action-body">
-          <div>
-            Add to Favorites
-          </div>
-          <div>
-            Share with friends
+            <% else %>
+            <div class="workplace-hours">
+              <p>CLOSED NOW</p>
+            </div>
+            <% end %>
           </div>
 
-          <div>
+          <div class="action-body">
+             <span>Add to Favorites</span>
+            <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
+             <span>Share with friends</span>
+             <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+             <span>Send to my iphone</span>
+             <!-- <i class="fa fa-mobile" aria-hidden="true"></i>  -->
+          </div>
+
+          <div class="action-footer">
             <% if @checkedin_visit == false || !@visitrender.nil? && @visitrender_stars.workplace == @workplace  %>
             <div id="checkin">
               <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
             </div>
             <% end %>
           </div>
-          </div>
-
+        </div>
         <!--    People already cheked in  -->
         <div id="present" class="checked-in">
-         <%= render 'visits/present', visit: @visit, workplace: @workplace %>
-         <p><%# visit.status unless visit.status.nil? %></p>
-       </div>
-     </div>
-
-
-   </div>
- </div>
+          <% if @visitrender.nil? %>
+          <p> Let people know where you are working today</p>
+          <% else %>
+          <%= render 'visits/present', visit: @visit, workplace: @workplace %>
+          <p><%# visit.status unless visit.status.nil? %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
 <div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A"></script>
