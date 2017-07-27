@@ -95,7 +95,7 @@ a {
 }
 
 .workplace-photo img {
-  width: 100%;
+  width: 40vw;
 }
 
 .workplace-nav {
@@ -132,15 +132,21 @@ a {
     font-weight: 800;
     margin-bottom: 20px;
   }
-  h4 {
+  h5 {
     font-weight: 16px;
     color: rgba( 0,0,0, 0.8);
+    font-weight: 300;
+  }
+  h4 {
+    font-weight: 16px;
+    color: rgba( 0,0,0, 1);
     font-weight: 800;
   }
 }
 
 .wp-section {
   margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 
@@ -161,7 +167,7 @@ a.user-checkedin {
   padding-left: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-sta;
 }
 
 .workplaceshow {
@@ -209,6 +215,7 @@ a.user-checkedin {
   margin-bottom: 40px;
   table {
     width: 180px;
+    line-height: 1.8;
   }
    tr>td {
     width: 60px;
