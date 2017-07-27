@@ -15,4 +15,11 @@
 @import "pages/index";
 
 .grow { transition: all .2s ease-in-out; }
+
 .grow:hover { transform: scale(1.020); }
+
+.grow:hover { transform: scale(1.1); }
+
+.btn-close-status {
+  margin-top: 15px;
+}

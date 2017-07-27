@@ -1,6 +1,7 @@
 <p> People who have already ckeckd-in</p>
 <% Visit.where(:checkin => true).each do |visit| %>
   <% user = visit.user %>
+
   <% avatar_url = user.facebook_picture_url || "http://placehold.it/30x30" %>
   <%= link_to user_path(user.id), class:"user-checkedin" do %>
   <%= image_tag avatar_url, class: "avatar" %>
