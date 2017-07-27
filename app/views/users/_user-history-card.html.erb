@@ -4,10 +4,13 @@
       <div class="fa fa-star rating-card"></div>
       <div class="workplace-history-rating"><%= workplace.global_rating %></div>
       </div>
+        <%= link_to((workplace), class: 'card-link') do %>
+
         <% if workplace.photo.url.nil? %>
             <%= image_tag 'http://via.placeholder.com/300x230', class:'history-card-image' %>
             <% else %>
           <%= cl_image_tag workplace.photo.url, class:'history-card-image' %>
+          <% end %>
           <% end %>
         <div class="history-card-body">
           <h4><%= workplace.name %></h4>
