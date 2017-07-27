@@ -1,30 +1,24 @@
-<div class="wrapper workplace-page">
+<div class="workplace-photo" style="background-image: url('<%= image_path @workplace.photo.url %>')";></div>
+<div class="workplace-page">
   <div class="container ">
-    <div class="row workplace-nav">
-      <!--    Bande de navigation  -->
-      <div>
-        <%= link_to workplaces_path, class: "btn btn-workplace" do %>
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        <h4>Back to the map</h4>
-        <% end %>
-      </div>
-
-    </div>
-
     <div class="row">
       <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 workplace-info">
 
-        <!--    Photo workplace   -->
-        <div class ="workplace-photo">
-          <% if @workplace.photo.url.nil? %>
-          <%= image_tag 'http://via.placeholder.com/550x350' %>
-          <% else %>
-          <%= cl_image_tag @workplace.photo.url %>
+        <!--    Bande de navigation  -->
+      <div class="workplace-nav">
+        <%= link_to workplaces_path, class: "btn btn-workplace" do %>
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <h4>Back to the map</h4>
           <% end %>
-        </div>
+      </div>
+
         <!--    Details infos  -->
         <h2> <%= @workplace.name %> </h2>
-        <h5> <%= @workplace.address %> </h5>
+        <div class="show-wp-address">
+          <% category = @workplace.category %>
+          <%= image_tag "icone_#{category}.png" %>
+          <h5> <%= @workplace.address %> </h5>
+        </div>
         <div>
           <p class="ratings-stars"><%= render_stars(@global_rating) %> <%= pluralize @workplace.reviews.size, 'review' %> </p>
         </div>
@@ -41,24 +35,6 @@
           </ul>
         </div>
         <hr>
-
-        <!--    Status of checked-in users  -->
-        <div id="status-checkedin">
-         <%= render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
-         <p><%# visit.status unless visit.status.nil? %></p>
-       </div>
-
-
-        <hr>
-        <!--    Ratings  -->
-        <div class="ratings">
-          <h3>Ratings</h3>
-          <% if @global_rating.nil? %>
-            <p>Help the community by rating the place </p>
-            <%= link_to "Rate this place", new_workplace_review_path(@workplace) %>
-          <% else %>
-          <%= @global_rating %>
-          <% end %>
 
         <!--    Features Rating  -->
         <div class="ratings wp-section">
@@ -159,7 +135,6 @@
           </div>
 
           <div class="action-body">
-
            <span id="favourites">
                <% if @favourite.nil?  %>
                <% @favourite = Favourite.new %>
@@ -167,7 +142,6 @@
               <% else %>
                   <%= render 'favourites/unfavourite', favourite: @favourite %>
               <% end %>
-
              </span>
            <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
            <span>Share with friends</span>
