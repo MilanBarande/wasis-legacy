@@ -1,11 +1,8 @@
-<div class="navbar-wagon navbar-wagon-fixed">
+<div class="navbar-wagon navbar-wagon-fixed work-nav">
   <!-- Logo -->
-  <div>
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
   <%= image_tag "logo.png" %>
   <% end %>
-  </div>
-
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -16,13 +13,6 @@
       <%= render 'visits/checkin_navbar', visit: @visit, workplace: @workplace %>
       <% end %>
     </div>
-    <div id="user_status">
-      <%= render 'users/user_status', user: current_user %>
-    </div>
-    <%= link_to user_path(current_user, status: "", nav: "true"),id: "status-link", :method => :put, remote: true do %>
-        <i class="fa fa-pencil" aria-hidden="true">
-        </i>
-      <% end %>
 
 
 
