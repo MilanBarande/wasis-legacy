@@ -1,0 +1,13 @@
+// Here you will write *javascript* that would be executed by the browser
+<% if @user.errors.any? %>
+  console.log("on est tristes")
+  // Render new review form with errors
+<% else %>
+ $('#wrapper-modal-status #modal-status').modal("hide");
+  $('#user_status').html("<%= j render 'users/user_status', user: @user %>");
+  $("#input-status").keyup(function() {
+     var url = "<%= user_path(current_user, status: "", nav: "true") %>"
+     $("#status-link").attr('href', url + $( this ).val());
+    });
+<% end %>
+$("#user_status").val("<%= current_user.status%>");

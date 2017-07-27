@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sx-12 col-sm-4 user-info" id="my-profile">
         <div class="status">
-          <p>Status : </p>
+          <p>Status : <%= @user.status %></p>
           <p><strong><%= @user.visits.count %></strong> Check In </p>
           <p><strong><%= @user.reviews.count %></strong> Reviews </p>
         </div>

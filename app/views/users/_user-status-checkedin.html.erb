@@ -1,0 +1,5 @@
+<% Visit.where(:checkin => true).each do |visit| %>
+  <% user = visit.user %>
+  <p><%= user.first_name %> <%= user.status %></p>
+<% end %>
+  <p><%# visit.status unless visit.status.nil? %></p>

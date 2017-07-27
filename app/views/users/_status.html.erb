@@ -1,0 +1,10 @@
+  <h3>Add a new status</h3>
+  <p><%= current_user.first_name %></p>
+  <%= simple_form_for([current_user], remote: true) do |f| %>
+    <%= f.input :status, maxlength: 480, size: 60 %>
+    <%= f.hidden_field :workplace, value: @workplace.id %>
+    <%= f.error_notification %>
+      <div class="">
+        <%= f.submit "Add a status", id: "status-submit",class: "btn btn-primary" %>
+      </div>
+<% end %>
