@@ -20,6 +20,8 @@
     <div>
       <%= link_to "FIND", workplaces_path, class: "button-banner" %>
     </div>
+
+
   </div>
   <div class="home-city">
     <p> Montreal - San Francisco - Paris - Boston - Toronto - Berlin - Milan - Barcelone - Stocklom </p>
@@ -36,8 +38,8 @@
        </h2>
        <ul>
         <li>15 Cities</li>
-        <li>358 Worplaces</li>
-        <li>2870 Checkin</li>
+        <li>946 Worplaces</li>
+        <li>33870 Checkin</li>
       </ul>
     </div>
   </div>
@@ -48,11 +50,9 @@
       <div class="box-placeholder"></div>
       <div class="box-placeholder"></div>
     </div>
-    <div class="button-banner">
-     <%= link_to new_user_registration_path do %>
-     <h4>JOIN</h4>
-     <% end %>
-   </div>
+      <div>
+      <%= link_to "JOIN", new_user_registration_path, class: "button-banner" %>
+      </div>
   </div>
 </section>
 
@@ -67,11 +67,8 @@
     <div>
       <h2>Help the community by adding workplaces around you!</h2>
     </div>
-
-     <div class="button-banner">
-      <%= link_to new_workplace_path do %>
-      <h4>START</h4>
-      <% end %>
+    <div>
+      <%= link_to "START", new_workplace_path, class: "button-banner" %>
     </div>
   </div>
 </section>

@@ -72,21 +72,13 @@
   border-radius: 50px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
-  h4 {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-    opacity: 0.9;
-  }
-  a {
-    color: white;
-  }
+  color: white;
 }
 
 .button-banner:hover{
  background: rgba(253, 141, 52, 0.9);
- a {
-   text-decoration: none;
- }
+ color: white;
+ text-decoration: none;
 }
 
 .button-banner:active{
@@ -99,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #c6c4c4;
+  color: rgb(178, 178, 178);
   p{
     margin-bottom: 0px;
   }
