@@ -4,8 +4,10 @@
     <div class="home-logo">
       <%= image_tag "wasis_home.png" %>
       <h2>Your next office is down the street</h2>
-      <p>Another placeholder text to say how amazing this app is and what<br/> it really help you to do today. It need to be in two line! thnks dawg</p>
+      <p>Finding new workplaces made easy for you! Precise filters answering your<br/> working need to be as productive as possible while discovering new places</p>
     </div>
+
+
     <div class="home-category">
       <ul>
         <li><h3>Coworking Space</h3><%= image_tag "type_coworking.png" %></li>
@@ -30,46 +32,48 @@
 
 <!--  Second section screen -->
 
-<section >
-  <div class="howitwork" style="background-image: linear-gradient(135deg, rgba(255,255,255,0.5) 20%,rgba(246,239,248,0.5) 23%,rgba(152,83,179,0.31) 53%,rgba(150,88,181,0.3) 54%,rgba(86,229,235,0.2) 81%,rgba(74,255,245,0.2) 86%,rgba(255,255,255,0.4) 100%,rgba(255,255,255,0.4) 101%), url('<%= image_path 'join_community_photo.png' %>');">
-    <div class = "home-stats">
-      <h2>Another quote on how productive it is <br/>
-       to work with  other people
-       </h2>
-       <ul>
-        <li>15 Cities</li>
-        <li>946 Worplaces</li>
-        <li>33870 Checkin</li>
-      </ul>
-    </div>
-  </div>
-
   <div class="home-text-section">
     <div class="home-how">
-      <div class="box-placeholder"></div>
-      <div class="box-placeholder"></div>
-      <div class="box-placeholder"></div>
-    </div>
-      <div>
-      <%= link_to "JOIN", new_user_registration_path, class: "button-banner" %>
+      <div class="how-description">
+      <h3><strong>FIND</strong></h3>
+      <p>Find workplaces around you with selected filters responding to your needs</p>
       </div>
-  </div>
-</section>
-
-<!-- box to insist user to add places -->
-
-<section class="home-page">
-
-  <!-- Start uploading -->
-
-  <div class="howitwork">
-    <%= video_tag "coffeelive.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-    <div>
-      <h2>Help the community by adding workplaces around you!</h2>
-    </div>
-    <div>
-      <%= link_to "START", new_workplace_path, class: "button-banner" %>
+      <div class="how-description">
+      <h3><strong>ENJOY</strong></h3>
+      <p>Enjoy workplaces you discovered near you</p>
+      </div>
+      <div class="how-description">
+      <h3><strong>REVIEW</strong></h3>
+      <p>Review workplaces you've just been, making it authentic to the work environment</p>
+      </div>
     </div>
   </div>
 </section>
+
+<%= content_for(:after_js) do %>
+<script>
+  $(function () {
+
+
+    // hide .navbar first
+    $(".navbar-wagon-brand").hide();
+
+    // fade in .navbar
+    $(function () {
+      $(window).scroll(function () {
+              // set distance user needs to scroll before we fadeIn navbar
+        if ($(this).scrollTop() > 216) {
+          $('.navbar-wagon-brand').fadeIn();
+        } else {
+          $('.navbar-wagon-brand').fadeOut();
+        }
+      });
+
+
+    });
+
+  });
+  </script>
+<% end %>
+
 
