@@ -51,19 +51,19 @@
             <table>
               <tr>
                 <td> Wifi </td>
-                <td><%= average_feature_rating :wifi %> </td>
+                <td><%= render_stars(average_feature_rating :wifi) %> </td>
               </tr>
               <tr>
                 <td> noise </td>
-                <td> <%= average_feature_rating :noise %></td>
+                <td> <%= render_stars(average_feature_rating :noise) %></td>
               </tr>
               <tr>
                 <td> Comfort </td>
-                <td><%= average_feature_rating :comfort %> </td>
+                <td><%= render_stars(average_feature_rating :comfort) %> </td>
               </tr>
               <tr>
                 <td> Service </td>
-                <td> <%= average_feature_rating :service %> </td>
+                <td> <%= render_stars(average_feature_rating :service) %> </td>
               </tr>
             </table>
           <% end %>
