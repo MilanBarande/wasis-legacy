@@ -49,6 +49,8 @@
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
+  flex: 25%;
+  height: 60px;
   img {
     width: 50px;
     margin-top: 2rem;
@@ -57,6 +59,7 @@
 
 .card-features-container {
   display: flex;
+  flex-wrap: wrap;
   background: #fff;
   width: 480px;
   position: absolute;
@@ -65,7 +68,7 @@
   padding-bottom: 1.5em;
   height: auto;
   color: #333;
-  opacity: .9;
+  opacity: .7;
   font-weight: 700;
   p {
     width: 65px;
@@ -74,4 +77,8 @@
     font-size: 13px;
     font-weight: normal;
   }
+}
+
+.workplace-img-bg {
+  height: 300px;
 }
