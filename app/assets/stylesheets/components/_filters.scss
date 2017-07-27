@@ -4,9 +4,7 @@
 }
 
 .filters-container {
-    background: #fff;
     margin-top: 85px;
-    opacity: 0.85;
     border-radius: 5px;
     p {
     width: 65px;
@@ -29,7 +27,7 @@
 
 .filters-submit {
   font-weight: 700;
-  width: 550px;
+  width: 480px;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -43,9 +41,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 5px auto;
-  opacity: 0.6;
   color: rgb(20,20,20);
-  background: rgba(200,200,200,0.3);
   img {
     width: 40px;
   }
@@ -58,14 +54,14 @@
 
 }
 .button-black:hover {
-  opacity: 1;
+  background: #f9f9f9;
   text-decoration: none;
-  color: rgb(20,20,20);
+  color: #333;
 }
 
 .active {
   color: rgb(5,5,5);
-  background: rgba(170,170,170, 0.9);
+  background: #f9f9f9;
   text-decoration: none;
 }
 

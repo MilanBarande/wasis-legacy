@@ -5,13 +5,16 @@
     <div class="card-graphics">
       <h3 class="card-title"><%= workplace.name %></h3>
       <p class="card-text"><%= workplace.address %></p>
-      <p class="card-distance"> meters away from your position.</p>
+      <p class="card-distance">
+        <span class="dist"></span>
+        meters away from your position.
+      </p>
     </div>
     <div class="card-features-container">
 
       <% workplace.features.each do |feature| %>
       <div class="feature-desc">
-        <%= image_tag(feature.icon) %> <p><%= feature.name %></p>
+        <%= image_tag(feature.icon) %> <p><%#= feature.name %></p>
       </div>
         <% end %>
     </div>
