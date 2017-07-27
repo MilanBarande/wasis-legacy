@@ -4,13 +4,13 @@ class ReviewsController < ApplicationController
     @review = Review.new
     @workplace = Workplace.find(params[:workplace_id])
     @rating = Rating.new
+    no_footer
   end
 
   def create
     @review = Review.new(review_params)
     @review.workplace = Workplace.find(params[:workplace_id])
     @review.user = User.find(current_user.id)
-
 
     if @review.save!
       if params[:review]["rating"] != ""
@@ -28,7 +28,10 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
+  end
 
+  def no_footer
+    @hide_footer = true
   end
 
   def destroy
