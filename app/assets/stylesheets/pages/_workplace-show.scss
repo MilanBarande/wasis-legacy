@@ -13,43 +13,55 @@ a {
 }
 
 .action-workplace {
+  position: relative;
   background-color: rgba( 230, 230, 230, 0.3);
   padding-left: 0px;
   padding-right: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+  min-height: 30vh;
 }
 
 .action-header {
   width: 100%;
-  background-color: rgba( 230, 230, 230, 0.8);
+  background-color: rgba( 230, 230, 230, 0.6);
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.action-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
 }
 
 .workplace-hours {
   img {
     width: 70px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
+.checked-in {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0px;
+}
 
 .workplace-photo img {
   width: 100%;
 }
 
 .workplace-nav {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -66,15 +78,12 @@ a {
   }
 }
 
-
-
-
-.checked-in {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 14px;
+.workplace-info {
+  padding-left: 0px;
 }
+
+
+
 
 .workplace-nav:after{
   content: none !important;

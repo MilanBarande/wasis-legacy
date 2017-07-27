@@ -27,6 +27,7 @@
         <div>
           <p class="ratings-stars"><%= render_stars(@global_rating) %> <%= pluralize @workplace.reviews.size, 'review' %> </p>
         </div>
+        <hr>
 
         <div class="features wp-section">
           <h3>Features</h3>
@@ -38,6 +39,7 @@
             <% end %>
           </ul>
         </div>
+        <hr>
         <!--    Ratings  -->
 
         <div class="ratings wp-section">
@@ -61,6 +63,7 @@
               </tr>
             </table>
         </div>
+        <hr>
         <!--    Reviews -->
         <div class="reviews wp-section">
           <h3>Reviews</h3>
@@ -105,20 +108,22 @@
           </div>
           <% end %>
         </div>
-
-        <div>
-          Add to Favorites
-        </div>
-        <div>
-          Share with friends
-        </div>
-        <div>
-          <% if @checkedin_visit == false || !@visitrender.nil? && @visitrender_stars.workplace == @workplace  %>
-          <div id="checkin">
-            <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+        <div class="action-body">
+          <div>
+            Add to Favorites
           </div>
-          <% end %>
-        </div>
+          <div>
+            Share with friends
+          </div>
+
+          <div>
+            <% if @checkedin_visit == false || !@visitrender.nil? && @visitrender_stars.workplace == @workplace  %>
+            <div id="checkin">
+              <%= render 'visits/checkin', visit: @visit, workplace: @workplace %>
+            </div>
+            <% end %>
+          </div>
+          </div>
 
         <!--    People already cheked in  -->
         <div id="present" class="checked-in">
