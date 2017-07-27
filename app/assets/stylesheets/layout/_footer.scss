@@ -21,7 +21,7 @@
 }
 
 .find-us {
-  padding: 10px 10vw 10px 10vw;
+  position: relative;
   ul {
     margin-top: 10px;
   }
@@ -50,9 +50,37 @@ footer .row {
   padding: 0;
   margin: 0;
 }
+.follow-text{
+  left: 0;
+}
 
-.social-logo {
+.social-logo-footer {
+  position: relative;
+  top: 1vh;
   padding: 0;
-  display: flex
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  list-style: none;
+  text-align: center;
+  a {
+    color: black;
+    &:hover {
+      color:rgb(253, 153, 73);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  .fa {
+    padding: 10px 15px;
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  .fa:hover {
+    color:rgb(253, 153, 73);
+    cursor: pointer;
+  }
 }
 
