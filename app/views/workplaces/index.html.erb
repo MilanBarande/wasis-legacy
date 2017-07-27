@@ -9,7 +9,7 @@
     <div class="container filters-container">
       <% @features.each do |feature| %>
       <div class="col-xs-4">
-        <a href="" class="button-black grow " id="btn-<%= feature.name.downcase.tr(" ", "_") %>">
+        <a href="" class="button-black grow <%= 'active' if params["features"].keys.include?(feature.name.downcase.tr(" ", "_")) %>" id="btn-<%= feature.name.downcase.tr(" ", "_") %>">
           <div class="button-img"><%= image_tag(feature.icon) %></div>
           <div class="button-text"><p class="text-12"><%= feature.name %></p>
           </div>
@@ -20,15 +20,15 @@
       <!-- FILTERING FORM -->
 
       <%= form_tag "/workplaces", method: "get", id: "workplace-form" do %>
-      <%= check_box_tag 'features[wifi]', Feature.find_by(name: "Wifi").id %>
-      <%= check_box_tag('features[hot_drinks]', Feature.find_by(name: "Hot drinks").id) %>
-      <%= check_box_tag('features[cold_drinks]', Feature.find_by(name: "Cold drinks").id) %>
-      <%= check_box_tag('features[large_tables]', Feature.find_by(name: "Large tables").id) %>
-      <%= check_box_tag('features[hourly_rate]', Feature.find_by(name: "Hourly rate").id) %>
-      <%= check_box_tag('features[meals]', Feature.find_by(name: "Meals").id) %>
-      <%= check_box_tag('features[private_rooms]', Feature.find_by(name: "Private rooms").id) %>
-      <%= check_box_tag('features[snacks]', Feature.find_by(name: "Snacks").id) %>
-      <%= check_box_tag('features[electric_outlets]', Feature.find_by(name: "Electric outlets").id) %>
+      <%= check_box_tag('features[wifi]', Feature.find_by(name: "Wifi").id, params["features"].keys.include?("wifi")) %>
+      <%= check_box_tag('features[hot_drinks]', Feature.find_by(name: "Hot drinks").id, params["features"].keys.include?("hot_drinks")) %>
+      <%= check_box_tag('features[cold_drinks]', Feature.find_by(name: "Cold drinks").id, params["features"].keys.include?("cold_drinks")) %>
+      <%= check_box_tag('features[large_tables]', Feature.find_by(name: "Large tables").id, params["features"].keys.include?("large_tables")) %>
+      <%= check_box_tag('features[hourly_rate]', Feature.find_by(name: "Hourly rate").id, params["features"].keys.include?("hourly_rate")) %>
+      <%= check_box_tag('features[meals]', Feature.find_by(name: "Meals").id, params["features"].keys.include?("meals")) %>
+      <%= check_box_tag('features[private_rooms]', Feature.find_by(name: "Private rooms").id, params["features"].keys.include?("private_rooms")) %>
+      <%= check_box_tag('features[snacks]', Feature.find_by(name: "Snacks").id, params["features"].keys.include?("snacks")) %>
+      <%= check_box_tag('features[electric_outlets]', Feature.find_by(name: "Electric outlets").id, params["features"].keys.include?("electric_outlets")) %>
       <%= submit_tag "Search", class: "btn btn-info filters-submit" %>
       <% end %>
 
@@ -138,7 +138,9 @@
       markers.push(marker);
     }
     var markerCluster = new MarkerClusterer(map, markers, {      });
+    <% if @first_workplace %>
     $('#card_' + <%= @first_workplace.id %>).show();
+    <% end %>
   }
 
 
