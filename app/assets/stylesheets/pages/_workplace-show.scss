@@ -2,6 +2,18 @@ a {
   text-decoration: none;
 }
 
+#action-bar {
+  float: left;
+}
+
+#action-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+}
+
+
+
 .workplace-photo img {
   width: 100%;
 }
@@ -9,7 +21,7 @@ a {
 .workplace-nav {
   padding-left: 15px;
   padding-right: 15px;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +32,7 @@ a {
     align-items: center;
     h4 {
       margin-left: 10px;
+      font-size: 16px;
     }
   }
 }
