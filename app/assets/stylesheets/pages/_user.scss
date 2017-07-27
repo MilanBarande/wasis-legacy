@@ -1,6 +1,7 @@
 #my-profile {
   display: flex;
   justify-content: space-around;
+  border-right: 1px solid #eaeaea;
   .status {
     text-align: center;
     display: table-column;
@@ -12,7 +13,6 @@
 }
 
 .status {
-  background: rgba(239, 239, 239, 0.2);
   padding-top: 15px;
   width: 300px;
   display: inline-block;
@@ -20,7 +20,6 @@
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
 }
 
 .status {
@@ -36,18 +35,17 @@
 }
 
 .user-nav {
-  background: rgba(239, 239, 239, 0.2);
   width: 100%;
   margin: auto;
   border-radius: 5px;
   display: inline-block;
   justify-content: space-around;
-  // width: 600px;
-  height: 100px;
   font-size: 18px;
   font-weight: 400;
   align: left;
-  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
+  font-size: .9em;
+  border-bottom: 1px solid #eaeaea;
+  border-radius: 0;
   ul {
     display: flex;
     justify-content: space-around;
@@ -69,7 +67,7 @@
   color: black;
   }
   a:hover {
-  color: rgb(253, 153, 73);
+  color: lighten(#333, 25%);
   cursor: pointer;
   text-decoration: none;
   opacity: 0.8;
@@ -77,9 +75,12 @@
 }
 
 .user-nav {
-  background: rgba(239, 239, 239, 0.2);
   display: flex;
   padding: 10px 10px 0 10px;
+  .tab.active {
+    background: #333;
+    color: #fff;
+  }
 }
 
 .tab {
@@ -100,12 +101,10 @@
 }
 
 .tab-content {
-  background: rgba(239, 239, 239, 0.2);
   width: 100%;
   display: inline-block;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
 }

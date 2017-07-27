@@ -154,7 +154,6 @@
 }
 
 .how-description {
-  background: rgb(250, 250, 250);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -162,12 +161,22 @@
   width: 250px;
 
   h3{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+  }
+  hr {
+    border: 2px solid;
+    color: #333;
+    width: 10%;
+    margin: .3rem 0 1.7rem 0;
   }
   p{
-    margin-top: 25px;
-    text-align: justify;
-    padding: 15px;
+    text-align: center;
+    padding: 0 .5em;
+    line-height: 1.8em;
+  }
+  .fa {
+    font-size: 50px;
+    margin-bottom: 10px;
   }
 }
 
