@@ -38,6 +38,7 @@
           <div class="tab-content hidden" id="my-places">
             <% if @favourites.count == 0 %>
               <p>You haven't added any place to your favourites yet.</p>
+              <%= link_to t(".top_call_to_action", default: "Add a new place"), new_workplace_path, class: "" %>
             <% else %>
               <p>My favourites places</p>
             <ul class="list-unstyled">

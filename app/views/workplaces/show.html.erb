@@ -13,6 +13,7 @@
 
     <div class="row">
       <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 workplace-info">
+
         <!--    Photo workplace   -->
         <div class ="workplace-photo">
           <% if @workplace.photo.url.nil? %>
@@ -22,15 +23,15 @@
           <% end %>
         </div>
         <!--    Details infos  -->
-        <h1><%= @workplace.name %></h1>
-        <h4><%= @workplace.address %></h4>
+        <h2> <%= @workplace.name %> </h2>
+        <h4> <%= @workplace.address %> </h4>
         <div>
           <p class="ratings-stars"><%= render_stars(@global_rating) %> <%= pluralize @workplace.reviews.size, 'review' %> </p>
         </div>
         <hr>
 
         <div class="features wp-section">
-          <h3>Features</h3>
+          <h4>Features</h4>
           <ul class="list-unstyled"><% @workplace.features.each do |feature| %>
             <li>
               <div><%= image_tag(feature.icon) %></div>
@@ -41,25 +42,17 @@
         </div>
         <hr>
         <!--    Status of checked-in users  -->
-        <div id="status-checkedin">
+        <div id="status-checkedin wp-section">
+          <h4>Check-in Status</h4>
          <%= render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
          <p><%# visit.status unless visit.status.nil? %></p>
        </div>
-
-        
         <hr>
-        <!--    Ratings  -->
-        <div class="ratings">
-          <h3>Ratings</h3>
-          <% if @global_rating.nil? %>
-            <p>Help the community by rating the place </p>
-            <%= link_to "Rate this place", new_workplace_review_path(@workplace) %>
-          <% else %>
-          <%= @global_rating %>
-          <% end %>
+
+        <!--    Features Rating  -->
 
         <div class="ratings wp-section">
-          <h3>Ratings</h3>
+          <h4>Ratings</h4>
           <table>
             <tr>
               <td> Wifi: </td>
@@ -82,7 +75,7 @@
         <hr>
         <!--    Reviews -->
         <div class="reviews wp-section">
-          <h3>Reviews</h3>
+          <h4>Reviews</h4>
           <% if @global_rating.nil? %>
 
           <p>This place doesn't have any review yet. <br/>
@@ -90,7 +83,7 @@
           </p>
           <%= link_to "Add a review", new_workplace_review_path(@workplace) %>
           <% else %>
-          <h3>Reviews:</h3>
+          <h4>Reviews:</h4>
           <% @workplace.reviews.each do |review| %>
           <% @user = User.find(review.user_id) %>
           <div>Review by <strong><%= @user.first_name %> <%= @user.last_name %></strong>
@@ -145,21 +138,23 @@
           <% if @visitrender.nil? %>
           <p> Let people know where you are working today</p>
           <% else %>
-          <%= render 'visits/present', visit: @visit, workplace: @workplace %>
-          <p><%# visit.status unless visit.status.nil? %></p>
+            <%= render 'visits/present', visit: @visit, workplace: @workplace %>
+            <p><%# visit.status unless visit.status.nil? %></p>
           <% end %>
         </div>
       </div>
+      </div>
     </div>
+
   </div>
 </div>
 
 <div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 
-<div id="map" class = "row" style="width: 100%; height: 400px;"></div>
 <div id="wrapper-modal-status">
   <%= render 'shared/modal_status', locals: { workplace: @workplace,status: @status } %>
 </div>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTiqJOTZ0WFaiV-EP7hsFFi2cBhYnfP8A"></script>
 
 
