@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :update] do
       resources :ratings, only: [:new, :create]
     end
-    resources :favourites, only: :create
+    resources :favourites, only: [:create, :destroy]
   end
 
   resources :visits, only: :destroy

@@ -41,6 +41,26 @@
           </ul>
         </div>
         <hr>
+<<<<<<< HEAD
+        <!--    Status of checked-in users  -->
+        <div id="status-checkedin">
+         <%= render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
+         <p><%# visit.status unless visit.status.nil? %></p>
+       </div>
+
+
+        <hr>
+        <!--    Ratings  -->
+        <div class="ratings">
+          <h3>Ratings</h3>
+          <% if @global_rating.nil? %>
+            <p>Help the community by rating the place </p>
+            <%= link_to "Rate this place", new_workplace_review_path(@workplace) %>
+          <% else %>
+          <%= @global_rating %>
+          <% end %>
+=======
+>>>>>>> master
 
         <!--    Features Rating  -->
         <div class="ratings wp-section">
@@ -141,7 +161,16 @@
           </div>
 
           <div class="action-body">
-           <span>Add to Favorites</span>
+
+           <span id="favourites">
+               <% if @favourite.nil?  %>
+               <% @favourite = Favourite.new %>
+                <%= render 'favourites/favourite', favourite: @favourite , workplace: @workplace%>
+              <% else %>
+                  <%= render 'favourites/unfavourite', favourite: @favourite %>
+              <% end %>
+
+             </span>
            <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
            <span>Share with friends</span>
            <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->

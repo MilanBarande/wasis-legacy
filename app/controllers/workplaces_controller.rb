@@ -55,6 +55,8 @@ class WorkplacesController < ApplicationController
 
   def show
     @workplace = Workplace.find(params[:id])
+
+    @favourite = Favourite.where("workplace_id = ? AND user_id = ?", @workplace.id, current_user.id).first
     @review = Review.new
     @global_rating = Workplace.find(params[:id]).global_rating
 

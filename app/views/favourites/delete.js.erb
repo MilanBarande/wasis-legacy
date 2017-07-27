@@ -1,0 +1,9 @@
+// Here you will write *javascript* that would be executed by the browser
+
+<% if @favourites.errors.any? %>
+  // Render new review form with errors
+  $('#favourites').html("<%= j render 'favourites/favourite', workplace: @workplace, favourite: @favourite  %>");
+<% else %>
+  //$(".modal-backdrop").remove();
+  $('#favourites').html("<%= j render 'favourites/favourite', workplace: @workplace, favourite: @favourite  %>");
+<% end %>

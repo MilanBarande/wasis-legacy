@@ -1,0 +1,7 @@
+// Here you will write *javascript* that would be executed by the browser
+<% if @favourite.errors.any? %>
+  // Render new review form with errors
+  $('#favourites').html("<%= j render 'favourites/unfavourite', favourite: @favourite %>");
+<% else %>
+  $('#favourites').html("<%= j render 'favourites/unfavourite', favourite: @favourite %>");
+<% end %>
