@@ -1,57 +1,62 @@
 <div class="wrapper wrapper-user">
+
   <div class="container">
     <div class="row">
-      <div class="col-sx-12 col-sm-4 user-info" id="my-profile">
-        <div class="status">
-          <p>Status : <%= @user.status %></p>
-          <p><strong><%= @user.visits.count %></strong> Check In </p>
-          <p><strong><%= @user.reviews.count %></strong> Reviews </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-8 user-activity profile-navbar">
-        <div class="user-nav">
-          <ul>
-            <li><a class="tab" data-target="#my-history">History</a></li>
-            <li><a class="tab" data-target="#my-favourites">My favourites</a></li>
-            <% if @user = current_user %>
-            <li><a class="tab" data-target="#settings">Edit</a></li>
-            <% end %>
-          </ul>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-4 user-activity profile-navbar">
+          <div class="user-nav">
+            <ul>
+              <li><a class="tab" data-target="#my-history">History</a></li>
+              <li><a class="tab" data-target="#my-favourites">My favourites</a></li>
+              <% if @user = current_user %>
+              <li><a class="tab" data-target="#settings">Edit</a></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <div class="profile-margins">
-      <div class="row">
-        <div class="col-sx-12 col-sm-4 user-info" id="my-profile">
-          <%= render 'user-info' %>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sx-12 col-sm-4 user-info" id="my-profile">
+        <%= render 'user-info' %>
+      </div>
+
+      <div class="col-sx-12 col-sm-8  user-activity text-center">
+        <div class="tab-content" id="my-history">
+          <%= render 'user-history-card' %>
         </div>
-        <div class="col-sx-12 col-sm-8 user-activity text-center">
-          <div class="tab-content" id="my-history">
-            <h4>Places visited:</h4>
-            <%= render 'user-history-card' %>
-          </div>
-          <% if @user = current_user %>
+        <% if @user = current_user %>
           <div class="tab-content hidden" id="settings">
-          <%= render 'user-edit' %>
+            <%= render 'user-edit' %>
           </div>
           <% end %>
           <div class="tab-content hidden" id="my-places">
             <% if @favourites.count == 0 %>
               <p>You haven't added any place to your favourites yet.</p>
+              <%= link_to t(".top_call_to_action", default: "Add a new place"), new_workplace_path, class: "" %>
             <% else %>
               <p>My favourites places</p>
+        <% end %>
+        <div class="tab-content hidden" id="my-places">
+          <% if @favourites.count == 0 %>
+            <p>You haven't added any place to your favourites yet.</p>
+          <% else %>
+            <p>My favourites places</p>
             <ul class="list-unstyled">
               <% @favourites.each do |favourite| %>
-              <div>
-                <%= Workplace.find(id: favourite.workplace_id) %> </div>
+                <div>
+                  <%= Workplace.find(id: favourite.workplace_id) %>
+                </div>
               <% end %>
-              <% end %>
-              </div>
-            </div>
-          </div>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>
+
+</div>
 
 
     <script src="javascript/tabs.js"></script>

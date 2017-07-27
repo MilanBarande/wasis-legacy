@@ -95,9 +95,8 @@ a {
 }
 
 
-
 .workplace-photo img {
-  width: 100%;
+  width: 40vw;
 }
 
 .workplace-nav {
@@ -108,8 +107,14 @@ a {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgrey;
-  :first-child
-  {
+  a {
+    color: rgba( 0, 0, 0, 0.5);
+  }
+  a:hover {
+    color: rgba(253, 142, 52, 0.8);
+    transition: 0.3s, ease-in;
+  }
+  :first-child {
     display: inline-flex;
     align-items: center;
     h4 {
@@ -124,6 +129,25 @@ a {
 
 .workplace-info {
   padding-left: 0px;
+  h2 {
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  h5 {
+    font-weight: 16px;
+    color: rgba( 0,0,0, 0.8);
+    font-weight: 300;
+  }
+  h4 {
+    font-weight: 16px;
+    color: rgba( 0,0,0, 1);
+    font-weight: 800;
+  }
+}
+
+.wp-section {
+  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 
@@ -144,7 +168,9 @@ a.user-checkedin {
   padding-left: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 10px;
+
 }
 
 .workplaceshow {
@@ -177,7 +203,7 @@ a.user-checkedin {
       padding: 0px 8px 0px 8px;
       :last-child {
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: lighter;
       }
       img {
@@ -192,6 +218,7 @@ a.user-checkedin {
   margin-bottom: 40px;
   table {
     width: 180px;
+    line-height: 1.8;
   }
    tr>td {
     width: 60px;

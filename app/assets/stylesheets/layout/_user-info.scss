@@ -5,25 +5,31 @@
 }
 
 .user-card-avatar {
-  background: rgba(239, 239, 239, 0.2);
   width: 300px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px rgb(240, 240, 240);
+  hr {
+    border: 2px solid;
+    color: #333;
+    width: 10%;
+    margin: 1.3rem 0 1.7rem 0;
+  }
 }
 
 
 
 .avatar-profile {
-  // TO DO
+  max-width: 220px;
+  border-radius: .3em;
 }
 
 .user-card-picture {
   position: relative;
-  height: 230px;
   margin-bottom: 35px;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
@@ -44,7 +50,7 @@
 }
 
 .user-card-description {
-  padding: 20px;
+  padding: 0 0 1em 0;
   margin-bottom: 10px;
 }
 
@@ -54,6 +60,7 @@
   font-size: 30px;
   list-style: none;
   text-align: center;
+  padding: 0;
   a {
     color: black;
     &:hover {
