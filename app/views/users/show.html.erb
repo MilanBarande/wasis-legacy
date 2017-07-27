@@ -34,12 +34,8 @@
           </div>
           <% end %>
           <div class="tab-content hidden" id="my-places">
-            <% if @favourites.count == 0 %>
               <p>You haven't added any workplaces yet.</p>
               <%= link_to t(".top_call_to_action", default: "Add a new workplace"), new_workplace_path, class: "" %>
-            <% else %>
-              <p>My favourites places</p>
-            <% end %>
         </div>
         <div class="tab-content hidden" id="my-favourites">
           <%= render 'user-favourite-card' %>
