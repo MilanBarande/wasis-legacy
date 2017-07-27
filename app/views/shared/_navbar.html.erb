@@ -13,7 +13,13 @@
       <%= render 'visits/checkin_navbar', visit: @visit, workplace: @workplace %>
       <% end %>
     </div>
-
+    <div id="user_status">
+      <%= render 'users/user_status', user: current_user %>
+    </div>
+    <%= link_to user_path(current_user, status: "", nav: "true"),id: "status-link", :method => :put, remote: true do %>
+        <i class="fa fa-pencil" aria-hidden="true">
+        </i>
+      <% end %>
 
 
     <!-- Different navigation if login or not -->

@@ -1,30 +1,29 @@
-
-  <h3>Add a new review</h3>
-  <h2><%= @workplace.name %></h2>
-  <h4><%= @workplace.address %></h4>
-  <%= simple_form_for [@workplace, @review] do |f| %>
-    <%= f.input :comment, maxlength: 480, size: 60 %>
-    <%= f.error_notification %>
-      <%= f.simple_fields_for :rating do |r| %>
-        <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
-        <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-        <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-        <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-      <% end %>
-      <%= f.submit "Add", class: "btn btn-primary btn-wasis" %>
-  <% end %>
+<h3>Add a new review</h3>
+<h2><%= @workplace.name %></h2>
+<h4><%= @workplace.address %></h4>
+<%= simple_form_for [@workplace, @review] do |f| %>
+  <%= f.input :comment, maxlength: 480, size: 60 %>
+  <%= f.error_notification %>
+    <%= f.simple_fields_for :rating do |r| %>
+      <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
+      <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+    <% end %>
+    <%= f.submit "Add", class: "btn btn-primary btn-wasis" %>
+<% end %>
 
 
 <%= content_for(:after_js) do %>
-  <script>
-    $(document).on('ready', function(){
-    $('.feature-rating').rating({
-        size:'xs',
-        step: 1,
-        clearCaption: '',
-        starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
-        starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
-    });
+<script>
+  $(document).on('ready', function(){
+  $('.feature-rating').rating({
+      size:'xs',
+      step: 1,
+      clearCaption: '',
+      starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
+      starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
+  });
 });
 </script>
 <% end %>

@@ -54,6 +54,14 @@
   font-size: 30px;
   list-style: none;
   text-align: center;
+  a {
+    color: black;
+    &:hover {
+      color:rgb(253, 153, 73);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
   .fa {
     padding: 10px 15px;
   }

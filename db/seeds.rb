@@ -19,7 +19,9 @@ coffees = @client.spots_by_query("coffee montreal workplace") + @client.spots_by
 
 puts "Seeding coworking places..."
 coworkings.each do |coworking|
-  workplace = Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat, photo: "la_gare.jpg")
+  workplace = Workplace.create!(google_id: coworking.place_id, name: coworking.name, category: 0, address: coworking.formatted_address, longitude: coworking.lng, latitude: coworking.lat)
+  workplace.remote_photo_url = 'https://res.cloudinary.com/dj0wtma0d/image/upload/v1501106842/la_gare_py70bd.jpg'
+  workplace.save
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
@@ -28,7 +30,9 @@ puts "Done."
 
 puts "Seeding libraries..."
 libraries.each do |library|
-  workplace = Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat, photo: "banq.jpg")
+  workplace = Workplace.create!(google_id: library.place_id, name: library.name, category: 1, address: library.formatted_address, longitude: library.lng, latitude: library.lat)
+  workplace.remote_photo_url = 'https://res.cloudinary.com/dj0wtma0d/image/upload/v1501106843/banq_efbsvx.jpg'
+  workplace.save
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
@@ -37,7 +41,9 @@ puts "Done."
 
 puts "Seeding coffees..."
 coffees.each do |coffee|
-  workplace = Workplace.create!(google_id: coffee.place_id, name: coffee.name, category: 2, address: coffee.formatted_address, longitude: coffee.lng, latitude: coffee.lat, photo: "caravane.jpg")
+  workplace = Workplace.create!(google_id: coffee.place_id, name: coffee.name, category: 2, address: coffee.formatted_address, longitude: coffee.lng, latitude: coffee.lat)
+  workplace.remote_photo_url = 'http://res.cloudinary.com/dj0wtma0d/image/upload/v1500909503/sdyhnqe0bjsx3aqo2oli.jpg'
+  workplace.save
   3.times do
     Workplacefeature.create!(workplace: workplace, feature: Feature.order("RANDOM()").first)
   end
