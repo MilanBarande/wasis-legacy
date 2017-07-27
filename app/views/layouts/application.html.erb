@@ -29,7 +29,11 @@
 </head>
 <body>
   <%= render 'shared/flashes' %>
-  <%= render 'shared/navbar' %>
+  <% if content_for? :navbar %>
+    <%= yield(:navbar) %>
+  <% else %>
+    <%= render 'shared/navbar' %>
+  <% end %>
   <%= yield %>
   <% unless @workplace.nil? || @review.nil? %>
   <%= render 'shared/modal_review', locals: { workplace: @workplace,review: @review } %>

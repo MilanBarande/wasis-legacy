@@ -1,4 +1,6 @@
-
+<% content_for :navbar do %>
+  <%= render "shared/work_nav" %>
+<% end %>
 <div class="index-content">
   <div class="side-container">
 
@@ -7,10 +9,10 @@
     <div class="container filters-container">
       <% @features.each do |feature| %>
       <div class="col-xs-4">
-        <a href="" class="button-black" id="btn-<%= feature.name.downcase.tr(" ", "_") %>">
+        <a href="" class="button-black grow " id="btn-<%= feature.name.downcase.tr(" ", "_") %>">
+          <div class="button-img"><%= image_tag(feature.icon) %></div>
           <div class="button-text"><p class="text-12"><%= feature.name %></p>
           </div>
-          <div class="button-img"><%= image_tag(feature.icon) %></div>
         </a>
       </div>
       <% end %>
@@ -66,9 +68,10 @@
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5259795, lng: -73.5951137},
-      zoom: 6
+      zoom: 6,
+      disableDefaultUI: true,
+      styles: [ { "featureType": "all", "elementType": "labels", "stylers": [ { "visibility": "on" } ] }, { "featureType": "administrative", "elementType": "all", "stylers": [ { "visibility": "off" }, { "color": "#efebe2" } ] }, { "featureType": "landscape", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi.attraction", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi.business", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi.government", "elementType": "all", "stylers": [ { "color": "#dfdcd5" } ] }, { "featureType": "poi.medical", "elementType": "all", "stylers": [ { "color": "#dfdcd5" } ] }, { "featureType": "poi.park", "elementType": "all", "stylers": [ { "color": "#bad294" } ] }, { "featureType": "poi.place_of_worship", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi.school", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "poi.sports_complex", "elementType": "all", "stylers": [ { "color": "#efebe2" } ] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [ { "color": "#fbfbfb" } ] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] }, { "featureType": "transit", "elementType": "all", "stylers": [ { "visibility": "on" } ] }, { "featureType": "water", "elementType": "all", "stylers": [ { "color": "#a5d7e0" } ] } ]
     });
-    var infoWindow = new google.maps.InfoWindow({map: map});
     var locations = <%= raw @hash.to_json %>
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
