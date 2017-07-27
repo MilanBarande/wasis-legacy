@@ -91,12 +91,12 @@
               <% else %>
                 <% @workplace.reviews.each do |review| %>
                 <% @user = User.find(review.user_id) %>
-                  <div>
+                  <div class="comment-card">
                     <div>
                       <div>
                         <div>
                           <% avatar_url = @user.facebook_picture_url || "http://placehold.it/30x30" %>
-                          <%= image_tag avatar_url, class: "avatar" %>
+                          <%= image_tag avatar_url, class: "avatar-bordered" %>
                         </div>
                         <div>
                           <div>by: <strong><%= @user.first_name %> <%= @user.last_name %></strong>
@@ -113,6 +113,8 @@
                        <p><u>Comment: </u> <%= review.comment %></p>
                      </div>
                   </div>
+                  <hr>
+
           <% end %>
           <% end %>
         </div>
