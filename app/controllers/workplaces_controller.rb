@@ -43,7 +43,7 @@ class WorkplacesController < ApplicationController
       marker.lat workplace.latitude
       marker.lng workplace.longitude
       marker.picture({
-        url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}"),
+        url: ActionController::Base.helpers.asset_path("icone_#{workplace.category}.png"),
         width:  45,
         height: 57
         })
