@@ -24,7 +24,6 @@
 
 .card-container {
   width: 480px;
-  height: 400px;
   position: relative;
   top: 22px;
   left: 55px;
@@ -51,15 +50,15 @@
   height: 60px;
   img {
     width: 40px;
-    margin-right: 4px;
-    margin-left: 4px;
+    margin-right: 2px;
+    margin-left: 2px;
   }
 }
 
 .card-features-container {
   display: flex;
   flex-wrap: wrap;
-  background: #FEBC2D;
+  background: white;
   width: 480px;
   position: absolute;
   bottom: 0;
@@ -79,5 +78,5 @@
 }
 
 .workplace-img-bg {
-  height: 300px;
+  height: 350px;
 }
