@@ -5,10 +5,11 @@
       <div class="col-xs-12 col-sm-8 col-sm-offset-4 user-activity profile-navbar">
           <div class="user-nav">
             <ul>
+              <% if @user = current_user %>
               <li><a class="tab" data-target="#my-history">History</a></li>
+              <% end %>
               <li><a class="tab" data-target="#my-favourites">My favourites</a></li>
               <% if @user = current_user %>
-              <li><a class="tab" data-target="#my-places">Added workplaces</a></li>
               <li><a class="tab" data-target="#settings">Edit my profile</a></li>
               <% end %>
             </ul>
@@ -33,10 +34,6 @@
             <%= render 'user-edit' %>
           </div>
           <% end %>
-          <div class="tab-content hidden" id="my-places">
-              <p>You haven't added any workplaces yet.</p>
-              <%= link_to t(".top_call_to_action", default: "Add a new workplace"), new_workplace_path, class: "" %>
-        </div>
         <div class="tab-content hidden" id="my-favourites">
           <%= render 'user-favourite-card' %>
         </div>
