@@ -4,12 +4,14 @@ module ApplicationHelper
   end
 
   def render_stars(value)
+
     stars = ""
     if value == [] || value.nil?
       5.times do
         stars << "<i class=\"fa fa-star-o\"></i>"
       end
     else
+
       rating = ((value) / 0.5).floor / 2.0
       5.times do
         if rating > 0.5
@@ -30,18 +32,21 @@ module ApplicationHelper
     @workplace = Workplace.find(params[:id])
     feature = feature.to_sym
     number_of_reviews_for_workplace = @workplace.reviews.count
-    @workplace.ratings.each do |review|
+    running_total = 0.0
+    @workplace.ratings.each do |rating|
       # the `send` method allows to dynamically pass methods to an object
-
-        if review.send(feature).nil?
-          return 0.to_f
-        else
-          running_total = 0.0
-          running_total += review.send(feature)
+        unless rating.send(feature).nil?
+          running_total += rating.send(feature)
         end
-         rating_float = running_total / number_of_reviews_for_workplace
-        ((rating_float) / 0.5).floor / 2.0
-      end
+    end
+
+    if running_total == 0.0
+      rating_float = 0.0
+    else
+      rating_float = (running_total / number_of_reviews_for_workplace.to_f).round(2)
+    end
+
+      # ((rating_float) / 0.5).floor / 2.0
   end
 end
 
