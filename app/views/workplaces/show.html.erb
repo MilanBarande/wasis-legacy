@@ -113,13 +113,14 @@
                 <div>
                   <div><strong><%= @user.first_name %> <%= @user.last_name %></strong>
                   </div>
-                  <div> <%= review.created_at %> </div>
+                  <div> <%= time_ago_in_words(review.created_at) %> </div>
                 </div>
               </div>
               <div> <%= render_stars(review.ratings.first.average) %></div>
             </div>
             <div>
-             <p><u>Comment: </u> <%= review.comment %></p>
+             <p><u>Comment: </u></p>
+             <p> <%= review.comment %></p>
            </div>
          </div>
          <hr>
