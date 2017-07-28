@@ -28,9 +28,18 @@
 .filters-submit {
   font-weight: 700;
   width: 480px;
+  height: 50px;
   position: absolute;
   bottom: 0px;
   left: 0px;
+  color: #FD8D34;
+  background-color: white;
+  &:hover{
+    color: #FD8D34;
+    background-color: rgba(253, 189, 52, 0.1);
+    border-color: rgba(253, 189, 52, 0.7);
+    transition: 0.2s ease;
+  }
 }
 
 .button-black {
@@ -54,7 +63,7 @@
 
 }
 .button-black:hover {
-  background: #f9f9f9;
+  background:#D6D6D6;
   text-decoration: none;
   color: #333;
 }

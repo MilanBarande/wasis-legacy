@@ -17,18 +17,13 @@
       <% end %>
     </div>
 
-
-
-
-
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
          <div id="user_status">
           <%= render 'users/user_status', user: current_user %>
         </div>
         <%= link_to user_path(current_user, status: "", nav: "true"),id: "status-link", :method => :put, remote: true do %>
-            <i class="fa fa-pencil" aria-hidden="true">
-            </i>
+            <i class="fa fa-user-o" aria-hidden="true"></i>
           <% end %>
 
 <!--     <!-- Notification -->

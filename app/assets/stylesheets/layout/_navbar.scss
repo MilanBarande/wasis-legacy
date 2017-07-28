@@ -168,6 +168,40 @@
 }
 
 .work-nav {
-  background: none!important;
+  background: rgba(255, 255, 255, 0.6) !important;
   z-index: 99999;
+}
+
+.navbar-wasis-button {
+  margin-left: 10px;
+  padding: 0 20px;
+  border-radius: 20em;
+  border: 3px solid;
+  border-color: rgba(253, 142, 52, 0.7);
+  line-height: 40px;
+  background-color: none;
+  color: rgba(253, 142, 52, 0.7);
+  font-size: 16px;
+}
+.navbar-wasis-button:hover {
+  color:  #FD8D34;
+  border-color: #FD8D34;
+}
+
+
+#user_status {
+  input {
+    height: 35px;
+    margin-top: 10px;
+  }
+  ::placeholder {
+    font-size: 14px;
+    color: #9F9F9F;
+  }
+}
+#status-link {
+  margin-right: 200px;
+  margin-top: 10px;
+  font-size: 24px;
+  color: rgba( 180, 180, 180, 0.8);
 }
