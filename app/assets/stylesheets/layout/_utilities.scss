@@ -43,11 +43,10 @@ body {
 
 .modal-style {
   background-color: rgba(255, 255, 255, 0.9);
-  height: 80vh;
   float: none;
   margin: 0 auto;
-  width: 1000px;
-  height: 600px;
+  width: 790px;
+  height: 750px;
   margin-top: 150px;
   border-radius: 4px;
 }
@@ -63,6 +62,10 @@ body {
   }
 
   button {
-    margin-top : 30px;
+    margin-top : 20px;
   }
+}
+
+.btn-wasis {
+  width: 100px;
 }
