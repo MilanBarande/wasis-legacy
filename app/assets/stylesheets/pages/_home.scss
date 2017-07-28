@@ -12,14 +12,14 @@
   position: relative;
   padding: 10px 5vw 10px 5vw;
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 18vh;
   img {
-    width: 25vw;
+    width: 28vw;
   }
   h2 {
-    font-size: 3.2vh;
-    color: rgba(0,0,0,0.8);
-    font-weight: lighter;
+    font-size: 3.6vh;
+    color: rgba(0,0,0,0.9);
+    font-weight: 200;
 
   }
   p {
@@ -68,17 +68,23 @@
   align-items: center;
   text-align: center;
   padding: 0px 80px 00px 80px;
-  background: rgba(255, 161, 86, 0.9);
+  background: rgba(255, 161, 86, 1);
   border-radius: 50px;
   transition: all 0.1s ease-in-out;
+  border: 3px solid;
+  border-color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   color: white;
+  font-size: 20px;
+  font-weight: 400;
+
 }
 
 .button-banner:hover{
  background: rgba(253, 141, 52, 0.9);
  color: white;
  text-decoration: none;
+ font-weight: 800;
 }
 
 .button-banner:active{
@@ -159,13 +165,13 @@
   flex-direction: column;
   align-items: center;
   width: 250px;
-
   h3{
     margin-bottom: 10px;
+    color: #FD8D34;
   }
   hr {
     border: 2px solid;
-    color: #333;
+    color: #FD8D34;
     width: 10%;
     margin: .3rem 0 1.7rem 0;
   }
@@ -177,6 +183,7 @@
   .fa {
     font-size: 50px;
     margin-bottom: 10px;
+    color: #FD8D34;
   }
 }
 
