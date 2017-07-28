@@ -94,7 +94,7 @@
         <!--    Reviews -->
         <div class="reviews wp-section">
           <h4>Reviews</h4>
-          <h5>   <%= pluralize @workplace.reviews.size, 'review' %></h5>
+          <p>  <%= pluralize @workplace.reviews.size, 'review' %></p>
           <% if @global_rating.nil? %>
           <p>This place doesn't have any review yet. <br/>
             Be the first one to add one :)
@@ -103,25 +103,22 @@
           <% else %>
           <% @workplace.reviews.each do |review| %>
           <% @user = User.find(review.user_id) %>
-          <div class="comment-card">
+          <div class="review-card">
             <div>
-              <div>
+              <div class="review-autor">
                 <div>
                   <% avatar_url = @user.facebook_picture_url || "http://placehold.it/30x30" %>
-                  <%= image_tag avatar_url, class: "avatar-bordered" %>
+                  <%= image_tag avatar_url, class: "avatar-bordered40" %>
                 </div>
                 <div>
-                  <div>by: <strong><%= @user.first_name %> <%= @user.last_name %></strong>
+                  <div><strong><%= @user.first_name %> <%= @user.last_name %></strong>
                   </%></div>
-
                   <div>date</div>
                 </div>
               </div>
-
               <div> <%= render_stars(review.ratings.first.average) %></div>
             </div>
-
-            <div class="review-comment">
+            <div>
              <p><u>Comment: </u> <%= review.comment %></p>
            </div>
          </div>
