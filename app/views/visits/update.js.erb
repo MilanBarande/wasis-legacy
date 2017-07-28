@@ -5,7 +5,7 @@
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
 <% else %>
   //$(".modal-backdrop").remove();
-  $('#reviews').modal("show");
+
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
   $('#checkin_navbar').html("");
   $('.feature-rating').rating({
@@ -15,5 +15,6 @@
       starCaptions: {1: 'Terrible', 2: 'bad', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
       starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
   });
-  $('#present').html("<%= j render 'visits/present', visit: @visit %>");
+  $('#present').html("<%= j render 'visits/present', visits: @visits %>");
+  $('#reviews').modal("show");
 <% end %>

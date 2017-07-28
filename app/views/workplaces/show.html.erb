@@ -82,10 +82,10 @@
         <div id="status-checkedin wp-section">
           <h4>Check-in Status</h4>
           <div id="present" class="checked-in">
-            <%= render 'visits/present', visit: @visit, workplace: @workplace %>
+            <%= render 'visits/present', visits: @visits %>
             <p><%# visit.status unless visit.status.nil? %></p>
           </div>
-          <%= render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
+          <%# render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
           <p><%# visit.status unless visit.status.nil? %></p>
         </div>
         <hr>
@@ -113,7 +113,7 @@
                 <div>
                   <div><strong><%= @user.first_name %> <%= @user.last_name %></strong>
                   </div>
-                  <div> <%= time_ago_in_words(review.created_at) %> </div>
+                  <div> <%= time_ago_in_words(review.created_at) %> ago</div>
                 </div>
               </div>
               <div> <%= render_stars(review.ratings.first.average) %></div>
@@ -134,7 +134,7 @@
      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 " id="action-bar" >
       <div class="action-workplace">
         <div class="action-header">
-          <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
+          <% if @workplace.google_id.nil? && @workplace.name != "Caravane Café" || @spot.opening_hours.nil?  && @workplace.name != "Caravane Café" %>
           <div class="workplace-hours">
             <%= image_tag('unknow.svg', alt: 'Unknown hours') %>
             <p>Opening hours are not available for this place.</p>
@@ -154,14 +154,14 @@
         </div>
 
         <div class="action-body">
-         <span id="favourites">
+         <div id="favourites">
            <% if @favourite.nil?  %>
            <% @favourite = Favourite.new %>
            <%= render 'favourites/favourite', favourite: @favourite , workplace: @workplace%>
            <% else %>
            <%= render 'favourites/unfavourite', favourite: @favourite %>
            <% end %>
-         </span>
+         </div>
          <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
          <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
          <!-- <i class="fa fa-mobile" aria-hidden="true"></i>  -->
