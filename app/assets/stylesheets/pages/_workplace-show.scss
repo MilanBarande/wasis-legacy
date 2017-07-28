@@ -240,15 +240,12 @@ a.user-checkedin {
   margin-bottom: 60px;
 }
 
-.show-wp-address {
+.show-wp-info {
   display: flex;
   align-items: center;
-  padding-bottom: 1em;
   img {
-    max-height: 50px;
-  }
-  h5 {
-    padding-left: 1em;
+    max-height: 100px;
+    margin-right: 20px;
   }
 }
 
