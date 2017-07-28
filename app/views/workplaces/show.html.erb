@@ -82,10 +82,10 @@
         <div id="status-checkedin wp-section">
           <h4>Check-in Status</h4>
           <div id="present" class="checked-in">
-            <%= render 'visits/present', visit: @visit, workplace: @workplace %>
+            <%= render 'visits/present', visits: @visits %>
             <p><%# visit.status unless visit.status.nil? %></p>
           </div>
-          <%= render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
+          <%# render 'users/user-status-checkedin', visit: @visit, workplace: @workplace %>
           <p><%# visit.status unless visit.status.nil? %></p>
         </div>
         <hr>
@@ -154,14 +154,14 @@
         </div>
 
         <div class="action-body">
-         <span id="favourites">
+         <div id="favourites">
            <% if @favourite.nil?  %>
            <% @favourite = Favourite.new %>
            <%= render 'favourites/favourite', favourite: @favourite , workplace: @workplace%>
            <% else %>
            <%= render 'favourites/unfavourite', favourite: @favourite %>
            <% end %>
-         </span>
+         </div>
          <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
          <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
          <!-- <i class="fa fa-mobile" aria-hidden="true"></i>  -->

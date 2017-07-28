@@ -4,10 +4,11 @@ console.log("on est tristes")
   // Render new review form with errors
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
 <% else %>
-  $('#modal-status').modal("show");
+
   $('#checkin').html("<%= j render 'visits/checkin', visit: @visit, workplace: @workplace %>");
   $('#checkin_navbar').html("<%= j render 'visits/checkin_navbar', visit: @visit, workplace: @workplace %>");
-  $('#present').html("<%= j render 'visits/present', visit: @visit %>");
 
+  $('#present').html("<%= j render 'visits/present', visits: @visits %>");
+  $("#user_status").val("<%= current_user.status%>");
+  $('#modal-status').modal("show");
 <% end %>
-$("#user_status").val("<%= current_user.status%>");

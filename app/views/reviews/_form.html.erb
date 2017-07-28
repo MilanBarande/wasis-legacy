@@ -3,10 +3,10 @@
   <%= f.input :comment, maxlength: 480, size: 60 %>
   <%= f.error_notification %>
     <%= f.simple_fields_for :rating do |r| %>
-      <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"} %>
-      <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-      <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
-      <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"} %>
+      <%= r.input :wifi, input_html: {class: "feature-rating ", 'data-show-clear': "false"}, require: true %>
+      <%= r.input :noise, input_html: {class: "feature-rating", 'data-show-clear': "false"}, require: true  %>
+      <%= r.input :comfort, input_html: {class: "feature-rating", 'data-show-clear': "false"}, require: true  %>
+      <%= r.input :service,  input_html: {class: "feature-rating", 'data-show-clear': "false"}, require: true  %>
     <% end %>
     <%= f.submit "Add", class: "btn btn-primary btn-wasis" %>
 <% end %>

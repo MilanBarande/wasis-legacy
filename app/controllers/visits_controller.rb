@@ -7,6 +7,8 @@ class VisitsController < ApplicationController
     @visit.user = current_user
     @visit.workplace = @workplace
     @visit.checkin = true
+    @visits = @workplace.visits.where(checkin: true)
+
     if @visit.save
       @checkedin_visit = true
       respond_to do |format|
@@ -26,6 +28,8 @@ class VisitsController < ApplicationController
     @visit = Visit.find(params[:id])
     @workplace = Workplace.find(params[:workplace_id])
     @visit.checkin = false
+    @visits = @workplace.visits.where(checkin: true)
+
     if @visit.save
       @checkedin_visit = false
       respond_to do |format|
