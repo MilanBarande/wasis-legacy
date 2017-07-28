@@ -4,7 +4,7 @@
  * Feel free to change them and create your own
  * ------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+ @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 // Paddings
 .padded {
@@ -33,7 +33,7 @@
 
 // font-style
 body {
-font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .ratings-stars  {
@@ -46,6 +46,10 @@ font-family: 'Quicksand', sans-serif;
   height: 80vh;
   float: none;
   margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+  margin-top: 150px;
+  border-radius: 4px;
 }
 
 #reviews {
