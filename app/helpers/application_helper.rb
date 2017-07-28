@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def render_stars(value)
     stars = ""
-    if value.nil?
+    if value == [] || value.nil?
       5.times do
         stars << "<i class=\"fa fa-star-o\"></i>"
       end
@@ -24,26 +24,24 @@ module ApplicationHelper
     end
     output = "<span>" + stars + "</span>"
     output.html_safe
-
   end
 
   def average_feature_rating(feature)
     @workplace = Workplace.find(params[:id])
     feature = feature.to_sym
     number_of_reviews_for_workplace = @workplace.reviews.count
+    @workplace.ratings.each do |review|
+      # the `send` method allows to dynamically pass methods to an object
 
-    else
-      running_total = 0.0
-      @workplace.ratings.each do |review|
-        # the `send` method allows to dynamically pass methods to an object
-          if review.send(feature).nil?
-            return 0.to_f
-          else
-            running_total += review.send(feature)
-          end
+        if review.send(feature).nil?
+          return 0.to_f
+        else
+          running_total = 0.0
+          running_total += review.send(feature)
         end
-      rating_float = running_total / number_of_reviews_for_workplace
-    ((rating_float) / 0.5).floor / 2.0
+         rating_float = running_total / number_of_reviews_for_workplace
+        ((rating_float) / 0.5).floor / 2.0
+      end
   end
 end
 
