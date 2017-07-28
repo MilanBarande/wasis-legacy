@@ -1,6 +1,6 @@
 class FavouritesController < ApplicationController
   def create
-
+    @favourite
     @favourite = Favourite.new
     @workplace = Workplace.find(params[:workplace_id])
     @favourite.workplace = @workplace

@@ -1,0 +1,25 @@
+<% @favourites.each do |favourite| %>
+
+  <div class="user-profile-card grow">
+    <div class="user-profile-card-rating">
+      <div class="fa fa-star rating-card"></div>
+      <div class="workplace-user-profile-rating"><%= favourite.workplace.global_rating %></div>
+      </div>
+        <%= link_to((favourite.workplace), class: 'card-link') do %>
+
+        <% if favourite.workplace.photo.url.nil? %>
+            <%= image_tag 'http://via.placeholder.com/300x230', class:'user-profile-card-image' %>
+            <% else %>
+          <%= cl_image_tag favourite.workplace.photo.url, class:'user-profile-card-image' %>
+          <% end %>
+          <% end %>
+        <div class="user-profile-card-body">
+          <h4><%= favourite.workplace.name %></h4>
+          <p><%= favourite.workplace.address %>, <br/> Visited: <%= favourite.workplace.visits.count %></p>
+        </div>
+
+      <ul class="card-favorites">
+        <li><a><i class="fa fa-heart" id="favorited"></i></a></li>
+      </ul>
+  </div>
+<% end %>
