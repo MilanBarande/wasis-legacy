@@ -5,8 +5,7 @@
     <% avatar_url = visit.user.facebook_picture_url || "http://placehold.it/30x30" %>
     <%= link_to user_path(visit.user.id), class:"user-checkedin" do %>
     <%= image_tag avatar_url, class: "avatar" %>
-    <p><%= visit.user.first_name %></p>
-    <p><%= visit.user.status unless visit.user.status.nil? %></p>
+    <p class='user-status'><%= visit.user.first_name %>: <%= visit.user.status unless visit.user.status.nil? %></p>
   <% end %>
 <% end %>
 <% end %>
