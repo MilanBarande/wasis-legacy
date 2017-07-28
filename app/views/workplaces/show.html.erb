@@ -134,7 +134,7 @@
      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 " id="action-bar" >
       <div class="action-workplace">
         <div class="action-header">
-          <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
+          <% if @workplace.google_id.nil? && @workplace.name != "Caravane Café" || @spot.opening_hours.nil?  && @workplace.name != "Caravane Café" %>
           <div class="workplace-hours">
             <%= image_tag('unknow.svg', alt: 'Unknown hours') %>
             <p>Opening hours are not available for this place.</p>
