@@ -31,16 +31,18 @@ module ApplicationHelper
     @workplace = Workplace.find(params[:id])
     feature = feature.to_sym
     number_of_reviews_for_workplace = @workplace.reviews.count
-    if number_of_reviews_for_workplace == 0
-      return 0
+    if @workplace.reviews.count == 0
+      return 0.to_f
     else
-    running_total = 0.0
-    @workplace.ratings.each do |review|
-      # the `send` method allows to dynamically pass methods to an object
-      running_total += review.send(feature)
-      end
-    rating_float = running_total / number_of_reviews_for_workplace
+      running_total = 0.0
+      @workplace.ratings.each do |review|
+        # the `send` method allows to dynamically pass methods to an object
+        running_total += review.send(feature)
+        end
+      rating_float = running_total / number_of_reviews_for_workplace
     ((rating_float) / 0.5).floor / 2.0
     end
   end
 end
+
+
