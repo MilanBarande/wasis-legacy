@@ -8,5 +8,4 @@ class Review < ApplicationRecord
   length: {maximum: 480},
   on: :create,
   allow_nil: false
-  validates :ratings, presence: true
 end

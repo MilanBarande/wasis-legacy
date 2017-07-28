@@ -112,14 +112,15 @@
                 </div>
                 <div>
                   <div><strong><%= @user.first_name %> <%= @user.last_name %></strong>
-                  </%></div>
-                  <div>date</div>
+                  </div>
+                  <div> <%= time_ago_in_words(review.created_at) %> </div>
                 </div>
               </div>
               <div> <%= render_stars(review.ratings.first.average) %></div>
             </div>
             <div>
-             <p><u>Comment: </u> <%= review.comment %></p>
+             <p><u>Comment: </u></p>
+             <p> <%= review.comment %></p>
            </div>
          </div>
          <hr>
@@ -135,15 +136,18 @@
         <div class="action-header">
           <% if @workplace.google_id.nil? || @spot.opening_hours.nil? %>
           <div class="workplace-hours">
+            <%= image_tag('unknow.svg', alt: 'Unknown hours') %>
             <p>Opening hours are not available for this place.</p>
           </div>
           <% elsif @spot.opening_hours["open_now"] %>
           <div class="workplace-hours">
+            <%= image_tag('open.svg', alt: 'Open now') %>
             <p>Open Now</p>
           </div>
 
           <% else %>
           <div class="workplace-hours">
+            <%= image_tag('closed.svg', alt: 'Open now') %>
             <p>CLOSED NOW</p>
           </div>
           <% end %>
@@ -159,9 +163,7 @@
            <% end %>
          </div>
          <!-- <i class="fa fa-share-alt" aria-hidden="true"></i> -->
-         <span>Share with friends</span>
          <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
-         <span>Send to my iphone</span>
          <!-- <i class="fa fa-mobile" aria-hidden="true"></i>  -->
        </div>
        <div class="action-footer">

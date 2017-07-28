@@ -45,10 +45,10 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   float: none;
   margin: 0 auto;
-  width: 790px;
-  height: 750px;
+  width: 520px;
+  height: 700px;
   margin-top: 150px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 #reviews {
@@ -67,5 +67,8 @@ body {
 }
 
 .btn-wasis {
-  width: 100px;
+  width: 520px;
+  position: absolute;
+  right: -142px;
+  bottom: -44px;
 }
