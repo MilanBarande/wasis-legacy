@@ -1,20 +1,21 @@
 <%= link_to((workplace), class: 'card-link') do %>
-<div class="card work" id="card_<%= workplace.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(<%= cl_image_path workplace.photo.url unless workplace.photo.url.nil? %>); background-size: cover; background-repeat: no-repeat;">
+<div class="card work" id="card_<%= workplace.id %>" style="background-image: linear-gradient(to bottom, rgba(135,109,196,0.45) 8%,rgba(211,89,153,0.45) 37%,rgba(250,79,131,0.32) 52%,rgba(250,84,124,0.3) 55%,rgba(253,141,52,0.3) 88%), url(<%= cl_image_path workplace.photo.url unless workplace.photo.url.nil? %>); background-size: cover; background-repeat: no-repeat;">
 
   <div class="card-content">
     <div class="card-graphics">
       <h3 class="card-title"><%= workplace.name %></h3>
+      <hr>
       <p class="card-text"><%= workplace.address %></p>
       <p class="card-distance">
-        <span class="dist"></span>
-        meters away from your position.
+        <strong><span class="dist"></span>
+         meters away </strong> from your position.
       </p>
     </div>
     <div class="card-features-container">
 
       <% workplace.features.each do |feature| %>
       <div class="feature-desc">
-        <%= image_tag(feature.icon) %> <p><%#= feature.name %></p>
+        <%= image_tag(feature.icon) %>
       </div>
         <% end %>
     </div>

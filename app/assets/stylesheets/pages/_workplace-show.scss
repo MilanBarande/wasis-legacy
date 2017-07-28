@@ -226,29 +226,41 @@ a.user-checkedin {
 .ratings {
   margin-bottom: 40px;
   table {
-    width: 180px;
+    width: 250px;
     line-height: 1.8;
+    font-size: 18px;
   }
    tr>td {
     width: 60px;
   }
 }
 
+.review-card {
+  :first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+}
+
+.review-autor {
+  display: inline-flex;
+  :first-child {
+    margin-right: 10px;
+  }
+}
 
 
 .reviews {
   margin-bottom: 60px;
 }
 
-.show-wp-address {
+.show-wp-info {
   display: flex;
   align-items: center;
-  padding-bottom: 1em;
   img {
-    max-height: 50px;
-  }
-  h5 {
-    padding-left: 1em;
+    max-height: 100px;
+    margin-right: 20px;
   }
 }
 

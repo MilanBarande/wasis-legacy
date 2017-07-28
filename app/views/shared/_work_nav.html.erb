@@ -22,8 +22,7 @@
           <%= render 'users/user_status', user: current_user %>
         </div>
         <%= link_to user_path(current_user, status: "", nav: "true"),id: "status-link", :method => :put, remote: true do %>
-            <i class="fa fa-pencil" aria-hidden="true">
-            </i>
+           <i class="fa fa-user-o" aria-hidden="true"></i>
           <% end %>
 <!--     <!-- Notification -->
 
@@ -60,7 +59,7 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Add a new place"), new_workplace_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <%= link_to t(".top_call_to_action", default: "Add a new place"), new_workplace_path, class: "navbar-wagon-item navbar-wasis-button btn" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
